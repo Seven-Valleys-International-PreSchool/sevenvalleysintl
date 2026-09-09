@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Day Care | Seven Valleys International Preschool</title>
+<meta name="description" content="Warm, playful and dependable day care at Seven Valleys International Preschool.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+
+<style>
+:root{
+ --dc-cyan:#12C7D9;--dc-pink:#F01883;--dc-yellow:#FFC928;--dc-purple:#6530A5;
+ --dc-coral:#FF565A;--dc-ink:#24344D;--dc-bg:#F5FBFD;--dc-pinkbg:#FFF1F8;
+}
+.daycare-page{overflow:hidden;background:#fff}
+.dc-hero{
+  position:relative;min-height:560px;display:flex;align-items:center;overflow:hidden;
+  background:
+    /* linear-gradient(90deg,rgba(36,52,77,.88),rgba(36,52,77,.48) 55%,rgba(36,52,77,.12)), */
+    url('assets/day-care.png') center/cover no-repeat;
+}
+.dc-hero:before{
+ content:"";position:absolute;inset:0;opacity:.32;
+ /* background-image:radial-gradient(rgba(101,48,165,.13) 1.3px,transparent 1.3px); */
+ /* background-size:24px 24px; */
+ /* mask-image:linear-gradient(to right,transparent,black 18%,black 82%,transparent); */
+}
+.dc-hero-content{position:relative;z-index:2;padding:80px 0 105px;max-width:690px}
+.dc-kicker{
+ display:inline-flex;gap:9px;align-items:center;background:#fff;padding:8px 15px;border-radius:999px;
+ box-shadow:0 8px 25px rgba(36,52,77,.08);font-size:13px;font-weight:900;color:var(--dc-purple)
+}
+.dc-hero h1{font-family:"Baloo 2";font-size:clamp(55px,7vw,84px);line-height:.92;margin:18px 0;color:var(--dc-ink);letter-spacing:-.035em}
+.dc-hero h1 em{font-style:normal;color:var(--dc-pink)}
+.dc-hero p{font-size:18px;color:#66778c;max-width:600px;margin:0 0 26px}
+.dc-actions{display:flex;gap:12px;flex-wrap:wrap}
+.dc-hero-art{position:absolute;right:3%;bottom:35px;width:390px;height:390px}
+.sun{position:absolute;inset:40px 20px 15px 40px;border-radius:45% 55% 50% 50%;background:#DDF9FC;transform:rotate(5deg)}
+.cloud{position:absolute;background:#fff;border-radius:999px;box-shadow:0 12px 25px rgba(36,52,77,.08)}
+.cloud:before,.cloud:after{content:"";position:absolute;background:#fff;border-radius:50%}
+.cloud.one{width:160px;height:35px;right:30px;top:25px}.cloud.one:before{width:65px;height:65px;left:25px;bottom:0}.cloud.one:after{width:52px;height:52px;right:25px;bottom:0}
+.cloud.two{width:110px;height:25px;left:5px;bottom:55px}.cloud.two:before{width:45px;height:45px;left:20px;bottom:0}.cloud.two:after{width:35px;height:35px;right:15px;bottom:0}
+.teddy{position:absolute;left:92px;top:92px;width:205px;height:205px;border-radius:50%;background:#FFC928;border:10px solid #fff;box-shadow:0 18px 40px rgba(36,52,77,.14)}
+.teddy:before,.teddy:after{content:"";position:absolute;width:58px;height:58px;border-radius:50%;background:#FFC928;border:8px solid #fff;top:-31px}
+.teddy:before{left:4px}.teddy:after{right:4px}
+.teddy-eyes{position:absolute;left:57px;top:70px;width:16px;height:16px;border-radius:50%;background:var(--dc-ink);box-shadow:74px 0 var(--dc-ink)}
+.teddy-mouth{position:absolute;left:75px;top:103px;width:35px;height:20px;border-bottom:5px solid var(--dc-ink);border-radius:0 0 50px 50px}
+.teddy-cheek{position:absolute;left:36px;top:101px;width:24px;height:12px;border-radius:50%;background:#FF8C91;opacity:.65;box-shadow:110px 0 #FF8C91}
+.star{position:absolute;color:var(--dc-yellow);font-size:29px}.star.a{left:45px;top:105px}.star.b{right:18px;top:150px;color:var(--dc-pink)}.star.c{right:74px;bottom:28px;color:var(--dc-purple)}
+.plane{position:absolute;right:5px;bottom:145px;font-size:42px;transform:rotate(-15deg);filter:drop-shadow(0 6px 5px rgba(36,52,77,.12))}
+.plane-trail{position:absolute;right:15px;bottom:105px;width:255px;border-top:3px dashed var(--dc-cyan);transform:rotate(-19deg);border-radius:50%;opacity:.75}
+
+/* floating reassurance cards */
+.dc-highlights{position:relative;margin-top:-55px;z-index:5}
+.dc-highlight-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.dc-highlight{
+ background:#fff;border-radius:24px;padding:23px;display:flex;gap:15px;align-items:center;
+ box-shadow:0 16px 40px rgba(36,52,77,.11);border:1px solid rgba(36,52,77,.04)
+}
+.dc-highlight:nth-child(1) .h-icon{background:#E8FBFD;color:#079BA9}
+.dc-highlight:nth-child(2) .h-icon{background:#FFF1F8;color:var(--dc-pink)}
+.dc-highlight:nth-child(3) .h-icon{background:#FFF7D9;color:#B88400}
+.h-icon{width:52px;height:52px;border-radius:17px;display:grid;place-items:center;font-size:25px;flex:0 0 auto}
+.dc-highlight strong{font-family:"Baloo 2";font-size:19px;display:block}.dc-highlight span{font-size:12px;color:#718095}
+
+/* common sections */
+.dc-section{position:relative;padding:100px 0;isolation:isolate}
+.dc-section.bg{background:var(--dc-bg)}.dc-section.pink{background:var(--dc-pinkbg)}
+.dc-section:before{
+ content:"";position:absolute;inset:0;z-index:-1;opacity:.38;
+ background-image:radial-gradient(rgba(101,48,165,.11) 1.2px,transparent 1.2px);
+ background-size:22px 22px;
+ mask-image:linear-gradient(to bottom,transparent,black 15%,black 85%,transparent);
+}
+.dc-heading{text-align:center;max-width:760px;margin:0 auto 50px}
+.dc-heading .mini{font-family:"Baloo 2";font-size:18px;font-weight:800;color:var(--dc-pink)}
+.dc-heading h2{font-family:"Baloo 2";font-size:clamp(42px,5vw,62px);line-height:1;margin:7px 0 13px;color:var(--dc-ink)}
+.dc-heading h2 em{font-style:normal;color:var(--dc-purple)}
+.dc-heading p{color:#718095;margin:0}
+.decor-stars{position:absolute;font-size:25px;color:var(--dc-yellow)}.ds1{left:4%;top:65px}.ds2{right:5%;bottom:70px;color:var(--dc-pink)}
+.decor-sticks{position:absolute;right:2%;top:25px}.decor-sticks i{display:block;width:9px;height:54px;border-radius:9px;position:absolute}.decor-sticks i:nth-child(1){background:var(--dc-pink);transform:rotate(25deg)}.decor-sticks i:nth-child(2){background:var(--dc-cyan);left:23px;top:5px;transform:rotate(45deg)}.decor-sticks i:nth-child(3){background:var(--dc-yellow);left:46px;top:12px;transform:rotate(65deg)}
+
+/* routine */
+.routine-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center}
+.routine-board{
+ background:#fff;border-radius:32px;padding:28px;box-shadow:0 18px 48px rgba(36,52,77,.09)
+}
+.routine-row{display:grid;grid-template-columns:115px 1fr auto;gap:17px;align-items:center;padding:17px 4px;border-bottom:1px dashed #dde5ed}
+.routine-row:last-child{border-bottom:0}.time{font-family:"Baloo 2";font-size:20px;color:var(--dc-purple)}
+.routine-row strong{font-size:14px}.routine-row span{font-size:12px;color:#7b899a}
+.routine-badge{width:43px;height:43px;border-radius:14px;display:grid;place-items:center;font-size:20px;background:#F5FBFD}
+.routine-copy .mini{font-family:"Baloo 2";color:var(--dc-coral);font-size:18px;font-weight:800}
+.routine-copy h2{font-family:"Baloo 2";font-size:52px;line-height:1;margin:7px 0 18px;color:var(--dc-ink)}
+.routine-copy p{color:#6c7b8f}
+.routine-points{display:grid;gap:10px;margin-top:24px}.routine-points div{font-size:14px;font-weight:800}.routine-points b{color:var(--dc-cyan);margin-right:8px}
+
+/* care pillars */
+.pillar-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.pillar{background:#fff;border-radius:27px;padding:29px 23px;min-height:230px;box-shadow:0 12px 32px rgba(36,52,77,.07);position:relative;overflow:hidden;transition:.25s transform}
+.pillar:hover{transform:translateY(-7px)}.pillar:after{content:"";position:absolute;width:90px;height:90px;border-radius:50%;right:-35px;bottom:-35px;background:rgba(18,199,217,.10)}
+.pillar:nth-child(2):after{background:rgba(240,24,131,.09)}.pillar:nth-child(3):after{background:rgba(255,201,40,.13)}.pillar:nth-child(4):after{background:rgba(101,48,165,.09)}
+.pillar-icon{width:58px;height:58px;border-radius:18px;display:grid;place-items:center;font-size:28px;background:#E9FBFD;margin-bottom:18px}
+.pillar:nth-child(2) .pillar-icon{background:#FFF1F8}.pillar:nth-child(3) .pillar-icon{background:#FFF8DC}.pillar:nth-child(4) .pillar-icon{background:#F0E9FA}
+.pillar h3{font-family:"Baloo 2";font-size:25px;margin:0 0 7px}.pillar p{font-size:13px;color:#718095;margin:0}
+
+/* age programme */
+.age-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.age-card{background:#fff;border-radius:28px;padding:30px;box-shadow:0 14px 35px rgba(36,52,77,.08);position:relative;overflow:hidden;border:2px solid transparent}
+.age-card:nth-child(1){border-color:#BDEFF4}.age-card:nth-child(2){border-color:#FFD0E6}.age-card:nth-child(3){border-color:#E0D2F4}
+.age-card .number{position:absolute;right:18px;top:8px;font:800 55px "Baloo 2";color:rgba(36,52,77,.06)}
+.age-card h3{font:700 29px "Baloo 2";margin:0 0 5px}.age{display:inline-block;border-radius:999px;padding:5px 11px;background:#F5FBFD;color:var(--dc-purple);font-size:11px;font-weight:900}.age-card p{font-size:13px;color:#6e7d91;margin:16px 0}.age-card a{font-weight:900;color:var(--dc-pink);font-size:13px}
+
+/* parent notes */
+.notes-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}.note{background:#fff;border-radius:26px;padding:28px;box-shadow:0 12px 32px rgba(36,52,77,.07);position:relative}.note:before{content:"“";font:800 75px "Baloo 2";position:absolute;right:24px;top:0;color:rgba(18,199,217,.16)}.note p{font-family:"Baloo 2";font-size:22px;line-height:1.3;margin:0 0 17px}.note strong{font-size:12px;color:var(--dc-purple)}
+
+/* CTA */
+.dc-cta{padding:95px 0;background:var(--dc-cyan)}
+.cta-card{position:relative;overflow:hidden;background:var(--dc-ink);border-radius:38px;padding:55px 60px;color:#fff;display:grid;grid-template-columns:1fr auto;align-items:center;gap:40px;box-shadow:0 25px 60px rgba(36,52,77,.2)}
+.cta-card:before,.cta-card:after{content:"";position:absolute;border-radius:50%;border:2px dashed rgba(255,255,255,.12)}.cta-card:before{width:260px;height:260px;right:-70px;top:-100px}.cta-card:after{width:110px;height:110px;left:43%;bottom:-60px}
+.cta-card .mini{font:700 18px "Baloo 2";color:var(--dc-yellow)}.cta-card h2{font:800 50px "Baloo 2";line-height:1;margin:7px 0 13px}.cta-card h2 em{font-style:normal;color:var(--dc-pink)}.cta-card p{color:#bbc6d4;max-width:620px;margin:0}.cta-actions{position:relative;z-index:2;display:flex;flex-direction:column;gap:10px}.cta-actions .btn{white-space:nowrap}
+
+/* responsive */
+@media(max-width:1000px){
+ .dc-hero-art{right:-70px;opacity:.72}.dc-hero-content{max-width:650px}.pillar-grid{grid-template-columns:1fr 1fr}.age-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:800px){
+ .dc-hero-art{display:none}.dc-hero-content{max-width:760px;text-align:center}.dc-actions{justify-content:center}
+ .dc-highlights{margin-top:-35px}.dc-highlight-grid{grid-template-columns:1fr}.routine-grid{grid-template-columns:1fr;gap:35px}
+ .cta-card{grid-template-columns:1fr;padding:42px 30px}.cta-actions{flex-direction:row;flex-wrap:wrap}
+}
+@media(max-width:620px){
+ .dc-hero{min-height:540px}.dc-hero-content{padding:65px 0 80px}.dc-hero h1{font-size:53px}.dc-hero p{font-size:15px}
+ .dc-section{padding:72px 0}.pillar-grid,.age-grid,.notes-grid{grid-template-columns:1fr}
+ .routine-board{padding:17px}.routine-row{grid-template-columns:78px 1fr auto;gap:9px}.time{font-size:17px}.routine-badge{width:38px;height:38px}
+ .routine-copy h2{font-size:43px}.cta-card h2{font-size:43px}.cta-actions{flex-direction:column;align-items:stretch}
+ .dc-highlight{padding:18px}
+}
+</style>
+</head>
+
+<body>
+<div class="announcement">
+ <div class="container announcement-inner">
+  <span class="announcement-badge">✨ Admissions Open</span>
+  <span>Now enrolling for the new academic year — schedule a school visit today.</span>
+  <a href="#contact">Enquire now <span>→</span></a>
+ </div>
+</div>
+
+<header class="site-header" id="top">
+ <div class="container nav-wrap">
+  <a class="brand" href="index.html" aria-label="Seven Valleys International Preschool home"><img src="assets/logo.png" alt="Seven Valleys International Preschool logo"></a>
+  <nav class="desktop-nav" aria-label="Primary navigation">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="academics.html">Academics</a>
+    <a class="active" href="daycare.html">Day Care</a>
+    <!-- <a href="#activities">Activities</a> -->
+    <a href="faq.html">FAQs</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <a class="btn btn-primary nav-cta" href="#contact">Book a Visit <span>→</span></a>
+  <button class="menu-btn" aria-label="Open navigation" aria-expanded="false" aria-controls="mobileDrawer"><span></span><span></span><span></span></button>
+ </div>
+</header>
+
+<aside class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+ <div class="drawer-top"><img src="assets/logo.png" alt="Seven Valleys International Preschool"><button class="drawer-close" aria-label="Close navigation">×</button></div>
+ <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="academics.html">Academics</a>
+    <a class="active" href="daycare.html">Day Care</a>
+    <!-- <a href="#activities">Activities</a> -->
+    <a href="faq.html">FAQs</a>
+    <a href="contact.html">Contact</a>
+ </nav>
+ <div class="drawer-card"><strong>A happy day, every day!</strong><p>Warm care, playful routines and a safe place for little ones to grow.</p><a class="btn btn-primary" href="contact.html">Enquire now →</a></div>
+</aside>
+<div class="drawer-backdrop"></div>
+
+<main class="daycare-page">
+
+<section class="dc-hero">
+ <div class="container dc-hero-content">
+  <div class="dc-kicker">🧸 Warm care • Happy days • Little adventures</div>
+  <h1>Day Care that feels like a <em>second home.</em></h1>
+  <p>A caring, playful space where children can eat, rest, explore, create and make friends while you get on with your day.</p>
+  <div class="dc-actions">
+   <a class="btn btn-secondary" href="#contact">Ask About Day Care <span>→</span></a>
+   <a class="btn btn-accent" href="#routine">See Our Day <span>↓</span></a>
+  </div>
+ </div>
+ <!-- <div class="dc-hero-art" aria-hidden="true"> -->
+  <!-- <div class="sun"></div><div class="cloud one"></div><div class="cloud two"></div> -->
+  <!-- <div class="teddy"><div class="teddy-eyes"></div><div class="teddy-mouth"></div><div class="teddy-cheek"></div></div> -->
+  <!-- <div class="star a">✦</div><div class="star b">✦</div><div class="star c">✧</div> -->
+  <!-- <div class="plane-trail"></div><div class="plane">✈</div> -->
+ <!-- </div> -->
+</section>
+
+<section class="dc-highlights">
+ <div class="container dc-highlight-grid">
+  <div class="dc-highlight"><div class="h-icon">🛡️</div><div><strong>Safe &amp; caring</strong><span>A reassuring environment for little learners.</span></div></div>
+  <div class="dc-highlight"><div class="h-icon">🎨</div><div><strong>Playful &amp; engaging</strong><span>Little activities woven into everyday care.</span></div></div>
+  <div class="dc-highlight"><div class="h-icon">💛</div><div><strong>Child-first routines</strong><span>Time for meals, rest, play and connection.</span></div></div>
+ </div>
+</section>
+
+<section class="dc-section bg" id="routine">
+ <div class="decor-stars ds1">✦</div><div class="decor-stars ds2">✧</div>
+ <div class="container">
+  <div class="dc-heading"><div class="mini">☀️ A little look at the day</div><h2>Little routines, <em>big comfort</em></h2><p>A predictable rhythm helps children feel secure while leaving plenty of room for curiosity and play.</p></div>
+  <div class="routine-grid">
+   <div class="routine-board">
+    <div class="routine-row"><div class="time">7:30 AM</div><div><strong>Arrival &amp; welcome</strong><span>Settling in, greetings and gentle start</span></div><div class="routine-badge">👋</div></div>
+    <div class="routine-row"><div class="time">9:00 AM</div><div><strong>Play &amp; learning</strong><span>Stories, activities, creative exploration</span></div><div class="routine-badge">🎨</div></div>
+    <div class="routine-row"><div class="time">12:00 PM</div><div><strong>Lunch &amp; quiet time</strong><span>Mealtime followed by calm rest</span></div><div class="routine-badge">🍎</div></div>
+    <div class="routine-row"><div class="time">3:00 PM</div><div><strong>Afternoon play</strong><span>Movement, games and social time</span></div><div class="routine-badge">🧩</div></div>
+    <div class="routine-row"><div class="time">5:00 PM</div><div><strong>Wind-down &amp; pick-up</strong><span>Easy transitions and happy hellos</span></div><div class="routine-badge">🎈</div></div>
+   </div>
+   <div class="routine-copy">
+    <div class="mini">🌈 The Seven Valleys rhythm</div>
+    <h2>Care with a little <span style="color:var(--dc-pink)">sparkle.</span></h2>
+    <p>Our day-care experience is designed around the simple things children need most: attentive adults, comfortable routines, opportunities to play and a sense that they belong.</p>
+    <div class="routine-points"><div><b>✓</b>Warm arrivals and reassuring transitions</div><div><b>✓</b>Balanced active and quiet moments</div><div><b>✓</b>Age-appropriate play and exploration</div><div><b>✓</b>Regular communication with families</div></div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="dc-section pink" id="care">
+ <div class="decor-sticks"><i></i><i></i><i></i></div>
+ <div class="container">
+  <div class="dc-heading"><div class="mini">💜 More than supervision</div><h2>Four things we care about <em>every day</em></h2><p>Day care should give children a happy place to be — not simply somewhere to stay.</p></div>
+  <div class="pillar-grid">
+   <article class="pillar"><div class="pillar-icon">🧸</div><h3>Comfort</h3><p>Familiar routines, kind adults and a calm environment help little ones settle and feel secure.</p></article>
+   <article class="pillar"><div class="pillar-icon">🎨</div><h3>Curiosity</h3><p>Creative play, stories, music and hands-on experiences keep growing minds interested.</p></article>
+   <article class="pillar"><div class="pillar-icon">🍎</div><h3>Well-being</h3><p>Time for food, hydration, rest, movement and the everyday rhythms children need.</p></article>
+   <article class="pillar"><div class="pillar-icon">🤝</div><h3>Connection</h3><p>Children build friendships, confidence and a sense of belonging through shared play.</p></article>
+  </div>
+ </div>
+</section>
+
+<section class="dc-section bg" id="programmes">
+ <div class="container">
+  <div class="dc-heading"><div class="mini">🌟 Day-care options</div><h2>Choose what works for your <em>family</em></h2><p>Our current day-care and preschool options can be explored together with our team.</p></div>
+  <div class="age-grid">
+   <article class="age-card"><div class="number">01</div><h3>Toddler Day Care</h3><span class="age">1.5–2.5 years</span><p>Designed for our youngest learners with a full-day rhythm of care, play, meals and rest.</p><a href="#contact">Ask about availability →</a></article>
+   <article class="age-card"><div class="number">02</div><h3>Playgroup</h3><span class="age">2.5–3.5 years</span><p>A playful early-learning experience with a half-day option and full-day care pathway.</p><a href="#contact">Ask about timings →</a></article>
+   <article class="age-card"><div class="number">03</div><h3>Nursery &amp; beyond</h3><span class="age">3.5+ years</span><p>For growing children who are ready for a little more structured learning alongside care.</p><a href="#contact">Explore the programme →</a></article>
+  </div>
+ </div>
+</section>
+
+<section class="dc-section pink" id="families">
+ <div class="container">
+  <div class="dc-heading"><div class="mini">💬 For parents</div><h2>A place you'll feel good <em>coming back to</em></h2><p>We know choosing day care is a big decision. Come visit, ask questions and see the environment for yourself.</p></div>
+  <div class="notes-grid">
+   <div class="note"><p>“I want my child to feel happy, safe and excited to come in each morning.”</p><strong>WHAT FAMILIES OFTEN LOOK FOR</strong></div>
+   <div class="note"><p>“I want a routine that works for our family without losing the warmth of a childhood experience.”</p><strong>WHAT GOOD DAY CARE SHOULD FEEL LIKE</strong></div>
+  </div>
+ </div>
+</section>
+
+<section class="dc-cta" id="contact">
+ <div class="container">
+  <div class="cta-card">
+   <div>
+    <div class="mini">✈️ Come take a look</div>
+    <h2>Let's plan a <em>happy day</em> for your little one.</h2>
+    <p>Book a campus visit or send us your questions. We'll help you understand the day-care options, timings and next steps.</p>
+   </div>
+   <div class="cta-actions">
+    <a class="btn btn-secondary" href="admissions-playful.html#enquire">Enquire on Admissions →</a>
+    <a class="btn btn-accent" href="tel:+919999999999">Call +91 99999 99999</a>
+   </div>
+  </div>
+ </div>
+</section>
+
+</main>
+
+<footer class="footer">
+ <div class="footer-premise"></div>
+ <div class="container footer-main">
+  <div class="footer-brand"><img src="assets/logo.png" alt="Seven Valleys International Preschool"><p>A joyful place to learn, play, grow and belong.</p></div>
+  <div><h3>Explore</h3>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="academics.html">Academics</a>
+    <a href="daycare.html">Day Care</a>
+    <a href="contact.html">Contact</a>
+  </div>
+  <div><h3>Programmes</h3><p>Toddler Day Care</p><p>Playgroup</p><p>Nursery</p><p>LKG &amp; UKG</p></div>
+  <div><h3>Contact</h3><p>Seven Valleys International Preschool</p><p>📞 +91 99999 99999</p><a class="direction-link" href="admissions-playful.html#enquire">Enquire via WhatsApp →</a></div>
+ </div>
+ <div class="copyright"><div class="container"><span>© Seven Valleys International Preschool</span><span>Day Care</span></div></div>
+</footer>
+
+<script>
+const menuBtn=document.querySelector('.menu-btn'),drawer=document.getElementById('mobileDrawer'),backdrop=document.querySelector('.drawer-backdrop'),closeBtn=document.querySelector('.drawer-close');
+function closeDrawer(){drawer.classList.remove('open');backdrop.classList.remove('open');drawer.setAttribute('aria-hidden','true');menuBtn.setAttribute('aria-expanded','false')}
+menuBtn?.addEventListener('click',()=>{drawer.classList.add('open');backdrop.classList.add('open');drawer.setAttribute('aria-hidden','false');menuBtn.setAttribute('aria-expanded','true')});
+closeBtn?.addEventListener('click',closeDrawer);backdrop?.addEventListener('click',closeDrawer);
+drawer?.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeDrawer));
+</script>
+</body>
+</html>

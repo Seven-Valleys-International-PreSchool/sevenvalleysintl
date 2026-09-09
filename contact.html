@@ -1,0 +1,520 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact | Seven Valleys International Preschool</title>
+  <meta name="description" content="Contact Seven Valleys International Preschool to enquire about admissions, preschool, day care and campus visits.">
+  <meta name="theme-color" content="#12C7D9">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    .contact-hero {
+      background: var(--bg);
+      padding: 80px 0 105px;
+      position: relative;
+      overflow: hidden;
+    }
+    .contact-hero:before,
+    .contact-hero:after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      pointer-events: none;
+    }
+    .contact-hero:before {
+      width: 260px;
+      height: 260px;
+      background: var(--pinkbg);
+      top: -100px;
+      right: 8%;
+    }
+    .contact-hero:after {
+      width: 120px;
+      height: 120px;
+      background: #d8f8fb;
+      bottom: -45px;
+      left: 7%;
+    }
+    .contact-hero-inner {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      max-width: 760px;
+      margin: auto;
+    }
+    .contact-hero h1 {
+      font-family: "Baloo 2", cursive;
+      font-size: clamp(48px, 6vw, 76px);
+      line-height: .98;
+      margin: 12px 0 18px;
+      letter-spacing: -.03em;
+    }
+    .contact-hero h1 em {
+      font-style: normal;
+      color: var(--secondary);
+    }
+    .contact-hero p {
+      color: #68788f;
+      font-size: 18px;
+      margin: 0 auto;
+      max-width: 650px;
+    }
+
+    .contact-section {
+      padding: 95px 0 110px;
+      background: #fff;
+    }
+    .contact-layout {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 55px;
+      align-items: start;
+    }
+    .contact-info h2,
+    .contact-form-wrap h2,
+    .map-copy h2 {
+      font-family: "Baloo 2", cursive;
+      font-size: clamp(38px, 4vw, 54px);
+      line-height: 1.02;
+      margin: 8px 0 18px;
+      letter-spacing: -.03em;
+    }
+    .contact-info > p {
+      color: #68788f;
+      margin-bottom: 30px;
+    }
+    .contact-info-grid {
+      display: grid;
+      gap: 14px;
+    }
+    .contact-detail {
+      display: grid;
+      grid-template-columns: 52px 1fr;
+      gap: 16px;
+      align-items: center;
+      padding: 17px;
+      border-radius: 18px;
+      background: var(--bg);
+    }
+    .contact-detail-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      font-size: 22px;
+      background: #fff;
+      box-shadow: 0 8px 20px rgba(36,52,77,.07);
+    }
+    .contact-detail strong,
+    .contact-detail span {
+      display: block;
+    }
+    .contact-detail strong {
+      font-family: "Baloo 2";
+      font-size: 18px;
+    }
+    .contact-detail span,
+    .contact-detail a {
+      color: #68788f;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+    .contact-detail a:hover {
+      color: var(--secondary);
+    }
+
+    .contact-form-wrap {
+      background: var(--text);
+      color: #fff;
+      border-radius: 30px;
+      padding: 42px;
+      box-shadow: var(--shadow);
+    }
+    .contact-form-wrap h2 {
+      color: #fff;
+    }
+    .contact-form-wrap > p {
+      color: rgba(255,255,255,.72);
+      margin: 0 0 25px;
+    }
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 13px;
+    }
+    .contact-form .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 13px;
+    }
+    .contact-form label span {
+      display: block;
+      color: #dbe4ef;
+      font-size: 12px;
+      font-weight: 800;
+      margin-bottom: 6px;
+    }
+    .contact-form label small {
+      opacity: .6;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      border: 0;
+      border-radius: 11px;
+      padding: 13px 14px;
+      background: #fff;
+      color: var(--text);
+      outline: none;
+    }
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      box-shadow: 0 0 0 3px rgba(18,199,217,.35);
+    }
+    .contact-form textarea {
+      resize: vertical;
+      min-height: 125px;
+    }
+    .contact-form .btn {
+      margin-top: 5px;
+      width: 100%;
+    }
+    .form-status {
+      min-height: 18px;
+      font-size: 12px;
+      color: var(--accent);
+      margin: 0;
+    }
+
+    .map-section {
+      padding: 100px 0;
+      background: var(--pinkbg);
+    }
+    .map-layout {
+      display: grid;
+      grid-template-columns: .75fr 1.25fr;
+      gap: 55px;
+      align-items: center;
+    }
+    .map-copy p {
+      color: #68788f;
+      margin-bottom: 25px;
+    }
+    .map-card {
+      background: #fff;
+      padding: 10px;
+      border-radius: 28px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+    .map-card iframe {
+      display: block;
+      width: 100%;
+      min-height: 430px;
+      border: 0;
+      border-radius: 20px;
+    }
+    .map-address {
+      padding: 15px 12px 8px;
+      color: #68788f;
+      font-size: 13px;
+    }
+
+    @media (max-width: 900px) {
+      .contact-layout,
+      .map-layout {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+      .contact-section,
+      .map-section {
+        padding: 75px 0;
+      }
+    }
+    @media (max-width: 620px) {
+      .contact-hero {
+        padding: 65px 0 75px;
+      }
+      .contact-form-wrap {
+        padding: 30px 22px;
+        border-radius: 24px;
+      }
+      .contact-form .form-row {
+        grid-template-columns: 1fr;
+      }
+      .map-card iframe {
+        min-height: 330px;
+      }
+    }
+
+    .footer-premise{
+      height:93px;background:url(assets/border-bottom.png?auto=format&fit=crop&w=1800&q=80) center/cover;
+      background-color:var(--pinkbg)!important
+    }
+  </style>
+</head>
+
+<body>
+  <div class="announcement">
+    <div class="container announcement-inner">
+      <span class="announcement-badge">✨ Admissions Open</span>
+      <span>Now enrolling for the new academic year — schedule a school visit today.</span>
+      <a href="#contact-form">Enquire now <span>→</span></a>
+    </div>
+  </div>
+
+  <header class="site-header" id="top">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html" aria-label="Seven Valleys International Preschool home">
+        <img src="assets/logo.png" alt="Seven Valleys International Preschool logo">
+      </a>
+
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="academics.html">Academics</a>
+        <a href="day-care.html">Day Care</a>
+        <a href="faq.html">FAQs</a>
+        <a class="active" href="contact.html">Contact</a>
+      </nav>
+
+      <a class="btn btn-primary nav-cta" href="#contact-form">Book a Visit <span>→</span></a>
+
+      <button class="menu-btn" aria-label="Open navigation" aria-expanded="false" aria-controls="mobileDrawer">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <aside class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+    <div class="drawer-top">
+      <img src="assets/logo.png" alt="Seven Valleys International Preschool">
+      <button class="drawer-close" aria-label="Close navigation">×</button>
+    </div>
+    <nav aria-label="Mobile navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="academics.html">Academics</a>
+      <a href="day-care.html">Day Care</a>
+      <a href="faq.html">FAQs</a>
+      <a class="active" href="contact.html">Contact</a>
+    </nav>
+    <div class="drawer-card">
+      <strong>Come say hello! 🌈</strong>
+      <p>Book a friendly campus tour and meet our teachers.</p>
+      <a class="btn btn-secondary" href="#contact-form">Book a Visit</a>
+    </div>
+  </aside>
+  <div class="drawer-backdrop"></div>
+
+  <main>
+    <section class="contact-hero">
+      <div class="container contact-hero-inner">
+        <span class="eyebrow coral-text">Let's connect ✨</span>
+        <h1>We'd love to <em>hear from you.</em></h1>
+        <p>Have a question about admissions, preschool, day care or a campus visit? Send us a message and we'll be happy to help.</p>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+      <div class="container contact-layout">
+        <div class="contact-info">
+          <span class="eyebrow cyan-text">Get in touch</span>
+          <h2>Let's make the next step <em>easy.</em></h2>
+          <p>Reach out to our team for admissions enquiries, program information or to arrange a visit to Seven Valleys International Preschool.</p>
+
+          <div class="contact-info-grid">
+            <div class="contact-detail">
+              <div class="contact-detail-icon">📍</div>
+              <div>
+                <strong>Address</strong>
+                <span>Seven Valleys International Preschool<br>25, Balwant Nagar, Gwalior MP, India 474002</span>
+              </div>
+            </div>
+
+            <div class="contact-detail">
+              <div class="contact-detail-icon">📞</div>
+              <div>
+                <strong>Mobile</strong>
+                <a href="tel:+919993592493">+91 99935 92493</a>
+              </div>
+            </div>
+
+            <div class="contact-detail">
+              <div class="contact-detail-icon">✉️</div>
+              <div>
+                <strong>Email</strong>
+                <a href="mailto:hello@sevenvalleysinternational.com">hello@sevenvalleysinternational.com</a>
+              </div>
+            </div>
+
+            <div class="contact-detail">
+              <div class="contact-detail-icon">🕘</div>
+              <div>
+                <strong>Opening Hours</strong>
+                <span>Mon – Sat, 8:00 AM – 6:30 PM</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form-wrap" id="contact-form">
+          <span class="eyebrow light">Message us on WhatsApp</span>
+          <h2>Tell us how we can <em>help.</em></h2>
+          <p>Fill in the form and your enquiry will open directly in WhatsApp, ready to send to our team.</p>
+
+          <form class="contact-form" id="whatsappContactForm">
+            <div class="form-row">
+              <label>
+                <span>Name</span>
+                <input name="name" type="text" autocomplete="name" required placeholder="Your name">
+              </label>
+              <label>
+                <span>Mobile</span>
+                <input name="mobile" type="tel" autocomplete="tel" required placeholder="+91">
+              </label>
+            </div>
+
+            <label>
+              <span>Email <small>(optional)</small></span>
+              <input name="email" type="email" autocomplete="email" placeholder="you@example.com">
+            </label>
+
+            <label>
+              <span>Message</span>
+              <textarea name="message" rows="5" required placeholder="I'd like to know more about..."></textarea>
+            </label>
+
+            <button class="btn btn-accent" type="submit">Send on WhatsApp <span>↗</span></button>
+            <p class="form-status" id="formStatus" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="map-section">
+      <div class="container map-layout">
+        <div class="map-copy">
+          <span class="eyebrow purple-text">Come visit us 🌈</span>
+          <h2>Find us in <em>Gwalior.</em></h2>
+          <p>We're located at 25, Balwant Nagar, Gwalior MP, India 474002. Use the map to plan your route and come say hello.</p>
+          <a class="btn btn-secondary" href="https://www.google.com/maps/search/?api=1&query=Seven+Valleys+International+Preschool%2C+25+Balwant+Nagar%2C+Gwalior%2C+Madhya+Pradesh+474002" target="_blank" rel="noopener">Get Directions <span>↗</span></a>
+        </div>
+
+        <div class="map-card">
+          <iframe
+            title="Seven Valleys International Preschool location map"
+            src="https://www.google.com/maps?q=Seven%20Valleys%20International%20Preschool%2C%2025%20Balwant%20Nagar%2C%20Gwalior%2C%20Madhya%20Pradesh%20474002&output=embed"
+            loading="lazy"
+            allowfullscreen
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+          <div class="map-address">📍 25, Balwant Nagar, Gwalior MP, India 474002</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-premise" aria-hidden="true"></div>
+    <div class="container footer-main">
+      <div class="footer-brand">
+        <img src="assets/logo.png" alt="Seven Valleys International Preschool">
+        <p>A joyful place to learn, play, grow and belong.</p>
+        <div class="socials">
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path></svg></a>
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1"></circle></svg></a>
+          <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="4"></rect><path d="M10 9l5 3-5 3z" fill="#fff" stroke="none"></path></svg></a>
+        </div>
+      </div>
+
+      <div>
+        <h3>Explore</h3>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="academics.html">Academics</a>
+        <a href="day-care.html">Day Care</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <div>
+        <h3>Get in touch</h3>
+        <p>Mon – Sat, 8:00 AM – 6:30 PM</p>
+        <a href="tel:+919993592493">+91 99935 92493</a>
+        <a href="mailto:hello@sevenvalleysinternational.com">hello@sevenvalleysinternational.com</a>
+      </div>
+
+      <div>
+        <h3>Find us</h3>
+        <p>Seven Valleys International Preschool<br>25, Balwant Nagar<br>Gwalior MP, India 474002</p>
+        <a class="direction-link" href="https://www.google.com/maps/search/?api=1&query=Seven+Valleys+International+Preschool%2C+25+Balwant+Nagar%2C+Gwalior%2C+Madhya+Pradesh+474002" target="_blank" rel="noopener">Get Directions ↗</a>
+      </div>
+    </div>
+
+    <div class="copyright">
+      <div class="container">
+        <span>© 2026 Seven Valleys International Preschool. All rights reserved.</span>
+        <span>Made for little dreamers ✦</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile navigation
+    const menuBtn = document.querySelector(".menu-btn");
+    const drawer = document.getElementById("mobileDrawer");
+    const drawerClose = document.querySelector(".drawer-close");
+    const backdrop = document.querySelector(".drawer-backdrop");
+
+    function closeDrawer() {
+      drawer.classList.remove("open");
+      backdrop.classList.remove("open");
+      drawer.setAttribute("aria-hidden", "true");
+      menuBtn.setAttribute("aria-expanded", "false");
+    }
+
+    menuBtn?.addEventListener("click", () => {
+      drawer.classList.add("open");
+      backdrop.classList.add("open");
+      drawer.setAttribute("aria-hidden", "false");
+      menuBtn.setAttribute("aria-expanded", "true");
+    });
+
+    drawerClose?.addEventListener("click", closeDrawer);
+    backdrop?.addEventListener("click", closeDrawer);
+    drawer?.querySelectorAll("a").forEach(link => link.addEventListener("click", closeDrawer));
+
+    // WhatsApp form
+    const whatsappForm = document.getElementById("whatsappContactForm");
+    const formStatus = document.getElementById("formStatus");
+
+    whatsappForm?.addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      const data = new FormData(whatsappForm);
+      const name = data.get("name").trim();
+      const mobile = data.get("mobile").trim();
+      const email = data.get("email").trim();
+      const message = data.get("message").trim();
+
+      const whatsappNumber = "919993592493";
+      const whatsappMessage =
+        "New Website Enquiry%0A%0A" +
+        "Name: " + encodeURIComponent(name) + "%0A" +
+        "Mobile: " + encodeURIComponent(mobile) + "%0A" +
+        "Email: " + encodeURIComponent(email || "Not provided") + "%0A" +
+        "Message: " + encodeURIComponent(message);
+
+      formStatus.textContent = "Opening WhatsApp…";
+      window.open("https://wa.me/" + whatsappNumber + "?text=" + whatsappMessage, "_blank", "noopener");
+
+      whatsappForm.reset();
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,480 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About Us | Seven Valleys International Preschool</title>
+  <meta name="description" content="Discover Seven Valleys International Preschool — our story, philosophy, values and commitment to joyful early childhood learning.">
+  <meta name="theme-color" content="#12C7D9">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    .about-hero{
+      position:relative;min-height:560px;display:flex;align-items:center;overflow:hidden;
+      background:
+        linear-gradient(90deg,rgba(36,52,77,.88),rgba(36,52,77,.48) 55%,rgba(36,52,77,.12)),
+        url('assets/feel-home.png') center/cover no-repeat;
+    }
+    .about-hero-content{position:relative;z-index:2;color:#fff;padding:95px 0 115px}
+    .about-hero h1{
+      font-family:"Baloo 2",cursive;font-size:clamp(48px,6vw,78px);line-height:.95;
+      letter-spacing:-.03em;max-width:780px;margin:14px 0 22px
+    }
+    .about-hero h1 em{font-style:normal;color:var(--secondary)}
+    .about-hero p{font-size:18px;max-width:650px;color:rgba(255,255,255,.92);margin:0 0 28px}
+
+    .about-intro{padding:105px 0 90px;background:#fff}
+    .about-intro-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:75px;align-items:center}
+    .about-intro h2,.about-section h2{
+      font-family:"Baloo 2";font-size:clamp(42px,4.2vw,62px);line-height:1.02;
+      letter-spacing:-.03em;margin:10px 0 20px
+    }
+    .about-intro h2 em,.about-section h2 em{font-style:normal;color:var(--secondary)}
+    .about-intro .lead{font-size:19px;color:var(--text);font-weight:700}
+    .about-intro p,.about-section p{color:#65748a}
+
+    .about-photo-card{
+      position:relative;border-radius:32px;overflow:hidden;background:var(--pinkbg);
+      box-shadow:var(--shadow);padding:14px;transform:rotate(2deg)
+    }
+    .about-photo-card img{
+      width:100%;height:440px;object-fit:cover;display:block;border-radius:24px
+    }
+    .about-photo-badge{
+      position:absolute;left:28px;bottom:28px;background:#fff;border-radius:20px;
+      padding:17px 21px;box-shadow:0 12px 30px rgba(36,52,77,.15)
+    }
+    .about-photo-badge strong{font-family:"Baloo 2";font-size:23px;display:block;color:var(--purple)}
+    .about-photo-badge span{font-size:12px;color:#69798d;font-weight:700}
+
+    .about-section{padding:105px 0}
+    .about-section.section--bg{background:var(--bg)}
+    .about-section.section--pink{background:var(--pinkbg)}
+
+    .section-head{margin-bottom:42px}
+    .section-head.center{text-align:center}
+    .section-head h2{margin-top:9px}
+    .eyebrow-mark{
+      display:flex;align-items:center;gap:8px;font-family:"Baloo 2";font-weight:700;
+      color:var(--primary);font-size:17px
+    }
+    .eyebrow-mark svg{width:17px;height:17px;flex:0 0 auto}
+
+    .story-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:60px;align-items:center}
+    .story-art{
+      background:#fff;border-radius:30px;padding:18px;box-shadow:var(--shadow)
+    }
+    .story-art img{width:100%;height:420px;object-fit:cover;border-radius:22px;display:block}
+    .story-copy p{margin-bottom:18px}
+    .story-highlight{
+      display:grid;grid-template-columns:repeat(2,1fr);gap:13px;margin-top:25px
+    }
+    .highlight{
+      background:#fff;border-radius:20px;padding:20px;border:1px solid #edf0f4
+    }
+    .highlight strong{font-family:"Baloo 2";font-size:21px;color:var(--purple);display:block}
+    .highlight span{font-size:12px;color:#69798d}
+
+    .values-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+    .value-card{
+      background:#fff;border-radius:24px;padding:30px 22px;min-height:230px;
+      border:1px solid #e9edf3;box-shadow:0 7px 22px rgba(36,52,77,.05);
+      transition:.25s transform,.25s box-shadow
+    }
+    .value-card:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+    .value-icon{
+      width:58px;height:58px;border-radius:17px;display:grid;place-items:center;
+      margin-bottom:18px
+    }
+    .value-icon svg{width:28px;height:28px}
+    .value-icon.teal{background:#E9FBFD;color:var(--primary)}
+    .value-icon.pink{background:#FFF1F8;color:var(--secondary)}
+    .value-icon.gold{background:#FFFBEA;color:#d49b00}
+    .value-icon.purple{background:#F2EEFF;color:var(--purple)}
+    .value-card h3{font-family:"Baloo 2";font-size:24px;line-height:1.05;margin:0 0 9px}
+    .value-card p{font-size:13px;margin:0}
+
+    .promise-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    .promise{
+      background:#fff;border-radius:25px;padding:28px 30px;border:1px solid #e9edf3;
+      box-shadow:0 7px 22px rgba(36,52,77,.05)
+    }
+    .promise h3{font-family:"Baloo 2";font-size:25px;margin:0 0 8px;color:var(--purple)}
+    .promise p{font-size:14px;margin:0}
+    .promise-number{
+      font-family:"Baloo 2";font-size:15px;color:var(--secondary);font-weight:800;margin-bottom:7px
+    }
+
+    .about-gallery{
+      display:grid;grid-template-columns:1.15fr .85fr .85fr;grid-template-rows:210px 210px;
+      gap:14px
+    }
+    .about-gallery a{display:block;overflow:hidden;border-radius:24px;background:var(--bg)}
+    .about-gallery a:first-child{grid-row:1 / 3}
+    .about-gallery img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s ease}
+    .about-gallery a:hover img{transform:scale(1.06)}
+
+    .about-cta{
+      position:relative;overflow:hidden;padding:90px 0;background:var(--primary);color:#fff;text-align:center
+    }
+    .about-cta:before,.about-cta:after{
+      content:"";position:absolute;border-radius:50%;background:rgba(255,255,255,.08)
+    }
+    .about-cta:before{width:260px;height:260px;left:-90px;top:-100px}
+    .about-cta:after{width:330px;height:330px;right:-130px;bottom:-160px}
+    .about-cta-inner{position:relative;z-index:1}
+    .about-cta h2{font-family:"Baloo 2";font-size:clamp(40px,4.5vw,60px);line-height:1;margin:0 0 15px}
+    .about-cta p{max-width:650px;margin:0 auto 28px;color:rgba(255,255,255,.85)}
+
+    .footer-premise{
+      height:93px;background:url(assets/border-bottom.png?auto=format&fit=crop&w=1800&q=80) center/cover;
+      background-color:var(--primary)!important
+    }
+
+    @media(max-width:1000px){
+      .about-intro-grid,.story-grid{grid-template-columns:1fr;gap:40px}
+      .values-grid{grid-template-columns:repeat(2,1fr)}
+      .about-photo-card{max-width:650px;margin:auto}
+    }
+    @media(max-width:900px){
+      .about-hero{min-height:500px}
+      .about-hero-content{padding:80px 0 100px}
+      .about-section{padding:80px 0}
+      .about-gallery{grid-template-columns:1fr 1fr;grid-template-rows:250px 180px}
+      .about-gallery a:first-child{grid-row:auto;grid-column:1 / 3}
+    }
+    @media(max-width:620px){
+      .about-hero{min-height:570px}
+      .about-hero h1{font-size:50px}
+      .about-hero p{font-size:15px}
+      .about-intro{padding:70px 0}
+      .about-section{padding:65px 0}
+      .values-grid,.promise-grid{grid-template-columns:1fr}
+      .value-card{min-height:auto}
+      .story-highlight{grid-template-columns:1fr 1fr}
+      .about-photo-card img{height:330px}
+      .about-gallery{grid-template-columns:1fr 1fr;grid-template-rows:190px 150px 150px}
+      .about-gallery a:first-child{grid-column:1 / 3}
+    }
+  </style>
+</head>
+
+<body>
+  <div class="announcement">
+    <div class="container announcement-inner">
+      <span class="announcement-badge">✨ Admissions Open</span>
+      <span>Now enrolling for the new academic year — schedule a school visit today.</span>
+      <a href="#contact">Enquire now <span>→</span></a>
+    </div>
+  </div>
+
+  <header class="site-header" id="top">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html" aria-label="Seven Valleys International Preschool home">
+        <img src="assets/logo.png" alt="Seven Valleys International Preschool logo">
+      </a>
+
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a class="active" href="about.html">About</a>
+        <a href="academics.html">Academics</a>
+        <a href="day-care.html">Day Care</a>
+        <!-- <a href="#activities">Activities</a> -->
+        <a href="faq.html">FAQs</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <a class="btn btn-primary nav-cta" href="contact.html">Book a Visit <span>→</span></a>
+
+      <button class="menu-btn" aria-label="Open navigation" aria-expanded="false" aria-controls="mobileDrawer">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <aside class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+    <div class="drawer-top">
+      <img src="assets/logo.png" alt="Seven Valleys International Preschool">
+      <button class="drawer-close" aria-label="Close navigation">×</button>
+    </div>
+    <nav aria-label="Mobile navigation">
+      <a href="index.html">Home</a>
+      <a class="active" href="about.html">About</a>
+      <a href="academics.html">Academics</a>
+      <a href="day-care.html">Day Care</a>
+      <!-- <a href="#activities">Activities</a> -->
+      <a href="faq.html">FAQs</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="drawer-card">
+      <strong>Come say hello! 🌈</strong>
+      <p>Book a friendly campus tour and meet our teachers.</p>
+      <a class="btn btn-secondary" href="index.html#contact">Book a Visit</a>
+    </div>
+  </aside>
+  <div class="drawer-backdrop"></div>
+
+  <main>
+    <!-- HERO -->
+    <section class="about-hero" aria-label="About Seven Valleys">
+      <div class="container about-hero-content">
+        <span class="eyebrow light">⭐ About Seven Valleys</span>
+        <h1>A little place with a <em>big heart.</em></h1>
+        <p>Seven Valleys International Preschool is a joyful early learning space where children feel safe, curious and confident enough to discover the world around them.</p>
+        <div class="hero-actions">
+          <a class="btn btn-accent" href="#our-story">Our Story <span>→</span></a>
+          <a class="text-link light-link" href="index.html#contact">Meet us <span>↗</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTRO -->
+    <section class="about-intro" id="our-story">
+      <div class="container about-intro-grid">
+        <div>
+          <span class="eyebrow coral-text">⭐ Who we are</span>
+          <h2>Growing <em>happy</em> minds, one day at a time.</h2>
+          <p class="lead">We believe the early years should be filled with wonder, warmth, play and meaningful discovery.</p>
+          <p>At Seven Valleys, children are encouraged to ask questions, try new things, make friends and express themselves. Our classrooms are designed to feel welcoming and purposeful, giving every child space to learn at their own pace.</p>
+          <p>From the first hello in the morning to stories, creative activities, outdoor play and quiet moments, we create experiences that nurture the whole child — socially, emotionally, physically and academically.</p>
+        </div>
+
+        <div class="about-photo-card">
+          <img src="assets/learning.png" alt="Children learning through a hands-on activity">
+          <div class="about-photo-badge">
+            <strong>Learn. Play. Grow.</strong>
+            <span>A joyful beginning to lifelong learning</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STORY -->
+    <section class="about-section section--bg">
+      <div class="container story-grid">
+        <div class="story-art">
+          <img src="assets/seven-valleys-student1.png" alt="Child exploring a creative learning activity">
+        </div>
+        <div class="story-copy">
+          <span class="eyebrow-mark">
+            <svg viewBox="0 0 24 24" fill="#FFC928"><path d="M12 2l2.6 6.6L22 10l-5.4 4.6L18 22l-6-3.6L6 22l1.4-7.4L2 10l7.4-1.4L12 2z"/></svg>
+            Our philosophy
+          </span>
+          <h2>Childhood is not a <em>race.</em></h2>
+          <p>Every child is wonderfully different. Some children talk first, some build first, some observe quietly and some want to explore everything at once.</p>
+          <p>Our role is not to rush them. It is to create the right environment, offer thoughtful guidance and celebrate each little milestone along the way.</p>
+          <p>We combine play-based learning with purposeful routines so children develop strong foundations while keeping their natural curiosity alive.</p>
+
+          <div class="story-highlight">
+            <div class="highlight"><strong>Warm &amp; caring</strong><span>Children feel known, heard and supported.</span></div>
+            <div class="highlight"><strong>Purposeful play</strong><span>Every experience has a reason behind it.</span></div>
+            <div class="highlight"><strong>Growing together</strong><span>Families and teachers work as a team.</span></div>
+            <div class="highlight"><strong>Little victories</strong><span>We notice and celebrate progress.</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VALUES -->
+    <section class="about-section section--pink" id="values">
+      <div class="container">
+        <div class="section-head center">
+          <span class="eyebrow-mark" style="justify-content:center">
+            <svg viewBox="0 0 24 24" fill="#FFC928"><path d="M12 2l2.6 6.6L22 10l-5.4 4.6L18 22l-6-3.6L6 22l1.4-7.4L2 10l7.4-1.4L12 2z"/></svg>
+            What guides us
+          </span>
+          <h2>The values behind <em>everything</em> we do</h2>
+        </div>
+
+        <div class="values-grid">
+          <article class="value-card">
+            <div class="value-icon teal">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20 11.5A8.4 8.4 0 0112 20a8.4 8.4 0 01-8-8.5A8.4 8.4 0 0112 3a8.4 8.4 0 018 8.5z"/><path d="M8 12l2.5 2.5L16 9"/></svg>
+            </div>
+            <h3>Kindness</h3>
+            <p>We teach children to care, listen, share and treat others with respect.</p>
+          </article>
+
+          <article class="value-card">
+            <div class="value-icon pink">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M8 12h8M12 8v8"/></svg>
+            </div>
+            <h3>Curiosity</h3>
+            <p>Questions are welcomed and everyday moments become opportunities to discover.</p>
+          </article>
+
+          <article class="value-card">
+            <div class="value-icon gold">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3l2.4 5 5.6.8-4 3.9.9 5.5-4.9-2.6-4.9 2.6.9-5.5-4-3.9 5.6-.8z"/></svg>
+            </div>
+            <h3>Confidence</h3>
+            <p>We give children small, meaningful chances to choose, try, lead and succeed.</p>
+          </article>
+
+          <article class="value-card">
+            <div class="value-icon purple">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 19V5M4 5h11l-2 3 2 3H4"/><path d="M20 19V9h-7"/></svg>
+            </div>
+            <h3>Belonging</h3>
+            <p>We build a community where every child and family feels welcome and valued.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- OUR PROMISE -->
+    <section class="about-section section--bg">
+      <div class="container">
+        <div class="section-head center">
+          <span class="eyebrow-mark" style="justify-content:center">
+            <svg viewBox="0 0 24 24" fill="#FFC928"><path d="M12 2l2.6 6.6L22 10l-5.4 4.6L18 22l-6-3.6L6 22l1.4-7.4L2 10l7.4-1.4L12 2z"/></svg>
+            Our promise
+          </span>
+          <h2>What families can <em>expect</em></h2>
+        </div>
+
+        <div class="promise-grid">
+          <div class="promise">
+            <div class="promise-number">01 — A SAFE START</div>
+            <h3>A warm welcome every day</h3>
+            <p>We create calm, caring routines that help children feel secure, settled and ready to participate.</p>
+          </div>
+          <div class="promise">
+            <div class="promise-number">02 — MEANINGFUL LEARNING</div>
+            <h3>Learning with purpose</h3>
+            <p>Activities are thoughtfully planned to develop language, numeracy, creativity, movement and social-emotional skills.</p>
+          </div>
+          <div class="promise">
+            <div class="promise-number">03 — INDIVIDUAL GROWTH</div>
+            <h3>Every child is seen</h3>
+            <p>We observe each child's interests and progress so experiences can be adapted to support their next little step.</p>
+          </div>
+          <div class="promise">
+            <div class="promise-number">04 — FAMILY PARTNERSHIP</div>
+            <h3>Parents are part of the journey</h3>
+            <p>Open communication helps home and school work together to make the early years happy, consistent and enriching.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="about-section section--pink">
+      <div class="container">
+        <div class="section-head center">
+          <span class="eyebrow-mark" style="justify-content:center">
+            <svg viewBox="0 0 24 24" fill="#FFC928"><path d="M12 2l2.6 6.6L22 10l-5.4 4.6L18 22l-6-3.6L6 22l1.4-7.4L2 10l7.4-1.4L12 2z"/></svg>
+            A glimpse of Seven Valleys
+          </span>
+          <h2>Little moments. <em>Big memories.</em></h2>
+        </div>
+
+        <div class="about-gallery">
+          <a href="#" aria-label="Children at Seven Valleys">
+            <img src="assets/mothers-lap.png" alt="Children enjoying a playful learning experience">
+          </a>
+          <a href="#" aria-label="Creative activity">
+            <img src="assets/kids-painted.png" alt="Children taking part in a creative activity">
+          </a>
+          <a href="#" aria-label="Learning activity">
+            <img src="assets/learn-numbers.png" alt="Children learning numbers">
+          </a>
+          <a href="#" aria-label="Pretend play">
+            <img src="assets/playroom-doctors.jpg" alt="Children learning through pretend play">
+          </a>
+          <a href="#" aria-label="Outdoor activity">
+            <img src="assets/sports.png" alt="Children participating in an activity">
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="about-cta" id="contact">
+      <div class="container about-cta-inner">
+        <h2>Come see where little minds grow. 🌈</h2>
+        <p>Visit Seven Valleys, meet our teachers and experience the warmth of our learning environment for yourself.</p>
+        <a class="btn btn-accent" href="index.html#contact">Book a School Visit <span>→</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-premise" aria-hidden="true"></div>
+    <div class="container footer-main">
+      <div class="footer-brand">
+        <img src="assets/logo.png" alt="Seven Valleys International Preschool">
+        <p>A joyful place to learn, play, grow and belong.</p>
+        <div class="socials">
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path></svg></a>
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1"></circle></svg></a>
+          <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="4"></rect><path d="M10 9l5 3-5 3z" fill="#fff" stroke="none"></path></svg></a>
+        </div>
+      </div>
+
+      <div>
+        <h3>Explore</h3>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="academics.html">Academics</a>
+        <a href="day-care.html">Day Care</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <div>
+        <h3>Get in touch</h3>
+        <p>Mon – Sat, 8:00 AM – 6:30 PM</p>
+        <a href="tel:+919993592493">+91 99935 92493</a>
+        <a href="mailto:hello@sevenvalleysinternational.com">hello@sevenvalleysinternational.com</a>
+      </div>
+
+      <div>
+        <h3>Find us</h3>
+        <p>Seven Valleys International Preschool<br>25, Balwant Nagar<br>Gwalior MP, India 474002</p>
+        <a class="direction-link" href="https://www.google.com/maps" target="_blank" rel="noopener">Get Directions ↗</a>
+      </div>
+    </div>
+
+    <div class="copyright">
+      <div class="container">
+        <span>© 2026 Seven Valleys International Preschool. All rights reserved.</span>
+        <span>Made for little dreamers ✦</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const menuBtn = document.querySelector('.menu-btn');
+      const drawer = document.querySelector('.mobile-drawer');
+      const backdrop = document.querySelector('.drawer-backdrop');
+      const closeBtn = document.querySelector('.drawer-close');
+
+      function closeDrawer() {
+        if (!drawer) return;
+        drawer.classList.remove('open');
+        backdrop && backdrop.classList.remove('open');
+        drawer.setAttribute('aria-hidden', 'true');
+        menuBtn && menuBtn.setAttribute('aria-expanded', 'false');
+      }
+
+      if (menuBtn && drawer) {
+        menuBtn.addEventListener('click', () => {
+          drawer.classList.add('open');
+          backdrop && backdrop.classList.add('open');
+          drawer.setAttribute('aria-hidden', 'false');
+          menuBtn.setAttribute('aria-expanded', 'true');
+        });
+      }
+
+      closeBtn && closeBtn.addEventListener('click', closeDrawer);
+      backdrop && backdrop.addEventListener('click', closeDrawer);
+      drawer && drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', closeDrawer));
+    });
+  </script>
+</body>
+</html>

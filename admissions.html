@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Admissions | Seven Valleys International Preschool</title>
+<meta name="description" content="Admissions at Seven Valleys International Preschool. Explore programmes, fees, documents and the simple admission process.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+
+<style>
+/* Admissions page — playful layered treatment using the existing Seven Valleys palette */
+:root{
+  --ad-cyan:#12C7D9; --ad-pink:#F01883; --ad-yellow:#FFC928;
+  --ad-purple:#6530A5; --ad-coral:#FF565A; --ad-ink:#24344D;
+  --ad-bg:#F5FBFD; --ad-pinkbg:#FFF1F8;
+}
+body{background:#fff}
+.admissions-page{overflow:hidden}
+.ad-hero{
+  position:relative; min-height:500px; display:grid; place-items:center;
+  background:
+    radial-gradient(circle at 9% 18%,rgba(255,201,40,.32) 0 55px,transparent 56px),
+    radial-gradient(circle at 91% 26%,rgba(240,24,131,.10) 0 105px,transparent 106px),
+    radial-gradient(circle at 76% 86%,rgba(18,199,217,.13) 0 150px,transparent 151px),
+    linear-gradient(135deg,#F5FBFD 0%,#fff 52%,#FFF1F8 100%);
+}
+.ad-hero:before,.ad-hero:after{
+  content:"";position:absolute;border-radius:50%;border:2px dashed rgba(101,48,165,.18);
+}
+.ad-hero:before{width:260px;height:260px;left:-110px;top:90px}
+.ad-hero:after{width:150px;height:150px;right:-60px;bottom:35px}
+.ad-hero-content{position:relative;z-index:2;text-align:center;max-width:850px;padding:80px 20px}
+.ad-kicker{
+  display:inline-flex;align-items:center;gap:8px;padding:8px 15px;border-radius:999px;
+  background:#fff;box-shadow:0 8px 24px rgba(36,52,77,.08);
+  color:var(--ad-purple);font-weight:800;font-size:13px;
+}
+.ad-hero h1{font-family:"Baloo 2";font-size:clamp(52px,7vw,82px);line-height:.95;margin:18px 0 14px;color:var(--ad-ink)}
+.ad-hero h1 em{font-style:normal;color:var(--ad-pink)}
+.ad-hero p{font-size:18px;color:#68788f;max-width:620px;margin:0 auto 25px}
+.ad-hero-actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+
+/* decorative paper-plane trail */
+.plane-trail{position:absolute;left:7%;top:55%;width:300px;height:110px;transform:rotate(-9deg);opacity:.85}
+.plane-trail svg{width:100%;height:100%;overflow:visible}
+.plane{position:absolute;right:0;top:3px;font-size:36px;transform:rotate(-12deg);filter:drop-shadow(0 5px 5px rgba(36,52,77,.12))}
+.sparkles{position:absolute;color:var(--ad-yellow);font-size:22px}
+.s1{left:16%;top:21%}.s2{right:16%;top:16%;color:var(--ad-pink)}.s3{right:27%;bottom:15%;color:var(--ad-cyan)}
+
+.ad-section{position:relative;padding:95px 0;isolation:isolate}
+.ad-section.alt{background:var(--ad-bg)}
+.ad-section.pink{background:var(--ad-pinkbg)}
+.ad-section:before{
+  content:"";position:absolute;inset:0;z-index:-2;opacity:.48;
+  background-image:radial-gradient(rgba(101,48,165,.10) 1.2px,transparent 1.2px);
+  background-size:22px 22px;
+  mask-image:linear-gradient(to bottom,transparent,black 16%,black 84%,transparent);
+}
+.ad-heading{text-align:center;max-width:760px;margin:0 auto 52px}
+.ad-heading .mini{font-family:"Baloo 2";font-weight:700;color:var(--ad-pink);font-size:18px}
+.ad-heading h2{font-family:"Baloo 2";font-size:clamp(42px,5vw,62px);line-height:1;margin:8px 0 13px;color:var(--ad-ink)}
+.ad-heading h2 em{font-style:normal;color:var(--primary)}
+.ad-heading p{color:#718095;margin:0}
+
+/* little festive sticks */
+.corner-sticks{position:absolute;pointer-events:none}
+.corner-sticks span{display:block;width:9px;height:54px;border-radius:10px;position:absolute}
+.corner-sticks span:nth-child(1){background:var(--ad-pink);transform:rotate(28deg)}
+.corner-sticks span:nth-child(2){background:var(--ad-cyan);transform:rotate(48deg);left:25px;top:3px}
+.corner-sticks span:nth-child(3){background:var(--ad-yellow);transform:rotate(68deg);left:48px;top:12px}
+.sticks-tl{left:2%;top:30px}.sticks-br{right:2%;bottom:35px;transform:rotate(180deg)}
+
+/* process */
+.process-grid{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.process-grid:before{
+  content:"";position:absolute;left:10%;right:10%;top:68px;border-top:3px dashed rgba(101,48,165,.18);z-index:-1;
+}
+.process-card{
+  position:relative;background:#fff;border-radius:28px;padding:30px 25px 27px;
+  min-height:250px;box-shadow:0 15px 40px rgba(36,52,77,.08);
+  border:1px solid rgba(36,52,77,.05);transition:.25s transform,.25s box-shadow;
+}
+.process-card:hover{transform:translateY(-8px) rotate(-.6deg);box-shadow:0 22px 50px rgba(36,52,77,.13)}
+.process-card:nth-child(2){margin-top:28px}.process-card:nth-child(3){margin-top:8px}.process-card:nth-child(4){margin-top:36px}
+.process-no{
+  width:76px;height:76px;border-radius:50%;display:grid;place-items:center;
+  font-family:"Baloo 2";font-size:29px;color:#fff;border:7px solid #fff;
+  box-shadow:0 9px 20px rgba(36,52,77,.12);margin:-57px auto 18px;
+}
+.process-card:nth-child(1) .process-no{background:var(--ad-coral)}
+.process-card:nth-child(2) .process-no{background:var(--ad-cyan)}
+.process-card:nth-child(3) .process-no{background:var(--ad-purple)}
+.process-card:nth-child(4) .process-no{background:var(--ad-pink)}
+.process-icon{text-align:center;font-size:29px;margin-bottom:7px}
+.process-card h3{font-family:"Baloo 2";font-size:25px;text-align:center;margin:0 0 7px;color:var(--ad-ink)}
+.process-card p{text-align:center;font-size:13px;color:#728096;margin:0}
+
+/* programmes */
+.table-wrap{background:#fff;border-radius:30px;padding:12px;box-shadow:0 18px 50px rgba(36,52,77,.09);overflow:auto}
+.program-table{width:100%;border-collapse:separate;border-spacing:0;min-width:760px;overflow:hidden}
+.program-table th{background:var(--ad-purple);color:#fff;text-align:left;padding:17px 20px;font-family:"Baloo 2";font-size:16px}
+.program-table th:first-child{border-radius:18px 0 0 0}.program-table th:last-child{border-radius:0 18px 0 0}
+.program-table td{padding:18px 20px;border-bottom:1px solid #edf0f5;font-size:14px}
+.program-table tr:last-child td{border-bottom:0}
+.program-table tbody tr:nth-child(even){background:#FFF8FC}
+.program-table tbody tr:hover{background:#F1FCFD}
+.program-name{font-family:"Baloo 2";font-size:20px;font-weight:700;color:var(--ad-ink)}
+.age-pill{display:inline-block;background:#E9FBFD;color:#078C9A;border-radius:999px;padding:5px 11px;font-size:12px;font-weight:800}
+.full-day{color:var(--ad-pink);font-weight:800}
+
+/* documents */
+.documents-layout{display:grid;grid-template-columns:.75fr 1.25fr;gap:60px;align-items:center}
+.doc-art{
+  min-height:380px;border-radius:42px;position:relative;overflow:hidden;
+  background:linear-gradient(145deg,#DDF9FC,#FFF1F8);box-shadow:0 18px 45px rgba(36,52,77,.09);
+}
+.doc-paper{
+  position:absolute;left:50%;top:50%;transform:translate(-50%,-50%) rotate(-4deg);
+  width:min(280px,72%);padding:28px 25px;background:#fff;border-radius:20px;
+  box-shadow:0 18px 35px rgba(36,52,77,.13)
+}
+.doc-paper h3{font-family:"Baloo 2";font-size:27px;margin:0 0 15px;color:var(--ad-purple)}
+.doc-line{height:9px;background:#edf1f6;border-radius:20px;margin:9px 0}.doc-line.short{width:62%}
+.doc-star{position:absolute;font-size:28px}.doc-star.a{left:12%;top:18%;color:var(--ad-yellow)}.doc-star.b{right:12%;top:23%;color:var(--ad-pink)}.doc-star.c{right:14%;bottom:17%;color:var(--ad-cyan)}
+.doc-list{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.doc-item{
+  background:#fff;border-radius:19px;padding:17px 17px 17px 48px;position:relative;
+  box-shadow:0 8px 22px rgba(36,52,77,.06);font-size:14px;font-weight:800
+}
+.doc-item:before{
+  content:"✓";position:absolute;left:15px;top:14px;width:25px;height:25px;border-radius:50%;
+  display:grid;place-items:center;background:#E8FBFD;color:#0799A6;font-weight:900
+}
+
+/* enquiry */
+.enquire-shell{position:relative;background:var(--ad-ink);border-radius:38px;padding:55px;display:grid;grid-template-columns:.85fr 1.15fr;gap:55px;box-shadow:0 24px 60px rgba(36,52,77,.17);overflow:hidden}
+.enquire-shell:before{content:"";position:absolute;width:320px;height:320px;border-radius:50%;background:rgba(18,199,217,.10);right:-90px;top:-120px}
+.enquire-copy{position:relative;color:#fff}.enquire-copy .mini{color:var(--ad-yellow);font-family:"Baloo 2";font-size:18px;font-weight:700}
+.enquire-copy h2{font-family:"Baloo 2";font-size:clamp(42px,4.5vw,58px);line-height:1;margin:8px 0 15px}.enquire-copy h2 em{font-style:normal;color:var(--ad-pink)}
+.enquire-copy p{color:#bac6d5}.whatsapp-bubble{display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.13);padding:11px 15px;border-radius:999px;font-size:13px;font-weight:800;margin-top:12px}
+.ad-form{position:relative;background:#fff;border-radius:26px;padding:26px}
+.ad-form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.ad-form label{display:block;font-size:12px;font-weight:800;color:var(--ad-ink)}
+.ad-form .full{grid-column:1/-1}
+.ad-form input,.ad-form select,.ad-form textarea{width:100%;border:1px solid #e7ebf1;border-radius:12px;padding:12px 13px;margin-top:6px;outline:0;background:#fbfcfe;color:var(--ad-ink)}
+.ad-form input:focus,.ad-form select:focus,.ad-form textarea:focus{border-color:var(--ad-cyan);box-shadow:0 0 0 3px rgba(18,199,217,.10)}
+.ad-form textarea{min-height:92px;resize:vertical}
+.ad-submit{width:100%;margin-top:14px;background:#25D366;color:#fff;padding:14px;border-radius:13px;font-weight:900;box-shadow:0 10px 24px rgba(37,211,102,.22)}
+.success-message{display:none;margin-top:12px;padding:12px;border-radius:12px;background:#EAFBF0;color:#16743A;font-size:13px;font-weight:800}
+.ad-note{text-align:center;font-size:10px;color:#8b98aa;margin:9px 0 0}
+
+/* responsive */
+@media(max-width:900px){
+ .process-grid{grid-template-columns:1fr 1fr}.process-grid:before{display:none}
+ .process-card:nth-child(n){margin-top:0}.documents-layout,.enquire-shell{grid-template-columns:1fr}.doc-art{min-height:330px}
+ .enquire-shell{padding:38px 28px}
+}
+@media(max-width:620px){
+ .ad-hero{min-height:560px}.plane-trail{left:-35px;top:70%;transform:scale(.7) rotate(-9deg)}
+ .ad-section{padding:72px 0}.process-grid,.doc-list,.ad-form-grid{grid-template-columns:1fr}
+ .program-table{min-width:680px}.table-wrap{padding:7px}
+ .enquire-shell{padding:30px 18px;border-radius:28px}.ad-form{padding:19px}
+ .corner-sticks{transform:scale(.7)}
+}
+.footer-premise{
+  height:93px;background:url(assets/border-bottom.png?auto=format&fit=crop&w=1800&q=80) center/cover;
+  background-color:var(--ad-pinkbg)!important
+}
+</style>
+</head>
+
+<body>
+<div class="announcement">
+  <div class="container announcement-inner">
+    <span class="announcement-badge">✨ Admissions Open</span>
+    <span>Now enrolling for the new academic year — schedule a school visit today.</span>
+    <a href="#enquire">Enquire now <span>→</span></a>
+  </div>
+</div>
+
+<header class="site-header" id="top">
+  <div class="container nav-wrap">
+    <a class="brand" href="index.html" aria-label="Seven Valleys International Preschool home">
+      <img src="assets/logo.png" alt="Seven Valleys International Preschool logo">
+    </a>
+    <nav class="desktop-nav" aria-label="Primary navigation">
+      <a class="active" href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="academics.html">Academics</a>
+      <a href="day-care.html">Day Care</a>
+      <!-- <a href="#activities">Activities</a> -->
+      <a href="faq.html">FAQs</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <a class="btn btn-primary nav-cta" href="#enquire">Book a Visit <span>→</span></a>
+    <button class="menu-btn" aria-label="Open navigation" aria-expanded="false" aria-controls="mobileDrawer"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<aside class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+  <div class="drawer-top">
+    <img src="assets/logo.png" alt="Seven Valleys International Preschool">
+    <button class="drawer-close" aria-label="Close navigation">×</button>
+  </div>
+  <nav>
+    <a class="active" href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="academics.html">Academics</a>
+    <a href="day-care.html">Day Care</a>
+    <!-- <a href="#activities">Activities</a> -->
+    <a href="faq.html">FAQs</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <div class="drawer-card"><strong>Admissions are open!</strong><p>Come meet our teachers and see the campus before you decide.</p><a class="btn btn-primary" href="contact.html">Enquire now →</a></div>
+</aside>
+<div class="drawer-backdrop"></div>
+
+<main class="admissions-page">
+<section class="ad-hero">
+  <div class="sparkles s1">✦</div><div class="sparkles s2">✦</div><div class="sparkles s3">✧</div>
+  <div class="plane-trail" aria-hidden="true">
+    <svg viewBox="0 0 300 110" fill="none">
+      <path d="M8 92 C62 24, 116 90, 168 43 S238 32, 270 13" stroke="#12C7D9" stroke-width="3" stroke-linecap="round" stroke-dasharray="8 10"/>
+      <path d="M13 89 C58 32, 112 83, 164 40" stroke="#F01883" stroke-width="2" stroke-linecap="round" stroke-dasharray="2 10" opacity=".55"/>
+    </svg>
+    <div class="plane">✈</div>
+  </div>
+  <div class="ad-hero-content container">
+    <div class="ad-kicker">🌈 A joyful beginning starts here</div>
+    <h1>Admissions at <em>Seven Valleys</em></h1>
+    <p>A happy start to your child's next big adventure — with playful learning, caring teachers and a place where little learners can belong.</p>
+    <div class="ad-hero-actions">
+      <a class="btn btn-secondary" href="#enquire">Start an Enquiry <span>→</span></a>
+      <a class="btn btn-accent" href="#process">See How It Works <span>↓</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="ad-section alt" id="process">
+  <div class="corner-sticks sticks-tl"><span></span><span></span><span></span></div>
+  <div class="container">
+    <div class="ad-heading">
+      <div class="mini">✦ Easy-peasy admission</div>
+      <h2>Four little steps to a <em>big beginning</em></h2>
+      <p>We've kept the journey simple, friendly and child-focused.</p>
+    </div>
+    <div class="process-grid">
+      <article class="process-card"><div class="process-no">01</div><div class="process-icon">✈️</div><h3>Book a campus tour</h3><p>Come see our spaces, meet the team and get a feel for everyday life at Seven Valleys.</p></article>
+      <article class="process-card"><div class="process-no">02</div><div class="process-icon">🌟</div><h3>Meet the teachers</h3><p>Have a relaxed conversation about your child, their interests and their learning journey.</p></article>
+      <article class="process-card"><div class="process-no">03</div><div class="process-icon">📋</div><h3>Submit the form &amp; documents</h3><p>Share the admission form and the required documents so we can complete the process.</p></article>
+      <article class="process-card"><div class="process-no">04</div><div class="process-icon">🎈</div><h3>Confirm your seat</h3><p>Once everything is in place, we'll guide you through the next steps and welcome you in.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="ad-section pink" id="programmes">
+  <div class="corner-sticks sticks-br"><span></span><span></span><span></span></div>
+  <div class="container">
+    <div class="ad-heading">
+      <div class="mini">🎨 Programmes &amp; fees</div>
+      <h2>Find the right <em>little-learning lane</em></h2>
+      <p>Programme timings and age groups at a glance.</p>
+    </div>
+    <div class="table-wrap">
+      <table class="program-table">
+        <thead><tr><th>Programme</th><th>Age</th><th>Timings</th><th>Days</th></tr></thead>
+        <tbody>
+          <tr><td><span class="program-name">Toddler Day Care</span></td><td><span class="age-pill">1.5–2.5 yrs</span></td><td>7:30 AM – 6:30 PM</td><td>Mon–Sat</td></tr>
+          <tr><td><span class="program-name">Playgroup</span></td><td><span class="age-pill">2.5–3.5 yrs</span></td><td>9:00 AM – 12:30 PM / <span class="full-day">Full day</span></td><td>Mon–Sat</td></tr>
+          <tr><td><span class="program-name">Nursery</span></td><td><span class="age-pill">3.5–4.5 yrs</span></td><td>9:00 AM – 1:00 PM / <span class="full-day">Full day</span></td><td>Mon–Sat</td></tr>
+          <tr><td><span class="program-name">LKG</span></td><td><span class="age-pill">4.5–5.5 yrs</span></td><td>9:00 AM – 1:30 PM / <span class="full-day">Full day</span></td><td>Mon–Sat</td></tr>
+          <tr><td><span class="program-name">UKG</span></td><td><span class="age-pill">5.5–6.5 yrs</span></td><td>9:00 AM – 1:30 PM / <span class="full-day">Full day</span></td><td>Mon–Sat</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="ad-section alt" id="documents">
+  <div class="container">
+    <div class="ad-heading">
+      <div class="mini">📄 Keep it simple</div>
+      <h2>Documents for a <em>smooth start</em></h2>
+      <p>Have these ready when you submit the admission form.</p>
+    </div>
+    <div class="documents-layout">
+      <div class="doc-art" aria-hidden="true">
+        <div class="doc-star a">✦</div><div class="doc-star b">✦</div><div class="doc-star c">✧</div>
+        <div class="doc-paper"><h3>Admission checklist</h3><div class="doc-line"></div><div class="doc-line"></div><div class="doc-line short"></div><div class="doc-line"></div><div class="doc-line short"></div></div>
+      </div>
+      <div class="doc-list">
+        <div class="doc-item">Child's birth certificate (copy)</div>
+        <div class="doc-item">4 passport-size photographs</div>
+        <div class="doc-item">Address proof (any one)</div>
+        <div class="doc-item">Immunisation record</div>
+        <div class="doc-item">Parents' ID proof (copy)</div>
+        <div class="doc-item">Emergency contact details</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="ad-section pink" id="enquire">
+  <div class="container">
+    <div class="enquire-shell">
+      <div class="enquire-copy">
+        <div class="mini">💬 Let's talk</div>
+        <h2>Ready to make a <em>happy start?</em></h2>
+        <p>Send us a few details and your enquiry will open directly in WhatsApp. Our team can help you with the next step.</p>
+        <div class="whatsapp-bubble">🟢 Quick enquiry via WhatsApp</div>
+      </div>
+      <form class="ad-form" id="admissionForm">
+        <div class="ad-form-grid">
+          <label>Parent name *<input name="parent" required placeholder="Your name"></label>
+          <label>Child's age *<input name="age" required placeholder="e.g. 3 years"></label>
+          <label>Mobile number *<input name="mobile" required type="tel" placeholder="Your mobile number"></label>
+          <label>Email <input name="email" type="email" placeholder="Optional"></label>
+          <label class="full">Interested programme
+            <select name="programme">
+              <option value="">Please select</option><option>Toddler Day Care</option><option>Playgroup</option><option>Nursery</option><option>LKG</option><option>UKG</option>
+            </select>
+          </label>
+          <label class="full">Message <textarea name="message" placeholder="Tell us anything you'd like to know..."></textarea></label>
+        </div>
+        <button class="ad-submit" type="submit">Send via WhatsApp&nbsp; →</button>
+        <div class="success-message" id="successMessage">Your enquiry is ready — WhatsApp is opening now. 💚</div>
+        <p class="ad-note">Your message is prepared for WhatsApp; you can review it before sending.</p>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="footer-premise"></div>
+  <div class="container footer-main">
+    <div class="footer-brand"><img src="assets/logo.png" alt="Seven Valleys International Preschool"><p>A joyful place to learn, play, grow and belong.</p></div>
+    <div><h3>Explore</h3>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="academics.html">Academics</a>
+      <a href="day-care.html">Day Care</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div><h3>Programmes</h3><p>Toddler Day Care</p><p>Playgroup</p><p>Nursery</p><p>LKG &amp; UKG</p></div>
+    <div><h3>Contact</h3><p>Seven Valleys International Preschool</p><p>📞 +91 99999 99999</p><a class="direction-link" href="#enquire">Enquire via WhatsApp →</a></div>
+  </div>
+  <div class="copyright"><div class="container"><span>© Seven Valleys International Preschool</span><span>Admissions page</span></div></div>
+</footer>
+
+<script>
+const menuBtn=document.querySelector('.menu-btn');
+const drawer=document.getElementById('mobileDrawer');
+const backdrop=document.querySelector('.drawer-backdrop');
+const closeBtn=document.querySelector('.drawer-close');
+function closeDrawer(){drawer.classList.remove('open');backdrop.classList.remove('open');drawer.setAttribute('aria-hidden','true');menuBtn.setAttribute('aria-expanded','false')}
+menuBtn?.addEventListener('click',()=>{drawer.classList.add('open');backdrop.classList.add('open');drawer.setAttribute('aria-hidden','false');menuBtn.setAttribute('aria-expanded','true')});
+closeBtn?.addEventListener('click',closeDrawer);backdrop?.addEventListener('click',closeDrawer);
+drawer?.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeDrawer));
+
+document.getElementById('admissionForm').addEventListener('submit',function(e){
+  e.preventDefault();
+  const data=new FormData(this);
+  const text=[
+    'Hello Seven Valleys! I would like to enquire about admissions.',
+    '',
+    'Parent name: '+data.get('parent'),
+    "Child's age: "+data.get('age'),
+    'Mobile: '+data.get('mobile'),
+    'Email: '+(data.get('email')||'Not provided'),
+    'Interested programme: '+(data.get('programme')||'Not specified'),
+    'Message: '+(data.get('message')||'No additional message')
+  ].join('\n');
+  document.getElementById('successMessage').style.display='block';
+  window.open('https://wa.me/919999999999?text='+encodeURIComponent(text),'_blank','noopener,noreferrer');
+});
+</script>
+</body>
+</html>

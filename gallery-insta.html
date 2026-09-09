@@ -1,0 +1,449 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gallery | Seven Valleys International Preschool</title>
+  <meta name="description" content="Explore the latest moments, activities and joyful memories from Seven Valleys International Preschool on Instagram.">
+  <meta name="theme-color" content="#12C7D9">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+/* ===== Instagram Gallery ===== */
+.gallery-hero{
+  position:relative;
+  overflow:hidden;
+  background:linear-gradient(135deg,var(--pinkbg),var(--bg));
+  padding:82px 0 95px;
+}
+.gallery-hero:before,.gallery-hero:after{
+  content:"";position:absolute;border-radius:50%;pointer-events:none;
+}
+.gallery-hero:before{width:230px;height:230px;background:rgba(255,201,40,.28);right:-60px;top:-80px}
+.gallery-hero:after{width:170px;height:170px;background:rgba(18,199,217,.18);left:-55px;bottom:-65px}
+.gallery-hero-inner{position:relative;z-index:1;text-align:center}
+.gallery-hero .eyebrow{color:var(--coral)}
+.gallery-hero h1{
+  font-family:"Baloo 2",cursive;
+  font-size:clamp(48px,6vw,76px);
+  line-height:.95;
+  letter-spacing:-.03em;
+  margin:12px 0 18px;
+}
+.gallery-hero h1 em{font-style:normal;color:var(--secondary)}
+.gallery-hero p{max-width:650px;margin:0 auto;color:#68788f;font-size:17px}
+.gallery-section{padding:90px 0 110px;background:#fff}
+.gallery-topbar{
+  display:flex;justify-content:space-between;align-items:end;gap:25px;margin-bottom:34px
+}
+.gallery-topbar h2{
+  font-family:"Baloo 2",cursive;font-size:clamp(34px,4vw,48px);
+  line-height:1;margin:0 0 6px;
+}
+.gallery-topbar p{margin:0;color:#748196;font-size:14px}
+.instagram-link{
+  display:inline-flex;align-items:center;gap:9px;color:#fff;background:var(--secondary);
+  border-radius:12px;padding:12px 17px;font-weight:800;box-shadow:0 10px 25px rgba(240,24,131,.18)
+}
+.instagram-link:hover{transform:translateY(-2px)}
+.gallery-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:16px
+}
+.gallery-item{
+  position:relative;aspect-ratio:1/1;overflow:hidden;border-radius:22px;background:#edf3f6;
+  cursor:pointer;box-shadow:0 8px 24px rgba(36,52,77,.07);border:0;padding:0
+}
+.gallery-item img{
+  width:100%;height:100%;display:block;object-fit:cover;transition:transform .5s ease,filter .3s ease
+}
+.gallery-item:hover img{transform:scale(1.06);filter:brightness(.78)}
+.gallery-overlay{
+  position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+  background:rgba(36,52,77,.18);opacity:0;transition:.25s
+}
+.gallery-item:hover .gallery-overlay,.gallery-item:focus-visible .gallery-overlay{opacity:1}
+.gallery-overlay span{
+  width:54px;height:54px;border-radius:50%;background:#fff;display:grid;place-items:center;
+  color:var(--text);font-size:22px;box-shadow:0 10px 25px rgba(0,0,0,.18)
+}
+.gallery-placeholder{
+  width:100%;height:100%;display:grid;place-items:center;text-align:center;padding:25px;color:#728095
+}
+.gallery-placeholder strong{display:block;font-family:"Baloo 2";font-size:20px;color:var(--text)}
+.gallery-status{
+  grid-column:1/-1;text-align:center;padding:55px 20px;color:#708096
+}
+.gallery-status strong{display:block;font-family:"Baloo 2";font-size:25px;color:var(--text);margin-bottom:6px}
+.gallery-spinner{
+  width:35px;height:35px;border:4px solid #dce8ed;border-top-color:var(--primary);
+  border-radius:50%;animation:gallerySpin .8s linear infinite;margin:0 auto 14px
+}
+@keyframes gallerySpin{to{transform:rotate(360deg)}}
+
+/* Lightbox */
+.gallery-lightbox{
+  position:fixed;inset:0;z-index:200;background:rgba(20,29,43,.93);
+  display:none;align-items:center;justify-content:center;padding:30px;
+}
+.gallery-lightbox.open{display:flex}
+.lightbox-content{
+  width:min(1050px,94vw);height:min(90vh,850px);display:grid;
+  grid-template-columns:minmax(0,1fr) 330px;background:#fff;border-radius:26px;
+  overflow:hidden;box-shadow:0 25px 80px rgba(0,0,0,.35)
+}
+.lightbox-media{background:#101722;display:flex;align-items:center;justify-content:center;min-width:0}
+.lightbox-media img{width:100%;height:100%;object-fit:contain;display:block}
+.lightbox-info{padding:32px 28px;display:flex;flex-direction:column;overflow:auto}
+.lightbox-info .ig-badge{
+  display:inline-flex;align-items:center;gap:8px;color:var(--secondary);font-weight:900;font-size:13px;margin-bottom:18px
+}
+.lightbox-info h3{font-family:"Baloo 2";font-size:28px;line-height:1.1;margin:0 0 12px}
+.lightbox-info p{color:#68788f;font-size:14px;margin:0 0 22px}
+.lightbox-info .lightbox-open-post{margin-top:auto}
+.lightbox-close,.lightbox-prev,.lightbox-next{
+  position:absolute;border:0;border-radius:50%;width:48px;height:48px;background:#fff;color:var(--text);
+  display:grid;place-items:center;font-size:24px;font-weight:900;box-shadow:0 10px 25px rgba(0,0,0,.22);z-index:3
+}
+.lightbox-close{right:25px;top:22px}
+.lightbox-prev{left:24px;top:50%;transform:translateY(-50%)}
+.lightbox-next{right:24px;top:50%;transform:translateY(-50%)}
+.lightbox-close:hover,.lightbox-prev:hover,.lightbox-next:hover{transform:translateY(-50%) scale(1.05)}
+.lightbox-close:hover{transform:scale(1.05)}
+.gallery-note{
+  margin-top:24px;padding:16px 18px;background:var(--bg);border-radius:15px;font-size:12px;color:#748196
+}
+@media(max-width:900px){
+  .gallery-grid{grid-template-columns:repeat(3,1fr)}
+  .lightbox-content{grid-template-columns:1fr;width:min(720px,94vw);height:min(88vh,780px)}
+  .lightbox-media{height:58vh}.lightbox-info{padding:20px 22px}
+  .lightbox-info .lightbox-open-post{margin-top:10px}
+}
+@media(max-width:620px){
+  .gallery-hero{padding:58px 0 70px}
+  .gallery-section{padding:60px 0 75px}
+  .gallery-topbar{align-items:flex-start;flex-direction:column}
+  .gallery-grid{grid-template-columns:repeat(2,1fr);gap:10px}
+  .gallery-item{border-radius:15px}
+  .lightbox-close{right:12px;top:12px}
+  .lightbox-prev{left:10px}.lightbox-next{right:10px}
+  .lightbox-content{height:92vh;border-radius:18px}
+  .lightbox-media{height:52vh}
+  .lightbox-info{padding:18px}
+}
+</style>
+</head>
+<body>
+
+<div class="announcement">
+    <div class="container announcement-inner">
+      <span class="announcement-badge">✨ Admissions Open</span>
+      <span>Now enrolling for the new academic year — schedule a school visit today.</span>
+      <a href="#contact">Enquire now <span>→</span></a>
+    </div>
+  </div>
+
+  <header class="site-header" id="top">
+    <div class="container nav-wrap">
+      <a class="brand" href="#top" aria-label="Seven Valleys International Preschool home">
+        <img src="assets/logo.png" alt="Seven Valleys International Preschool logo">
+      </a>
+
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <a class="active" href="#top">Home</a>
+        <a href="#about">About</a>
+        <a href="#academics">Academics</a>
+        <a href="#daycare">Day Care</a>
+        <a href="#activities">Activities</a>
+        <a href="#faq">FAQs</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <a class="btn btn-primary nav-cta" href="#contact">Book a Visit <span>→</span></a>
+
+      <button class="menu-btn" aria-label="Open navigation" aria-expanded="false" aria-controls="mobileDrawer">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+<aside class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+    <div class="drawer-top">
+      <img src="assets/logo.png" alt="Seven Valleys International Preschool">
+      <button class="drawer-close" aria-label="Close navigation">×</button>
+    </div>
+    <nav aria-label="Mobile navigation">
+      <a href="#top">Home</a>
+      <a href="#about">About Us</a>
+      <a href="#academics">Academics</a>
+      <a href="#daycare">Day Care</a>
+      <a href="#faq">FAQs</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="drawer-card">
+      <strong>Come say hello! 🌈</strong>
+      <p>Book a friendly campus tour and meet our teachers.</p>
+      <a class="btn btn-secondary" href="#contact">Book a Visit</a>
+    </div>
+  </aside>
+  <div class="drawer-backdrop"></div>
+
+<main>
+  <section class="gallery-hero">
+    <div class="container gallery-hero-inner">
+      <span class="eyebrow"><span>📸</span> From our Instagram</span>
+      <h1>Little moments.<br><em>Big memories.</em></h1>
+      <p>Take a peek at the happy, playful and creative moments happening every day at Seven Valleys International Preschool.</p>
+    </div>
+  </section>
+
+  <section class="gallery-section">
+    <div class="container">
+      <div class="gallery-topbar">
+        <div>
+          <span class="eyebrow purple-text">✨ Our latest updates</span>
+          <h2>Life at <em>Seven Valleys</em></h2>
+          <p>Our 20 latest Instagram posts — click any photo to view it larger.</p>
+        </div>
+        <a class="instagram-link" id="instagramProfileLink" href="#" target="_blank" rel="noopener noreferrer">
+          <span>◎</span> Follow us on Instagram ↗
+        </a>
+      </div>
+
+      <div class="gallery-grid" id="instagramGallery" aria-live="polite">
+        <div class="gallery-status">
+          <div class="gallery-spinner"></div>
+          <strong>Loading our latest moments…</strong>
+          Please wait while we bring in the latest Instagram posts.
+        </div>
+      </div>
+
+      <div class="gallery-note">
+        <strong>Instagram connection:</strong> This page is prepared for the Instagram Graph API.
+        Add your Instagram Business/Creator account ID and a valid access token in the configuration
+        section of <code>gallery.html</code>. The token should be kept server-side for a production website.
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+
+    <div class="footer-premise" aria-hidden="true"></div>
+    <div class="container footer-main">
+      <div class="footer-brand"><img src="assets/logo.png" alt="Seven Valleys International Preschool"><p>A joyful place to learn, play, grow and belong.</p><div class="socials">
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path></svg></a>
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1"></circle></svg></a>
+          <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="4"></rect><path d="M10 9l5 3-5 3z" fill="#fff" stroke="none"></path></svg></a>
+        </div></div>
+      <div><h3>Explore</h3><a href="#about">About Us</a><a href="#academics">Academics</a><a href="#daycare">Day Care</a><a href="#faq">FAQs</a></div>
+      <div><h3>Get in touch</h3><p>Mon – Sat, 8:00 AM – 6:30 PM</p><a href="tel:+919993592493">+91 99935 92493</a><a href="mailto:hello@sevenvalleys.example">hello@sevenvalleysinternational.com</a></div>
+      <div><h3>Find us</h3><p>Seven Valleys International Preschool<br>25, Balwant Nagar<br>Gwalior MP, India 474002</p><a class="direction-link" href="https://www.google.com/maps" target="_blank" rel="noopener">Get Directions ↗</a></div>
+    </div>
+    <div class="copyright"><div class="container"><span>© 2026 Seven Valleys International Preschool. All rights reserved.</span><span>Made for little dreamers ✦</span></div></div>
+  </footer>
+
+<!-- Lightbox -->
+<div class="gallery-lightbox" id="galleryLightbox" role="dialog" aria-modal="true" aria-label="Instagram post preview">
+  <button class="lightbox-close" id="lightboxClose" aria-label="Close preview">×</button>
+  <button class="lightbox-prev" id="lightboxPrev" aria-label="Previous post">←</button>
+  <button class="lightbox-next" id="lightboxNext" aria-label="Next post">→</button>
+
+  <div class="lightbox-content">
+    <div class="lightbox-media">
+      <img id="lightboxImage" src="" alt="">
+    </div>
+    <div class="lightbox-info">
+      <div class="ig-badge">◎ Instagram</div>
+      <h3 id="lightboxTitle">Seven Valleys International Preschool</h3>
+      <p id="lightboxCaption"></p>
+      <a class="btn btn-secondary lightbox-open-post" id="lightboxPostLink" href="#" target="_blank" rel="noopener noreferrer">
+        View on Instagram <span>↗</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<script>
+/*
+ * ============================================================
+ * INSTAGRAM CONFIGURATION
+ * ============================================================
+ * Recommended production setup:
+ *   Your server -> Instagram Graph API -> gallery.html
+ *
+ * For a quick client-side test, you can put a short-lived token
+ * here, but DO NOT publish a long-lived/private access token in
+ * frontend source code.
+ */
+const INSTAGRAM_CONFIG = {
+  // Example: "1784xxxxxxxxxxxxxx"
+  USER_ID: "YOUR_INSTAGRAM_USER_ID",
+
+  // Example: "EAAG..."
+  ACCESS_TOKEN: "YOUR_INSTAGRAM_ACCESS_TOKEN",
+
+  // Your Instagram profile URL
+  PROFILE_URL: "https://www.instagram.com/"
+};
+
+const gallery = document.getElementById("instagramGallery");
+const lightbox = document.getElementById("galleryLightbox");
+const lightboxImage = document.getElementById("lightboxImage");
+const lightboxCaption = document.getElementById("lightboxCaption");
+const lightboxPostLink = document.getElementById("lightboxPostLink");
+const profileLink = document.getElementById("instagramProfileLink");
+
+let posts = [];
+let currentIndex = 0;
+
+profileLink.href = INSTAGRAM_CONFIG.PROFILE_URL;
+
+function escapeHtml(value = "") {
+  return String(value).replace(/[&<>"']/g, char => ({
+    "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"
+  })[char]);
+}
+
+function renderPosts(items) {
+  posts = items.slice(0, 20);
+
+  if (!posts.length) {
+    gallery.innerHTML = `
+      <div class="gallery-status">
+        <strong>No Instagram posts found.</strong>
+        Please check your Instagram API configuration.
+      </div>`;
+    return;
+  }
+
+  gallery.innerHTML = posts.map((post, index) => {
+    const image = post.media_type === "VIDEO"
+      ? (post.thumbnail_url || post.media_url)
+      : post.media_url;
+
+    return `
+      <button class="gallery-item" type="button" data-index="${index}" aria-label="Open Instagram post ${index + 1}">
+        <img src="${escapeHtml(image)}" alt="${escapeHtml(post.caption || "Seven Valleys International Preschool Instagram post")}" loading="lazy">
+        <span class="gallery-overlay"><span>⌕</span></span>
+      </button>`;
+  }).join("");
+
+  gallery.querySelectorAll(".gallery-item").forEach(item => {
+    item.addEventListener("click", () => openLightbox(Number(item.dataset.index)));
+  });
+}
+
+function openLightbox(index) {
+  currentIndex = (index + posts.length) % posts.length;
+  const post = posts[currentIndex];
+  const image = post.media_type === "VIDEO"
+    ? (post.thumbnail_url || post.media_url)
+    : post.media_url;
+
+  lightboxImage.src = image;
+  lightboxImage.alt = post.caption || "Seven Valleys International Preschool Instagram post";
+  lightboxCaption.textContent = post.caption || "A joyful moment from Seven Valleys International Preschool.";
+  lightboxPostLink.href = post.permalink || INSTAGRAM_CONFIG.PROFILE_URL;
+
+  lightbox.classList.add("open");
+  document.body.style.overflow = "hidden";
+}
+
+function closeLightbox() {
+  lightbox.classList.remove("open");
+  document.body.style.overflow = "";
+  lightboxImage.src = "";
+}
+
+function moveLightbox(direction) {
+  openLightbox(currentIndex + direction);
+}
+
+document.getElementById("lightboxClose").addEventListener("click", closeLightbox);
+document.getElementById("lightboxPrev").addEventListener("click", () => moveLightbox(-1));
+document.getElementById("lightboxNext").addEventListener("click", () => moveLightbox(1));
+
+lightbox.addEventListener("click", event => {
+  if (event.target === lightbox) closeLightbox();
+});
+
+document.addEventListener("keydown", event => {
+  if (!lightbox.classList.contains("open")) return;
+  if (event.key === "Escape") closeLightbox();
+  if (event.key === "ArrowLeft") moveLightbox(-1);
+  if (event.key === "ArrowRight") moveLightbox(1);
+});
+
+async function loadInstagramPosts() {
+  if (
+    !INSTAGRAM_CONFIG.USER_ID ||
+    !INSTAGRAM_CONFIG.ACCESS_TOKEN ||
+    INSTAGRAM_CONFIG.USER_ID.startsWith("YOUR_") ||
+    INSTAGRAM_CONFIG.ACCESS_TOKEN.startsWith("YOUR_")
+  ) {
+    gallery.innerHTML = `
+      <div class="gallery-status">
+        <strong>Instagram gallery is ready.</strong>
+        Add your Instagram User ID and Access Token in the configuration
+        at the top of this page to load the latest 20 posts.
+      </div>`;
+    return;
+  }
+
+  const fields = "id,caption,media_type,media_url,thumbnail_url,permalink,timestamp";
+  const endpoint =
+    "https://graph.facebook.com/v23.0/" +
+    encodeURIComponent(INSTAGRAM_CONFIG.USER_ID) +
+    "/media?fields=" + encodeURIComponent(fields) +
+    "&limit=20&access_token=" + encodeURIComponent(INSTAGRAM_CONFIG.ACCESS_TOKEN);
+
+  try {
+    const response = await fetch(endpoint);
+    const data = await response.json();
+
+    if (!response.ok) {
+      throw new Error(data.error?.message || "Instagram API request failed.");
+    }
+
+    renderPosts(data.data || []);
+  } catch (error) {
+    console.error("Instagram gallery:", error);
+    gallery.innerHTML = `
+      <div class="gallery-status">
+        <strong>We couldn't load Instagram right now.</strong>
+        Please check the Instagram API credentials and permissions.
+      </div>`;
+  }
+}
+
+loadInstagramPosts();
+
+/* Mobile navigation, kept self-contained so gallery.html works independently. */
+const menuBtn = document.querySelector(".menu-btn");
+const drawer = document.getElementById("mobileDrawer");
+const backdrop = document.querySelector(".drawer-backdrop");
+const drawerClose = document.querySelector(".drawer-close");
+
+function openMenu() {
+  if (!drawer) return;
+  drawer.classList.add("open");
+  backdrop?.classList.add("open");
+  drawer.setAttribute("aria-hidden", "false");
+  menuBtn?.setAttribute("aria-expanded", "true");
+}
+function closeMenu() {
+  if (!drawer) return;
+  drawer.classList.remove("open");
+  backdrop?.classList.remove("open");
+  drawer.setAttribute("aria-hidden", "true");
+  menuBtn?.setAttribute("aria-expanded", "false");
+}
+menuBtn?.addEventListener("click", openMenu);
+drawerClose?.addEventListener("click", closeMenu);
+backdrop?.addEventListener("click", closeMenu);
+drawer?.querySelectorAll("a").forEach(link => link.addEventListener("click", closeMenu));
+</script>
+</body>
+</html>
