@@ -1,0 +1,1042 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Gallery | Seven Valleys International Preschool">
+  <title>Gallery | Seven Valleys International Preschool</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    /* =========================================================
+       GALLERY PAGE
+       ========================================================= */
+
+    .gallery-hero {
+      position: relative;
+      overflow: hidden;
+      padding: 78px 0 72px;
+      background: linear-gradient(135deg, #EAFBFD 0%, #FFF1F8 52%, #FFF9DF 100%);
+    }
+
+    .gallery-hero::before,
+    .gallery-hero::after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .gallery-hero::before {
+      width: 220px;
+      height: 220px;
+      background: rgba(18, 199, 217, .13);
+      top: -90px;
+      right: 8%;
+    }
+
+    .gallery-hero::after {
+      width: 150px;
+      height: 150px;
+      background: rgba(240, 24, 131, .10);
+      bottom: -70px;
+      left: 8%;
+    }
+
+    .gallery-hero-inner {
+      position: relative;
+      z-index: 1;
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .gallery-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 16px;
+      margin-bottom: 14px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, .82);
+      color: var(--secondary);
+      font-weight: 800;
+      font-size: .9rem;
+      box-shadow: 0 8px 24px rgba(36,52,77,.08);
+    }
+
+    .gallery-hero h1 {
+      margin: 0 0 12px;
+      font-family: "Baloo 2", cursive;
+      font-size: clamp(2.6rem, 6vw, 4.7rem);
+      line-height: .98;
+      color: var(--text);
+    }
+
+    .gallery-hero h1 span {
+      color: var(--secondary);
+    }
+
+    .gallery-hero p {
+      max-width: 680px;
+      margin: 0 auto;
+      color: #5d6b80;
+      font-size: 1.08rem;
+      line-height: 1.7;
+    }
+
+    .gallery-section {
+      padding: 70px 0 90px;
+      background: var(--bg);
+    }
+
+    .gallery-heading {
+      max-width: 760px;
+      margin: 0 auto 30px;
+      text-align: center;
+    }
+
+    .gallery-heading h2 {
+      margin-bottom: 8px;
+    }
+
+    .gallery-heading p {
+      margin: 0;
+      color: #6a7789;
+    }
+
+    /* Filter tabs */
+    .gallery-filters {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin: 0 auto 38px;
+    }
+
+    .gallery-filter {
+      border: 2px solid transparent;
+      padding: 10px 20px;
+      border-radius: 999px;
+      background: #fff;
+      color: var(--text);
+      font-family: inherit;
+      font-size: .95rem;
+      font-weight: 800;
+      cursor: pointer;
+      box-shadow: 0 8px 22px rgba(36,52,77,.07);
+      transition: transform .2s ease, background .2s ease, color .2s ease, box-shadow .2s ease;
+    }
+
+    .gallery-filter:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 28px rgba(36,52,77,.11);
+    }
+
+    .gallery-filter.active {
+      background: var(--secondary);
+      color: #fff;
+      box-shadow: 0 10px 25px rgba(240,24,131,.23);
+    }
+
+    /* Tiled grid */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .gallery-item {
+      position: relative;
+      min-width: 0;
+      aspect-ratio: 1 / 1;
+      overflow: hidden;
+      border-radius: var(--radius);
+      background: #e9f2f5;
+      cursor: pointer;
+      box-shadow: var(--shadow);
+      isolation: isolate;
+    }
+
+    .gallery-item:nth-child(3n + 1) {
+      aspect-ratio: 4 / 5;
+    }
+
+    .gallery-item:nth-child(5n + 1) {
+      aspect-ratio: 5 / 4;
+    }
+
+    .gallery-item img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .45s cubic-bezier(.2,.7,.2,1), filter .35s ease;
+    }
+
+    .gallery-item::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      background: linear-gradient(to top, rgba(20,28,45,.72), transparent 55%);
+      opacity: 0;
+      transition: opacity .3s ease;
+    }
+
+    .gallery-item:hover img,
+    .gallery-item:focus-visible img {
+      transform: scale(1.07);
+      filter: saturate(1.08);
+    }
+
+    .gallery-item:hover::after,
+    .gallery-item:focus-visible::after {
+      opacity: 1;
+    }
+
+    .gallery-caption {
+      position: absolute;
+      z-index: 2;
+      left: 18px;
+      right: 18px;
+      bottom: 16px;
+      color: #fff;
+      transform: translateY(10px);
+      opacity: 0;
+      transition: opacity .3s ease, transform .3s ease;
+    }
+
+    .gallery-caption strong {
+      display: block;
+      font-family: "Baloo 2", cursive;
+      font-size: 1.18rem;
+      line-height: 1.1;
+    }
+
+    .gallery-caption small {
+      display: block;
+      margin-top: 3px;
+      opacity: .88;
+      font-size: .78rem;
+      font-weight: 700;
+    }
+
+    .gallery-item:hover .gallery-caption,
+    .gallery-item:focus-visible .gallery-caption {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .gallery-item:focus-visible {
+      outline: 4px solid var(--accent);
+      outline-offset: 3px;
+    }
+
+    .gallery-empty {
+      display: none;
+      padding: 50px 20px;
+      text-align: center;
+      color: #68768a;
+      background: #fff;
+      border-radius: var(--radius);
+    }
+
+    .gallery-empty.show {
+      display: block;
+    }
+
+    /* Lightbox */
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 28px;
+      background: rgba(20, 27, 43, .91);
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transition: opacity .25s ease, visibility .25s ease;
+    }
+
+    .lightbox.open {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+    }
+
+    .lightbox-content {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: min(1100px, 92vw);
+      height: min(86vh, 800px);
+    }
+
+    .lightbox-media-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    .lightbox-image {
+      display: block;
+      max-width: min(100%, 1050px);
+      max-height: 72vh;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      border-radius: 16px;
+      box-shadow: 0 25px 70px rgba(0,0,0,.38);
+    }
+
+    .lightbox-info {
+      width: min(800px, 100%);
+      margin-top: 14px;
+      text-align: center;
+      color: #fff;
+    }
+
+    .lightbox-info h3 {
+      margin: 0 0 3px;
+      font-family: "Baloo 2", cursive;
+      font-size: 1.45rem;
+      line-height: 1.1;
+    }
+
+    .lightbox-info p {
+      margin: 0;
+      color: rgba(255,255,255,.76);
+      font-size: .92rem;
+    }
+
+    .lightbox-close,
+    .lightbox-prev,
+    .lightbox-next {
+      position: absolute;
+      z-index: 3;
+      display: grid;
+      place-items: center;
+      width: 48px;
+      height: 48px;
+      border: 0;
+      border-radius: 50%;
+      background: rgba(255,255,255,.95);
+      color: var(--text);
+      font-family: inherit;
+      font-size: 1.5rem;
+      font-weight: 800;
+      cursor: pointer;
+      box-shadow: 0 10px 30px rgba(0,0,0,.18);
+      transition: transform .2s ease, background .2s ease;
+    }
+
+    .lightbox-close:hover,
+    .lightbox-prev:hover,
+    .lightbox-next:hover {
+      transform: scale(1.06);
+      background: #fff;
+    }
+
+    .lightbox-close {
+      top: 22px;
+      right: 22px;
+    }
+
+    .lightbox-prev {
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .lightbox-next {
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .lightbox-prev:hover,
+    .lightbox-next:hover {
+      transform: translateY(-50%) scale(1.06);
+    }
+
+    body.lightbox-open {
+      overflow: hidden;
+    }
+
+    /* Optional local image fallback styling */
+    .placeholder-image {
+      width: 100%;
+      height: 100%;
+      display: grid;
+      place-items: center;
+      padding: 20px;
+      text-align: center;
+      color: #fff;
+      font-family: "Baloo 2", cursive;
+      font-size: 1.2rem;
+      background: linear-gradient(135deg, #12C7D9, #6530A5);
+    }
+
+    @media (max-width: 1000px) {
+      .gallery-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 700px) {
+      .gallery-hero {
+        padding: 60px 0;
+      }
+
+      .gallery-section {
+        padding: 55px 0 70px;
+      }
+
+      .gallery-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+      }
+
+      .gallery-item,
+      .gallery-item:nth-child(3n + 1),
+      .gallery-item:nth-child(5n + 1) {
+        aspect-ratio: 1 / 1;
+        border-radius: 17px;
+      }
+
+      .gallery-caption {
+        left: 12px;
+        right: 12px;
+        bottom: 11px;
+      }
+
+      .gallery-caption strong {
+        font-size: 1rem;
+      }
+
+      .lightbox {
+        padding: 15px;
+      }
+
+      .lightbox-content {
+        width: 100%;
+        height: 90vh;
+      }
+
+      .lightbox-image {
+        max-height: 70vh;
+        border-radius: 12px;
+      }
+
+      .lightbox-close {
+        top: 8px;
+        right: 8px;
+      }
+
+      .lightbox-prev,
+      .lightbox-next {
+        top: auto;
+        bottom: 12px;
+        transform: none;
+        width: 44px;
+        height: 44px;
+      }
+
+      .lightbox-prev {
+        left: 28%;
+      }
+
+      .lightbox-next {
+        right: 28%;
+      }
+
+      .lightbox-prev:hover,
+      .lightbox-next:hover {
+        transform: scale(1.06);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .gallery-filters {
+        gap: 7px;
+      }
+
+      .gallery-filter {
+        padding: 8px 13px;
+        font-size: .83rem;
+      }
+
+      .gallery-grid {
+        gap: 9px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .gallery-item img,
+      .gallery-item::after,
+      .gallery-caption,
+      .gallery-filter,
+      .lightbox {
+        transition: none;
+      }
+    }
+    .footer-premise{
+      height:93px;background:url(assets/border-bottom.png?auto=format&fit=crop&w=1800&q=80) center/cover;
+      background-color:var(--white);
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="announcement">
+    <div class="container announcement-inner">
+      <span class="announcement-badge">✨ Admissions Open</span>
+      <span>Now enrolling for the new academic year — schedule a school visit today.</span>
+      <a href="#contact">Enquire now <span>→</span></a>
+    </div>
+  </div>
+
+  <header class="site-header" id="top">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html" aria-label="Seven Valleys International Preschool home">
+        <img src="assets/logo.png" alt="Seven Valleys International Preschool logo">
+      </a>
+
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <a class="active" href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="academics.html">Academics</a>
+        <a href="day-care.html">Day Care</a>
+        <!-- <a href="#activities">Activities</a> -->
+        <a href="faq.html">FAQs</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <a class="btn btn-primary nav-cta" href="index.html#contact">Book a Visit <span>→</span></a>
+
+      <button class="menu-btn" aria-label="Open navigation" aria-expanded="false" aria-controls="mobileDrawer">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <aside class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+    <div class="drawer-top">
+      <img src="assets/logo.png" alt="Seven Valleys International Preschool">
+      <button class="drawer-close" aria-label="Close navigation">×</button>
+    </div>
+    <nav aria-label="Mobile navigation">
+      <a class="active" href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="academics.html">Academics</a>
+      <a href="day-care.html">Day Care</a>
+      <!-- <a href="#activities">Activities</a> -->
+      <a href="faq.html">FAQs</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="drawer-card">
+      <strong>Come say hello! 🌈</strong>
+      <p>Book a friendly campus tour and meet our teachers.</p>
+      <a class="btn btn-secondary" href="contact.html">Book a Visit</a>
+    </div>
+  </aside>
+  <div class="drawer-backdrop"></div>
+
+  <!-- Gallery Hero -->
+  <section class="gallery-hero">
+    <div class="container gallery-hero-inner">
+      <div class="gallery-kicker">📸 Little moments, big memories</div>
+      <h1>Our <span>Gallery</span></h1>
+      <p>
+        Take a peek into the joyful world of Seven Valleys — where little
+        learners explore, create, play and grow every day.
+      </p>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <main class="gallery-section">
+    <div class="container">
+
+      <div class="gallery-heading">
+        <h2>Life at Seven Valleys</h2>
+        <p>Explore our preschool moments by category.</p>
+      </div>
+
+      <!-- Filter tabs -->
+      <div class="gallery-filters" role="tablist" aria-label="Gallery categories">
+        <button class="gallery-filter active" type="button" role="tab" aria-selected="true" data-filter="all">
+          All
+        </button>
+        <button class="gallery-filter" type="button" role="tab" aria-selected="false" data-filter="classroom">
+          Classroom
+        </button>
+        <button class="gallery-filter" type="button" role="tab" aria-selected="false" data-filter="activities">
+          Activities
+        </button>
+        <button class="gallery-filter" type="button" role="tab" aria-selected="false" data-filter="outdoor">
+          Outdoor
+        </button>
+        <button class="gallery-filter" type="button" role="tab" aria-selected="false" data-filter="events">
+          Events
+        </button>
+        <button class="gallery-filter" type="button" role="tab" aria-selected="false" data-filter="daycare">
+          Day Care
+        </button>
+      </div>
+
+      <!--
+        IMAGE SETUP:
+        Replace each placeholder URL below with your own image.
+        Recommended folder:
+        assets/gallery/
+        Example:
+        src="assets/gallery/classroom-01.jpg"
+      -->
+      <div class="gallery-grid" id="galleryGrid">
+
+        <article class="gallery-item"
+          tabindex="0"
+          role="button"
+          data-category="classroom"
+          data-title="Happy Learning"
+          data-description="Curious minds discovering something new."
+          data-image="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1400&q=85">
+          <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=800&q=80"
+               alt="Children learning together in a classroom" loading="lazy">
+          <div class="gallery-caption">
+            <strong>Happy Learning</strong>
+            <small>Classroom</small>
+          </div>
+        </article>
+
+        <article class="gallery-item"
+          tabindex="0"
+          role="button"
+          data-category="activities"
+          data-title="Creative Time"
+          data-description="Making, painting and expressing little ideas."
+          data-image="https://images.unsplash.com/photo-1560785496-3c9d27877182?auto=format&fit=crop&w=1400&q=85">
+          <img src="https://images.unsplash.com/photo-1560785496-3c9d27877182?auto=format&fit=crop&w=800&q=80"
+               alt="Children enjoying a creative activity" loading="lazy">
+          <div class="gallery-caption">
+            <strong>Creative Time</strong>
+            <small>Activities</small>
+          </div>
+        </article>
+
+        <article class="gallery-item"
+          tabindex="0"
+          role="button"
+          data-category="outdoor"
+          data-title="Outdoor Adventures"
+          data-description="Fresh air, active play and plenty of smiles."
+          data-image="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=1400&q=85">
+          <img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=800&q=80"
+               alt="Children playing outdoors" loading="lazy">
+          <div class="gallery-caption">
+            <strong>Outdoor Adventures</strong>
+            <small>Outdoor</small>
+          </div>
+        </article>
+
+        <article class="gallery-item"
+          tabindex="0"
+          role="button"
+          data-category="events"
+          data-title="Special Celebrations"
+          data-description="Celebrating happy moments together."
+          data-image="https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=1400&q=85">
+          <img src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=800&q=80"
+               alt="Children celebrating together" loading="lazy">
+          <div class="gallery-caption">
+            <strong>Special Celebrations</strong>
+            <small>Events</small>
+          </div>
+        </article>
+
+        <article class="gallery-item"
+          tabindex="0"
+          role="button"
+          data-category="daycare"
+          data-title="Day Care Moments"
+          data-description="A warm and caring space for every little one."
+          data-image="https://images.unsplash.com/photo-1540479859555-17af45c78602?auto=format&fit=crop&w=1400&q=85">
+          <img src="https://images.unsplash.com/photo-1540479859555-17af45c78602?auto=format&fit=crop&w=800&q=80"
+               alt="Children enjoying a comfortable learning space" loading="lazy">
+          <div class="gallery-caption">
+            <strong>Day Care Moments</strong>
+            <small>Day Care</small>
+          </div>
+        </article>
+
+        <article class="gallery-item"
+          tabindex="0"
+          role="button"
+          data-category="classroom"
+          data-title="Story Time"
+          data-description="Listening, imagining and learning through stories."
+          data-image="https://images.unsplash.com/photo-1596464716127-f2a82984de30?auto=format&fit=crop&w=1400&q=85">
+          <img src="https://images.unsplash.com/photo-1596464716127-f2a82984de30?auto=format&fit=crop&w=800&q=80"
+               alt="Children enjoying story time" loading="lazy">
+          <div class="gallery-caption">
+            <strong>Story Time</strong>
+            <small>Classroom</small>
+          </div>
+        </article>
+
+        <article class="gallery-item"
+          tabindex="0"
+          role="button"
+          data-category="activities"
+          data-title="Little Creators"
+          data-description="Hands-on activities that turn ideas into something special."
+          data-image="https://images.unsplash.com/photo-1607453998774-d533f65dac99?auto=format&fit=crop&w=1400&q=85">
+          <img src="https://images.unsplash.com/photo-1607453998774-d533f65dac99?auto=format&fit=crop&w=800&q=80"
+               alt="Children doing hands-on creative work" loading="lazy">
+          <div class="gallery-caption">
+            <strong>Little Creators</strong>
+            <small>Activities</small>
+          </div>
+        </article>
+
+        <article class="gallery-item"
+          tabindex="0"
+          role="button"
+          data-category="outdoor"
+          data-title="Play & Explore"
+          data-description="Learning through movement, play and discovery."
+          data-image="https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?auto=format&fit=crop&w=1400&q=85">
+          <img src="https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?auto=format&fit=crop&w=800&q=80"
+               alt="Children exploring outdoors" loading="lazy">
+          <div class="gallery-caption">
+            <strong>Play & Explore</strong>
+            <small>Outdoor</small>
+          </div>
+        </article>
+
+        <article class="gallery-item"
+          tabindex="0"
+          role="button"
+          data-category="events"
+          data-title="Fun Together"
+          data-description="Building friendships and making memories."
+          data-image="https://images.unsplash.com/photo-1504159506876-f8338247a14a?auto=format&fit=crop&w=1400&q=85">
+          <img src="https://images.unsplash.com/photo-1504159506876-f8338247a14a?auto=format&fit=crop&w=800&q=80"
+               alt="Children having fun together" loading="lazy">
+          <div class="gallery-caption">
+            <strong>Fun Together</strong>
+            <small>Events</small>
+          </div>
+        </article>
+
+        <article class="gallery-item"
+          tabindex="0"
+          role="button"
+          data-category="daycare"
+          data-title="Caring Spaces"
+          data-description="Comfortable spaces designed for little learners."
+          data-image="https://images.unsplash.com/photo-1596464716127-f2a82984de30?auto=format&fit=crop&w=1400&q=85">
+          <img src="https://images.unsplash.com/photo-1596464716127-f2a82984de30?auto=format&fit=crop&w=800&q=80"
+               alt="Children in a caring learning environment" loading="lazy">
+          <div class="gallery-caption">
+            <strong>Caring Spaces</strong>
+            <small>Day Care</small>
+          </div>
+        </article>
+
+        <article class="gallery-item"
+          tabindex="0"
+          role="button"
+          data-category="classroom"
+          data-title="Learning Together"
+          data-description="Every question is the beginning of an adventure."
+          data-image="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1400&q=85">
+          <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=800&q=80"
+               alt="Children learning together" loading="lazy">
+          <div class="gallery-caption">
+            <strong>Learning Together</strong>
+            <small>Classroom</small>
+          </div>
+        </article>
+
+        <article class="gallery-item"
+          tabindex="0"
+          role="button"
+          data-category="activities"
+          data-title="Messy & Magical"
+          data-description="Sensory play and joyful hands-on discovery."
+          data-image="https://images.unsplash.com/photo-1602030028438-4cf153cbae9e?auto=format&fit=crop&w=1400&q=85">
+          <img src="https://images.unsplash.com/photo-1602030028438-4cf153cbae9e?auto=format&fit=crop&w=800&q=80"
+               alt="Children enjoying hands-on play" loading="lazy">
+          <div class="gallery-caption">
+            <strong>Messy & Magical</strong>
+            <small>Activities</small>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="gallery-empty" id="galleryEmpty">
+        <h3>No photos in this category yet</h3>
+        <p>More happy moments will be added soon.</p>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <div class="lightbox-content">
+
+      <button class="lightbox-close" id="lightboxClose" type="button" aria-label="Close gallery">
+        &times;
+      </button>
+
+      <button class="lightbox-prev" id="lightboxPrev" type="button" aria-label="Previous image">
+        &#8249;
+      </button>
+
+      <div class="lightbox-media-wrap">
+        <img class="lightbox-image" id="lightboxImage" src="" alt="">
+        <div class="lightbox-info">
+          <h3 id="lightboxTitle"></h3>
+          <p id="lightboxDescription"></p>
+        </div>
+      </div>
+
+      <button class="lightbox-next" id="lightboxNext" type="button" aria-label="Next image">
+        &#8250;
+      </button>
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-premise" aria-hidden="true"></div>
+    <div class="container footer-main">
+      <div class="footer-brand">
+        <img src="assets/logo.png" alt="Seven Valleys International Preschool">
+        <p>A joyful place to learn, play, grow and belong.</p>
+        <div class="socials">
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path></svg></a>
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1"></circle></svg></a>
+          <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="4"></rect><path d="M10 9l5 3-5 3z" fill="#fff" stroke="none"></path></svg></a>
+        </div>
+      </div>
+
+      <div>
+        <h3>Explore</h3>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="academics.html">Academics</a>
+        <a href="day-care.html">Day Care</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <div>
+        <h3>Get in touch</h3>
+        <p>Mon – Sat, 8:00 AM – 6:30 PM</p>
+        <a href="tel:+919993592493">+91 99935 92493</a>
+        <a href="mailto:hello@sevenvalleysinternational.com">hello@sevenvalleysinternational.com</a>
+      </div>
+
+      <div>
+        <h3>Find us</h3>
+        <p>Seven Valleys International Preschool<br>25, Balwant Nagar<br>Gwalior MP, India 474002</p>
+        <a class="direction-link" href="https://www.google.com/maps" target="_blank" rel="noopener">Get Directions ↗</a>
+      </div>
+    </div>
+
+    <div class="copyright">
+      <div class="container">
+        <span>© 2026 Seven Valleys International Preschool. All rights reserved.</span>
+        <span>Made for little dreamers ✦</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const filters = Array.from(document.querySelectorAll(".gallery-filter"));
+      const items = Array.from(document.querySelectorAll(".gallery-item"));
+      const emptyState = document.getElementById("galleryEmpty");
+
+      const lightbox = document.getElementById("lightbox");
+      const lightboxImage = document.getElementById("lightboxImage");
+      const lightboxTitle = document.getElementById("lightboxTitle");
+      const lightboxDescription = document.getElementById("lightboxDescription");
+      const lightboxClose = document.getElementById("lightboxClose");
+      const lightboxPrev = document.getElementById("lightboxPrev");
+      const lightboxNext = document.getElementById("lightboxNext");
+
+      let currentFilter = "all";
+      let visibleItems = [];
+      let currentIndex = 0;
+
+      function updateVisibleItems() {
+        visibleItems = items.filter(function (item) {
+          return currentFilter === "all" || item.dataset.category === currentFilter;
+        });
+      }
+
+      function applyFilter(filter) {
+        currentFilter = filter;
+
+        filters.forEach(function (button) {
+          const active = button.dataset.filter === filter;
+          button.classList.toggle("active", active);
+          button.setAttribute("aria-selected", active ? "true" : "false");
+        });
+
+        items.forEach(function (item) {
+          const show = filter === "all" || item.dataset.category === filter;
+          item.hidden = !show;
+        });
+
+        updateVisibleItems();
+        emptyState.classList.toggle("show", visibleItems.length === 0);
+      }
+
+      function openLightbox(index) {
+        if (!visibleItems.length) return;
+
+        currentIndex = index;
+        const item = visibleItems[currentIndex];
+
+        lightboxImage.src = item.dataset.image || item.querySelector("img").src;
+        lightboxImage.alt = item.querySelector("img").alt || item.dataset.title || "Gallery image";
+        lightboxTitle.textContent = item.dataset.title || "";
+        lightboxDescription.textContent = item.dataset.description || "";
+
+        lightbox.classList.add("open");
+        lightbox.setAttribute("aria-hidden", "false");
+        document.body.classList.add("lightbox-open");
+
+        // Keep focus inside the lightbox on open.
+        lightboxClose.focus();
+      }
+
+      function closeLightbox() {
+        lightbox.classList.remove("open");
+        lightbox.setAttribute("aria-hidden", "true");
+        document.body.classList.remove("lightbox-open");
+
+        // Stop loading the large image when closed.
+        lightboxImage.src = "";
+      }
+
+      function showNext() {
+        if (!visibleItems.length) return;
+        currentIndex = (currentIndex + 1) % visibleItems.length;
+        openLightbox(currentIndex);
+      }
+
+      function showPrevious() {
+        if (!visibleItems.length) return;
+        currentIndex = (currentIndex - 1 + visibleItems.length) % visibleItems.length;
+        openLightbox(currentIndex);
+      }
+
+      filters.forEach(function (button) {
+        button.addEventListener("click", function () {
+          applyFilter(button.dataset.filter);
+        });
+      });
+
+      items.forEach(function (item) {
+        item.addEventListener("click", function () {
+          updateVisibleItems();
+          openLightbox(visibleItems.indexOf(item));
+        });
+
+        item.addEventListener("keydown", function (event) {
+          if (event.key === "Enter" || event.key === " ") {
+            event.preventDefault();
+            updateVisibleItems();
+            openLightbox(visibleItems.indexOf(item));
+          }
+        });
+      });
+
+      lightboxClose.addEventListener("click", closeLightbox);
+      lightboxNext.addEventListener("click", showNext);
+      lightboxPrev.addEventListener("click", showPrevious);
+
+      // Close when clicking the dark backdrop.
+      lightbox.addEventListener("click", function (event) {
+        if (event.target === lightbox) {
+          closeLightbox();
+        }
+      });
+
+      document.addEventListener("keydown", function (event) {
+        if (!lightbox.classList.contains("open")) return;
+
+        if (event.key === "Escape") closeLightbox();
+        if (event.key === "ArrowRight") showNext();
+        if (event.key === "ArrowLeft") showPrevious();
+      });
+
+      // Simple touch swipe support.
+      let touchStartX = 0;
+
+      lightbox.addEventListener("touchstart", function (event) {
+        touchStartX = event.changedTouches[0].screenX;
+      }, { passive: true });
+
+      lightbox.addEventListener("touchend", function (event) {
+        const touchEndX = event.changedTouches[0].screenX;
+        const distance = touchEndX - touchStartX;
+
+        if (Math.abs(distance) < 50) return;
+
+        if (distance < 0) {
+          showNext();
+        } else {
+          showPrevious();
+        }
+      }, { passive: true });
+
+      // Initial state.
+      applyFilter("all");
+
+      /*
+        MOBILE MENU
+        Self-contained so this page works with the existing styles.css.
+      */
+      const menuToggle = document.querySelector(".menu-toggle");
+      const nav = document.querySelector(".main-nav");
+
+      if (menuToggle && nav) {
+        menuToggle.addEventListener("click", function () {
+          const isOpen = nav.classList.toggle("open");
+          menuToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+        });
+
+        nav.querySelectorAll("a").forEach(function (link) {
+          link.addEventListener("click", function () {
+            nav.classList.remove("open");
+            menuToggle.setAttribute("aria-expanded", "false");
+          });
+        });
+      }
+    });
+  </script>
+
+</body>
+</html>

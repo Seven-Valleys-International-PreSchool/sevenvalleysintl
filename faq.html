@@ -1,0 +1,615 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FAQs | Seven Valleys International Preschool</title>
+  <meta name="description" content="Frequently asked questions about preschool and day care at Seven Valleys International Preschool.">
+  <meta name="theme-color" content="#12C7D9">
+
+  <!-- Same fonts used by index.html -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Existing site stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    /* =========================================================
+       FAQ PAGE
+       Uses the same CSS variables, fonts and visual language
+       already defined in styles.css.
+       ========================================================= */
+
+    .faq-page-hero {
+      position: relative;
+      overflow: hidden;
+      padding: 90px 0 80px;
+      text-align: center;
+      background: linear-gradient(135deg, var(--bg), var(--pinkbg));
+    }
+
+    .faq-page-hero::before {
+      content: "";
+      position: absolute;
+      top: -110px;
+      right: -80px;
+      width: 280px;
+      height: 280px;
+      border-radius: 50%;
+      background: var(--primary);
+      opacity: 0.12;
+    }
+
+    .faq-page-hero::after {
+      content: "";
+      position: absolute;
+      left: -70px;
+      bottom: -90px;
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      background: var(--accent);
+      opacity: 0.18;
+    }
+
+    .faq-page-hero .container {
+      position: relative;
+      z-index: 1;
+    }
+
+    .faq-page-hero h1 {
+      margin: 12px 0 18px;
+      font-family: "Baloo 2", cursive;
+      font-size: clamp(48px, 6vw, 76px);
+      line-height: 1;
+      letter-spacing: -0.03em;
+    }
+
+    .faq-page-hero h1 em {
+      color: var(--secondary);
+      font-style: normal;
+    }
+
+    .faq-page-hero p {
+      max-width: 680px;
+      margin: 0 auto;
+      color: #68788f;
+      font-size: 18px;
+    }
+
+    .faq-page {
+      padding: 85px 0 100px;
+      background: #fff;
+    }
+
+    .faq-page-grid {
+      display: grid;
+      grid-template-columns: 0.75fr 1.25fr;
+      gap: 70px;
+      align-items: start;
+    }
+
+    .faq-sidebar {
+      position: sticky;
+      top: 120px;
+      align-self: start;
+      padding: 34px;
+      border-radius: 28px;
+      background: var(--pinkbg);
+    }
+
+    .faq-stars {
+      font-size: 28px;
+      letter-spacing: 4px;
+    }
+
+    .faq-sidebar h2 {
+      margin: 10px 0 14px;
+      font-family: "Baloo 2", cursive;
+      font-size: 36px;
+      line-height: 1.05;
+    }
+
+    .faq-sidebar p {
+      color: #68788f;
+      font-size: 14px;
+    }
+
+    .faq-sidebar .btn {
+      margin-top: 12px;
+    }
+
+    .faq-list details {
+      margin-bottom: 13px;
+      padding: 0 24px;
+      border: 1px solid #e9edf3;
+      border-radius: 18px;
+      background: #fff;
+      box-shadow: 0 7px 22px rgba(36, 52, 77, 0.045);
+      transition: 0.2s ease;
+    }
+
+    .faq-list details[open] {
+      border-color: rgba(18, 199, 217, 0.35);
+      box-shadow: 0 12px 30px rgba(36, 52, 77, 0.08);
+    }
+
+    .faq-list summary {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 22px 0;
+      cursor: pointer;
+      list-style: none;
+      color: var(--text);
+      font-weight: 800;
+    }
+
+    .faq-list summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-list summary span {
+      display: grid;
+      flex: 0 0 auto;
+      width: 30px;
+      height: 30px;
+      place-items: center;
+      border-radius: 50%;
+      background: var(--pinkbg);
+      color: var(--secondary);
+      font-size: 21px;
+      line-height: 1;
+      transition: 0.2s;
+    }
+
+    .faq-list details[open] summary span {
+      transform: rotate(45deg);
+      background: var(--primary);
+      color: #fff;
+    }
+
+    .faq-list p {
+      margin: -3px 0 22px;
+      padding-right: 45px;
+      color: #68788f;
+      font-size: 14px;
+      line-height: 1.75;
+    }
+
+    /* Tablet */
+    @media (max-width: 900px) {
+      .faq-page-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+
+      .faq-sidebar {
+        position: static;
+      }
+    }
+
+    /* Mobile */
+    @media (max-width: 620px) {
+      .faq-page-hero {
+        padding: 65px 0 60px;
+      }
+
+      .faq-page-hero p {
+        font-size: 15px;
+      }
+
+      .faq-page {
+        padding: 60px 0 75px;
+      }
+
+      .faq-list details {
+        padding: 0 17px;
+      }
+
+      .faq-list summary {
+        padding: 19px 0;
+        font-size: 14px;
+      }
+
+      .faq-list p {
+        padding-right: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Announcement bar -->
+  <div class="announcement">
+    <div class="container announcement-inner">
+      <span class="announcement-badge">✨ Admissions Open</span>
+      <span>Now enrolling for the new academic year — schedule a school visit today.</span>
+      <a href="contact.html">Enquire now <span>→</span></a>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header" id="top">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html" aria-label="Seven Valleys International Preschool home">
+        <img src="assets/logo.png" alt="Seven Valleys International Preschool logo">
+      </a>
+
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="academics.html">Academics</a>
+        <a href="day-care.html">Day Care</a>
+        <a class="active" href="faq.html">FAQs</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <a class="btn btn-primary nav-cta" href="contact.html">
+        Book a Visit <span>→</span>
+      </a>
+
+      <button
+        class="menu-btn"
+        type="button"
+        aria-label="Open navigation"
+        aria-expanded="false"
+        aria-controls="mobileDrawer"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile navigation drawer -->
+  <aside class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+    <div class="drawer-top">
+      <img src="assets/logo.png" alt="Seven Valleys International Preschool">
+      <button class="drawer-close" type="button" aria-label="Close navigation">×</button>
+    </div>
+
+    <nav aria-label="Mobile navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="academics.html">Academics</a>
+      <a href="day-care.html">Day Care</a>
+      <a class="active" href="faq.html">FAQs</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="drawer-card">
+      <strong>Come say hello! 🌈</strong>
+      <p>Book a friendly campus tour and meet our teachers.</p>
+      <a class="btn btn-secondary" href="contact.html">Book a Visit</a>
+    </div>
+  </aside>
+
+  <div class="drawer-backdrop"></div>
+
+  <main>
+    <!-- FAQ hero -->
+    <section class="faq-page-hero" aria-label="Frequently asked questions">
+      <div class="container">
+        <span class="eyebrow purple-text">Parents, we've got you ⭐</span>
+        <h1>
+          Questions?<br>
+          <em>Let's make it easy.</em>
+        </h1>
+        <p>
+          Everything you need to know about preschool, day care, daily routines,
+          admissions and your child's early learning journey.
+        </p>
+      </div>
+    </section>
+
+    <!-- FAQ content -->
+    <section class="faq-page">
+      <div class="container faq-page-grid">
+        <aside class="faq-sidebar">
+          <div class="faq-stars" aria-hidden="true">✦ ✦ ✦</div>
+          <h2>A little clarity can make a big difference.</h2>
+          <p>
+            Still wondering about something? Our team is happy to answer questions
+            and help you understand which program is right for your child.
+          </p>
+          <a class="btn btn-secondary" href="contact.html">
+            Ask Our Team <span>→</span>
+          </a>
+        </aside>
+
+        <div class="faq-list">
+          <details open>
+            <summary>
+              What age groups do you accept?
+              <span>+</span>
+            </summary>
+            <p>
+              We welcome young children across our early-years programs. The right
+              program is based on your child's age, developmental stage and readiness.
+              Please contact our admissions team for current age criteria and availability.
+            </p>
+          </details>
+
+          <details>
+            <summary>
+              What preschool programs do you offer?
+              <span>+</span>
+            </summary>
+            <p>
+              Our preschool experience focuses on joyful, play-based learning.
+              Children build early language, numeracy, motor, social and communication
+              skills through stories, songs, creative activities, movement and hands-on exploration.
+            </p>
+          </details>
+
+          <details>
+            <summary>
+              Do you offer day care along with preschool?
+              <span>+</span>
+            </summary>
+            <p>
+              Yes. Our day care is designed to provide a warm, engaging environment
+              beyond regular preschool hours, with age-appropriate activities, routines,
+              play and quiet time.
+            </p>
+          </details>
+
+          <details>
+            <summary>
+              What does a typical day at preschool look like?
+              <span>+</span>
+            </summary>
+            <p>
+              A typical day includes arrival and free play, circle time, guided learning
+              experiences, creative activities, outdoor or movement play, meals or snacks,
+              rest or quiet time and opportunities for social interaction.
+            </p>
+          </details>
+
+          <details>
+            <summary>
+              How do you support learning through play?
+              <span>+</span>
+            </summary>
+            <p>
+              Children learn through purposeful play, hands-on experiences and exploration.
+              Teachers use stories, puzzles, music, art, sensory activities, movement and
+              everyday problem-solving to make learning meaningful and enjoyable.
+            </p>
+          </details>
+
+          <details>
+            <summary>
+              How do you keep children safe and secure?
+              <span>+</span>
+            </summary>
+            <p>
+              Child safety is part of our everyday routines. We use supervised spaces,
+              clear arrival and departure procedures, age-appropriate environments and
+              attentive adult supervision throughout the school and day care experience.
+            </p>
+          </details>
+
+          <details>
+            <summary>
+              How do you help a child settle into preschool?
+              <span>+</span>
+            </summary>
+            <p>
+              We aim to make the transition gentle and reassuring. Teachers build familiar
+              routines, positive relationships and a sense of belonging while working with
+              parents to understand each child's personality and comfort needs.
+            </p>
+          </details>
+
+          <details>
+            <summary>
+              Do you provide meals and snacks?
+              <span>+</span>
+            </summary>
+            <p>
+              Meal and snack arrangements depend on the current program and school policy.
+              Please speak with our team about the available options, timings and how dietary
+              requirements or allergies are handled.
+            </p>
+          </details>
+
+          <details>
+            <summary>
+              What activities do children enjoy at Seven Valleys?
+              <span>+</span>
+            </summary>
+            <p>
+              Children enjoy a variety of activities including music, learning games,
+              painting and creative work, sports, movement and playground time. These
+              experiences support confidence, coordination, communication, creativity and social development.
+            </p>
+          </details>
+
+          <details>
+            <summary>
+              How do you support a child's individual needs?
+              <span>+</span>
+            </summary>
+            <p>
+              Teachers observe children closely and adapt activities, communication and
+              routines to their interests, strengths and developmental needs. We also value
+              regular communication with families.
+            </p>
+          </details>
+
+          <details>
+            <summary>
+              What are the day care timings?
+              <span>+</span>
+            </summary>
+            <p>
+              Our listed school hours are Monday to Saturday, 8:00 AM to 6:30 PM.
+              Day care schedules and availability can vary, so please contact the school
+              to confirm the current timings for your child's program.
+            </p>
+          </details>
+
+          <details>
+            <summary>
+              Can parents visit the school before admission?
+              <span>+</span>
+            </summary>
+            <p>
+              Absolutely. We encourage families to visit the campus, see the learning
+              environment, meet our team and discuss their child's needs before making an admission decision.
+            </p>
+          </details>
+
+          <details>
+            <summary>
+              How do I apply for admission?
+              <span>+</span>
+            </summary>
+            <p>
+              Start by contacting us or booking a campus visit. Our team can explain the
+              available programs, current openings, required documents, fees and the next
+              steps in the admission process.
+            </p>
+          </details>
+
+          <details>
+            <summary>
+              How do teachers communicate with parents?
+              <span>+</span>
+            </summary>
+            <p>
+              We believe in an open partnership with families. Parents can discuss their
+              child's progress, routines, experiences and questions with the school team
+              through the communication channels provided by the school.
+            </p>
+          </details>
+
+          <details>
+            <summary>
+              What should my child bring to school or day care?
+              <span>+</span>
+            </summary>
+            <p>
+              The exact list depends on the child's program. Typically, families may need
+              comfortable clothing, a labelled water bottle and any program-specific personal
+              items requested by the school. Our team will provide the current checklist during admission.
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section class="contact-cta">
+      <div class="container contact-card">
+        <div>
+          <span class="eyebrow light">Let's meet</span>
+          <h2>
+            Still have a<br>
+            <em>question?</em>
+          </h2>
+          <p>
+            We'd love to hear from you. Send us a message and our team will help you
+            with your preschool or day care enquiry.
+          </p>
+        </div>
+
+        <div>
+          <a class="btn btn-accent" href="contact.html">
+            Contact Seven Valleys <span>↗</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-premise" aria-hidden="true"></div>
+
+    <div class="container footer-main">
+      <div class="footer-brand">
+        <img src="assets/logo.png" alt="Seven Valleys International Preschool">
+        <p>A joyful place to learn, play, grow and belong.</p>
+
+        <div class="socials">
+          <a href="#" aria-label="Facebook">f</a>
+          <a href="#" aria-label="Instagram">◎</a>
+          <a href="#" aria-label="YouTube">▶</a>
+        </div>
+      </div>
+
+      <div>
+        <h3>Explore</h3>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="academics.html">Academics</a>
+        <a href="day-care.html">Day Care</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <div>
+        <h3>Get in touch</h3>
+        <p>Mon – Sat, 8:00 AM – 6:30 PM</p>
+        <a href="tel:+919993592493">+91 99935 92493</a>
+        <a href="mailto:hello@sevenvalleysinternational.com">
+          hello@sevenvalleysinternational.com
+        </a>
+      </div>
+
+      <div>
+        <h3>Find us</h3>
+        <p>
+          Seven Valleys International Preschool<br>
+          25, Balwant Nagar<br>
+          Gwalior MP, India 474002
+        </p>
+        <a
+          class="direction-link"
+          href="https://www.google.com/maps/search/?api=1&query=Seven+Valleys+International+Preschool%2C+25+Balwant+Nagar%2C+Gwalior%2C+Madhya+Pradesh+474002"
+          target="_blank"
+          rel="noopener"
+        >
+          Get Directions ↗
+        </a>
+      </div>
+    </div>
+
+    <div class="copyright">
+      <div class="container">
+        <span>© 2026 Seven Valleys International Preschool. All rights reserved.</span>
+        <span>Made for little dreamers ✦</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const menuButton = document.querySelector('.menu-btn');
+    const drawer = document.getElementById('mobileDrawer');
+    const closeButton = document.querySelector('.drawer-close');
+    const backdrop = document.querySelector('.drawer-backdrop');
+
+    function toggleDrawer(open) {
+      drawer.classList.toggle('open', open);
+      backdrop.classList.toggle('open', open);
+      drawer.setAttribute('aria-hidden', String(!open));
+      menuButton.setAttribute('aria-expanded', String(open));
+      document.body.style.overflow = open ? 'hidden' : '';
+    }
+
+    menuButton.addEventListener('click', () => toggleDrawer(true));
+    closeButton.addEventListener('click', () => toggleDrawer(false));
+    backdrop.addEventListener('click', () => toggleDrawer(false));
+
+    drawer.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => toggleDrawer(false));
+    });
+  </script>
+</body>
+</html>
