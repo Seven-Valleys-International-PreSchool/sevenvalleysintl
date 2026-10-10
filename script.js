@@ -121,3 +121,10 @@ activityTabs.forEach((tab, index)=>{
     target.focus();
   });
 });
+
+
+// Principal / Director flap cards: tap to toggle on touch devices
+document.querySelectorAll('.flap-card').forEach(card=>{
+  card.addEventListener('click',()=>{ if(!window.matchMedia('(hover:hover)').matches) card.classList.toggle('open'); });
+  card.addEventListener('keydown',e=>{ if(e.key==='Enter'||e.key===' '){e.preventDefault();card.classList.toggle('open');} });
+});
