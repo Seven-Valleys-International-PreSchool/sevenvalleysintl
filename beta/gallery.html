@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery | Seven Valleys International Preschool</title>
+  <meta name="description" content="Explore joyful moments, creative activities, and memories from Seven Valleys International Preschool.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Elfsight Instagram Feed | Untitled Instagram Feed -->
+  <script src="https://elfsightcdn.com/platform.js" async></script>
+  <script>
+    tailwind.config = { theme: { extend: { colors: {
+      'brand-cyan': '#12C7D9', 'brand-pink': '#F01883', 'brand-yellow': '#FFC928',
+      'brand-bg-cyan': '#F5FBFD', 'brand-bg-pink': '#FFF1F8', 'brand-navy': '#24344D'
+    }, fontFamily: { sans: ['"Plus Jakarta Sans"', 'sans-serif'], heading: ['"Outfit"', 'sans-serif'] } } } };
+  </script>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/gallery.css">
+</head>
+<body class="bg-white text-brand-navy antialiased">
+  <!-- ==========================================================================
+       1. ANNOUNCEMENT BAR
+       ========================================================================== -->
+  <aside id="announcement-bar" aria-label="Announcement" class="bg-brand-navy text-white text-xs sm:text-sm py-2 px-4 border-b border-brand-cyan/20 transition-all duration-300">
+    <div class="max-w-7xl mx-auto flex items-center justify-between gap-3">
+      <div class="flex items-center gap-2 overflow-hidden text-ellipsis whitespace-nowrap">
+        <span class="inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-bold bg-brand-pink text-white uppercase tracking-wider animate-pulse">
+          Admissions Open
+        </span>
+        <span class="text-slate-200 truncate">
+          Session 2026-27 Enrollment is now live. Limited seats per cohort!
+        </span>
+      </div>
+      <div class="flex items-center gap-4 shrink-0">
+        <!-- Quick homepage variant links -->
+        <!-- <div class="hidden lg:flex items-center gap-1.5 text-[11px] bg-slate-800/80 px-2.5 py-1 rounded-lg border border-slate-700">
+          <span class="text-slate-400">Layouts:</span>
+          <a href="index1.html" class="text-slate-300 hover:text-white hover:underline">Static (1)</a>
+          <span class="text-slate-500">&bull;</span>
+          <span class="text-brand-yellow font-bold">Carousel (2)</span>
+          <span class="text-slate-500">&bull;</span>
+          <a href="index3.html" class="text-slate-300 hover:text-white hover:underline">Video (3)</a>
+        </div> -->
+        <a href="tel:+919109357416" class="hidden md:inline-flex items-center gap-1.5 text-brand-cyan hover:underline font-semibold">
+          <i class="fa-solid fa-phone text-xs"></i> +91 9109357416
+        </a>
+        <a href="admissions.html" class="inline-flex items-center gap-1 text-brand-yellow font-bold hover:underline">
+          <span>Apply Now</span>
+          <i class="fa-solid fa-arrow-right text-[10px]"></i>
+        </a>
+        <button id="announcement-dismiss" aria-label="Dismiss banner" class="text-slate-400 hover:text-white p-1 ml-1 transition-colors">
+          <i class="fa-solid fa-xmark text-xs"></i>
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ==========================================================================
+       2. HEADER WITH LOGO & NAVIGATION + CTA APPLY NOW
+       (Extra WhatsApp CTA removed from header)
+       ========================================================================== -->
+  <header id="main-header" class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-100 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <a href="index.html" class="flex items-center gap-3 group">
+          <!-- <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-brand-bg-cyan via-white to-brand-bg-pink border border-slate-200/80 flex items-center justify-center shadow-sm group-hover:scale-105 transition-transform">
+            <img src="assets/logo.png">
+          </div> -->
+          <div class="flex flex-col">
+            <img src="assets/logo.png" class="w-36 h-20">
+          </div>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden lg:flex items-center gap-8 text-sm font-semibold text-brand-navy">
+          <div class="relative group">
+            <a href="index.html" class="text-slate-600 hover:text-brand-navy transition-colors py-1">
+              <span>Home</span>
+              <!-- <i class="fa-solid fa-chevron-down text-[10px]"></i> -->
+            </a>
+          </div>
+          <a href="about.html" class="text-slate-600 hover:text-brand-navy transition-colors py-1">About Us</a>
+          <a href="admissions.html" class="text-slate-600 hover:text-brand-navy transition-colors py-1">Admission</a>
+          <a href="programs.html" class="text-slate-600 hover:text-brand-navy transition-colors py-1">Programs</a>
+          <a href="gallery.html" class="text-brand-pink transition-colors relative py-1 after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-brand-pink">Gallery</a>
+          <a href="contact.html" class="text-slate-600 hover:text-brand-navy transition-colors py-1">Contact Us</a>
+        </nav>
+
+        <!-- CTA Button -->
+        <div class="flex items-center gap-3">
+          <a href="admissions.html" class="inline-flex items-center justify-center px-5 py-2.5 rounded-xl font-bold text-xs sm:text-sm tracking-wide text-white bg-brand-pink hover:bg-[#d61272] shadow-sm hover:shadow-brand-pink/25 transition-all transform hover:-translate-y-0.5 active:translate-y-0">
+            APPLY NOW
+          </a>
+          <button id="mobile-menu-btn" aria-label="Open Navigation Menu" class="lg:hidden p-2 rounded-xl text-brand-navy hover:bg-slate-100 transition-colors">
+            <i class="fa-solid fa-bars-staggered text-xl"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div id="mobile-menu-backdrop" class="mobile-nav-backdrop fixed inset-0 bg-brand-navy/60 z-50 backdrop-blur-sm lg:hidden"></div>
+  <aside id="mobile-menu-panel" class="mobile-nav-panel fixed top-0 right-0 bottom-0 w-80 max-w-full bg-white z-50 shadow-2xl flex flex-col justify-between p-6 lg:hidden">
+    <div>
+      <div class="flex items-center justify-between pb-6 border-b border-slate-100">
+        <div class="flex items-center gap-2.5">
+          <!-- <div class="w-10 h-10 rounded-xl bg-brand-bg-cyan flex items-center justify-center">
+            <i class="fa-solid fa-shapes text-brand-cyan text-lg"></i>
+          </div> -->
+          <div>
+            <img src="assets/logo.png" class="w-36 h-20">
+          </div>
+        </div>
+        <button id="mobile-menu-close" class="w-9 h-9 rounded-lg bg-slate-100 text-slate-600 flex items-center justify-center hover:bg-slate-200">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <nav class="flex flex-col gap-2 mt-6 text-base font-semibold text-brand-navy">
+        <div class="space-y-1 bg-slate-50 p-2 rounded-xl">
+          <div class="text-[11px] font-bold uppercase tracking-wider text-slate-400 px-2 py-1">Home Page Layouts</div>
+          <a href="index.html" class="flex items-center justify-between px-3.5 py-3 rounded-xl hover:bg-slate-50 text-slate-700">
+            <span>Home</span>
+          </a>
+
+        </div>
+        <a href="about.html" class="flex items-center justify-between px-3.5 py-3 rounded-xl bg-brand-bg-pink text-brand-pink">About Us</a>
+        <a href="admissions.html" class="flex items-center justify-between px-3.5 py-3 rounded-xl hover:bg-slate-50 text-slate-700">Admission</a>
+        <a href="programs.html" class="flex items-center justify-between px-3.5 py-3 rounded-xl hover:bg-slate-50 text-slate-700">Programs</a>
+        <a href="gallery.html" class="flex items-center justify-between px-3.5 py-3 rounded-xl bg-brand-bg-pink text-brand-pink">Gallery</a>
+        <a href="contact.html" class="flex items-center justify-between px-3.5 py-3 rounded-xl hover:bg-slate-50 text-slate-700">Contact Us</a>
+      </nav>
+    </div>
+
+    <div class="pt-6 border-t border-slate-100 space-y-3">
+      <a href="admissions.html" class="w-full flex items-center justify-center py-3 rounded-xl bg-brand-pink text-white font-bold text-sm shadow-sm">
+        APPLY NOW
+      </a>
+      <a href="https://wa.me/919109357416" target="_blank" rel="noopener noreferrer" class="w-full flex items-center justify-center gap-2 py-3 rounded-xl bg-emerald-50 text-emerald-700 font-bold text-sm border border-emerald-200">
+        <i class="fa-brands fa-whatsapp text-lg"></i>
+        <span>Chat on WhatsApp</span>
+      </a>
+    </div>
+  </aside>
+
+
+  <main>
+    <section class="gallery-hero"  style="background: url('assets/page-hero.jpg');">
+      <!-- Top Decorative Scalloped Border Pattern Strip -->
+      <div class="border-scallop-strip absolute top-0 left-0 right-0 z-30"></div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <span class="gallery-eyebrow"><i class="fa-regular fa-images"></i> Little moments, lasting memories</span>
+        <h1 class="font-heading font-extrabold text-3xl sm:text-4xl lg:text-5xl text-slate-100 tracking-tight">
+        Our Gallery
+        </h1>
+        <p>Take a peek into the joyful discoveries, creative play, and everyday magic at Seven Valleys International Preschool.</p>
+        <a href="#photo-gallery" class="gallery-hero__button">Explore moments <i class="fa-solid fa-arrow-down"></i></a>
+      </div>
+    </section>
+
+    <section id="photo-gallery" class="gallery-layout max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="gallery-main">
+        <div class="gallery-section-heading">
+          <div><span class="gallery-kicker">Captured with care</span><h2>Moments at Seven Valleys</h2></div>
+          <p>Choose any photo to view it in full size and copy a shareable link.</p>
+        </div>
+        <div class="gallery-grid" id="gallery-grid">
+          <button class="gallery-card mosaic-img-yellow" type="button"
+            data-gallery-image data-full="gallery/seven-valleys-preschool23.png?auto=format&fit=crop&w=1000&q=85" data-caption="Making memories" data-image-id="moment-12"
+            aria-label="View full size: Making memories">
+            <img src="gallery/seven-valleys-preschool23.png?auto=format&fit=crop&w=1000&q=85" alt="Making memories" loading="lazy">
+            <span class="gallery-card__overlay"><span>Making memories</span><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+          </button>
+          <button class="gallery-card mosaic-img-cyan" type="button"
+            data-gallery-image data-full="gallery/seven-valleys-preschool13.jpeg?auto=format&fit=crop&w=1000&q=85" data-caption="Learning through play" data-image-id="moment-1"
+            aria-label="View full size: Learning through play">
+            <img src="gallery/seven-valleys-preschool13.jpeg?auto=format&fit=crop&w=1000&q=85" alt="Learning through play" loading="lazy">
+            <span class="gallery-card__overlay"><span>Learning through play</span><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+          </button>
+          <button class="gallery-card mosaic-img-pink" type="button"
+            data-gallery-image data-full="gallery/seven-valleys-preschool2.jpeg?auto=format&fit=crop&w=1000&q=85" data-caption="Little artists at work" data-image-id="moment-2"
+            aria-label="View full size: Little artists at work">
+            <img src="gallery/seven-valleys-preschool2.jpeg?auto=format&fit=crop&w=1000&q=85" alt="Little artists at work" loading="lazy">
+            <span class="gallery-card__overlay"><span>Little artists at work</span><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+          </button>
+          <button class="gallery-card mosaic-img-yellow" type="button"
+            data-gallery-image data-full="gallery/seven-valleys-preschool14.jpeg?auto=format&fit=crop&w=1000&q=85" data-caption="Curious minds explore" data-image-id="moment-3"
+            aria-label="View full size: Curious minds explore">
+            <img src="gallery/seven-valleys-preschool14.jpeg?auto=format&fit=crop&w=1000&q=85" alt="Curious minds explore" loading="lazy">
+            <span class="gallery-card__overlay"><span>Curious minds explore</span><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+          </button>
+          <button class="gallery-card mosaic-img-cyan" type="button"
+            data-gallery-image data-full="gallery/seven-valleys-preschool15.jpeg?auto=format&fit=crop&w=1000&q=85" data-caption="A world of discovery" data-image-id="moment-4"
+            aria-label="View full size: A world of discovery">
+            <img src="gallery/seven-valleys-preschool15.jpeg?auto=format&fit=crop&w=1000&q=85" alt="A world of discovery" loading="lazy">
+            <span class="gallery-card__overlay"><span>A world of discovery</span><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+          </button>
+          <button class="gallery-card mosaic-img-pink" type="button"
+            data-gallery-image data-full="gallery/seven-valleys-preschool16.jpeg?auto=format&fit=crop&w=1000&q=85" data-caption="Creative little hands" data-image-id="moment-5"
+            aria-label="View full size: Creative little hands">
+            <img src="gallery/seven-valleys-preschool16.jpeg?auto=format&fit=crop&w=1000&q=85" alt="Creative little hands" loading="lazy">
+            <span class="gallery-card__overlay"><span>Creative little hands</span><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+          </button>
+          <button class="gallery-card mosaic-img-yellow" type="button"
+            data-gallery-image data-full="gallery/seven-valleys-preschool17.jpeg?auto=format&fit=crop&w=1000&q=85" data-caption="Growing together" data-image-id="moment-6"
+            aria-label="View full size: Growing together">
+            <img src="gallery/seven-valleys-preschool17.jpeg?auto=format&fit=crop&w=1000&q=85" alt="Growing together" loading="lazy">
+            <span class="gallery-card__overlay"><span>Growing together</span><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+          </button>
+          <button class="gallery-card mosaic-img-cyan" type="button"
+            data-gallery-image data-full="gallery/seven-valleys-preschool7.jpeg?auto=format&fit=crop&w=1000&q=85" data-caption="Joyful moments" data-image-id="moment-7"
+            aria-label="View full size: Joyful moments">
+            <img src="gallery/seven-valleys-preschool7.jpeg?auto=format&fit=crop&w=1000&q=85" alt="Joyful moments" loading="lazy">
+            <span class="gallery-card__overlay"><span>Joyful moments</span><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+          </button>
+          <button class="gallery-card mosaic-img-pink" type="button"
+            data-gallery-image
+            data-full="gallery/seven-valleys-preschool24.png"
+            data-caption="Play, learn, repeat"
+            data-image-id="moment-8"
+            aria-label="View full size: Play, learn, repeat">
+
+            <img
+              src="gallery/seven-valleys-preschool24.png"
+              alt="Play, learn, repeat"
+              loading="lazy">
+
+            <span class="gallery-card__overlay">
+              <span>Play, learn, repeat</span>
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </span>
+          </button>
+          <button class="gallery-card mosaic-img-yellow" type="button"
+            data-gallery-image data-full="gallery/seven-valleys-preschool9.jpeg?auto=format&fit=crop&w=1000&q=85" data-caption="Every day is an adventure" data-image-id="moment-9"
+            aria-label="View full size: Every day is an adventure">
+            <img src="gallery/seven-valleys-preschool9.jpeg?auto=format&fit=crop&w=1000&q=85" alt="Every day is an adventure" loading="lazy">
+            <span class="gallery-card__overlay"><span>Every day is an adventure</span><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+          </button>
+          <button class="gallery-card mosaic-img-cyan" type="button"
+            data-gallery-image data-full="gallery/seven-valleys-preschool10.jpeg?auto=format&fit=crop&w=1000&q=85" data-caption="Small steps, big discoveries" data-image-id="moment-10"
+            aria-label="View full size: Small steps, big discoveries">
+            <img src="gallery/seven-valleys-preschool10.jpeg?auto=format&fit=crop&w=1000&q=85" alt="Small steps, big discoveries" loading="lazy">
+            <span class="gallery-card__overlay"><span>Small steps, big discoveries</span><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+          </button>
+          <button class="gallery-card mosaic-img-pink" type="button"
+            data-gallery-image data-full="gallery/seven-valleys-preschool11.jpeg?auto=format&fit=crop&w=1000&q=85" data-caption="A place to belong" data-image-id="moment-11"
+            aria-label="View full size: A place to belong">
+            <img src="gallery/seven-valleys-preschool11.jpeg?auto=format&fit=crop&w=1000&q=85" alt="A place to belong" loading="lazy">
+            <span class="gallery-card__overlay"><span>A place to belong</span><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+          </button>
+          <button class="gallery-card mosaic-img-yellow" type="button"
+            data-gallery-image data-full="gallery/learn-numbers.png?auto=format&fit=crop&w=1000&q=85" data-caption="Making memories" data-image-id="moment-12"
+            aria-label="View full size: Making memories">
+            <img src="gallery/learn-numbers.png?auto=format&fit=crop&w=1000&q=85" alt="Making memories" loading="lazy">
+            <span class="gallery-card__overlay"><span>Making memories</span><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+          </button>
+          <button class="gallery-card mosaic-img-yellow" type="button"
+            data-gallery-image data-full="gallery/seven-valleys-preschool18.jpeg?auto=format&fit=crop&w=1000&q=85" data-caption="Making memories" data-image-id="moment-12"
+            aria-label="View full size: Making memories">
+            <img src="gallery/seven-valleys-preschool18.jpeg?auto=format&fit=crop&w=1000&q=85" alt="Making memories" loading="lazy">
+            <span class="gallery-card__overlay"><span>Making memories</span><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+          </button>
+          <button class="gallery-card mosaic-img-yellow" type="button"
+            data-gallery-image data-full="gallery/seven-valleys-preschool19.jpeg?auto=format&fit=crop&w=1000&q=85" data-caption="Making memories" data-image-id="moment-12"
+            aria-label="View full size: Making memories">
+            <img src="gallery/seven-valleys-preschool19.jpeg?auto=format&fit=crop&w=1000&q=85" alt="Making memories" loading="lazy">
+            <span class="gallery-card__overlay"><span>Making memories</span><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+          </button>
+          <button class="gallery-card mosaic-img-yellow" type="button"
+            data-gallery-image data-full="gallery/seven-valleys-preschool20.jpeg?auto=format&fit=crop&w=1000&q=85" data-caption="Making memories" data-image-id="moment-12"
+            aria-label="View full size: Making memories">
+            <img src="gallery/seven-valleys-preschool20.jpeg?auto=format&fit=crop&w=1000&q=85" alt="Making memories" loading="lazy">
+            <span class="gallery-card__overlay"><span>Making memories</span><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+          </button>
+        </div>
+      </div>
+
+      <aside class="instagram-sidebar" aria-labelledby="instagram-title">
+        <div class="instagram-heading">
+          <span class="instagram-icon"><i class="fa-brands fa-instagram"></i></span>
+          <div><span class="gallery-kicker">Follow our journey</span><h2 id="instagram-title">Instagram Updates</h2></div>
+        </div>
+        <!-- Elfsight Instagram Feed | Untitled Instagram Feed -->
+        <div class="elfsight-app-e3be2d59-2304-4fdd-9f16-1c1f8333c286" data-elfsight-app-lazy></div>
+      </aside>
+      <!-- <aside class="instagram-sidebar" aria-labelledby="instagram-title">
+        <div class="instagram-heading">
+          <span class="instagram-icon"><i class="fa-brands fa-instagram"></i></span>
+          <div><span class="gallery-kicker">Follow our journey</span><h2 id="instagram-title">Instagram Updates</h2></div>
+        </div>
+        <p class="instagram-intro">More smiles, activities, and little milestones from our preschool community.</p>
+        <div class="instagram-grid">
+          <a class="instagram-card" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Classroom moments — open Instagram">
+            <img src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=500&q=80" alt="Classroom moments" loading="lazy"><span><i class="fa-brands fa-instagram"></i></span>
+          </a>
+          <a class="instagram-card" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Playful learning — open Instagram">
+            <img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=500&q=80" alt="Playful learning" loading="lazy"><span><i class="fa-brands fa-instagram"></i></span>
+          </a>
+          <a class="instagram-card" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Nature explorers — open Instagram">
+            <img src="https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&w=500&q=80" alt="Nature explorers" loading="lazy"><span><i class="fa-brands fa-instagram"></i></span>
+          </a>
+          <a class="instagram-card" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Creative time — open Instagram">
+            <img src="https://images.unsplash.com/photo-1564429238817-393bd4286b2d?auto=format&fit=crop&w=500&q=80" alt="Creative time" loading="lazy"><span><i class="fa-brands fa-instagram"></i></span>
+          </a>
+          <a class="instagram-card" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Happy little learners — open Instagram">
+            <img src="https://images.unsplash.com/photo-1472162314594-06b0f7e7e5c2?auto=format&fit=crop&w=500&q=80" alt="Happy little learners" loading="lazy"><span><i class="fa-brands fa-instagram"></i></span>
+          </a>
+          <a class="instagram-card" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Discover together — open Instagram">
+            <img src="https://images.unsplash.com/photo-1503919005314-30d93d07d823?auto=format&fit=crop&w=500&q=80" alt="Discover together" loading="lazy"><span><i class="fa-brands fa-instagram"></i></span>
+          </a>
+          <a class="instagram-card" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Learning in action — open Instagram">
+            <img src="https://images.unsplash.com/photo-1471286174890-9c112ffca5b4?auto=format&fit=crop&w=500&q=80" alt="Learning in action" loading="lazy"><span><i class="fa-brands fa-instagram"></i></span>
+          </a>
+          <a class="instagram-card" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Little adventures — open Instagram">
+            <img src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=500&q=80" alt="Little adventures" loading="lazy"><span><i class="fa-brands fa-instagram"></i></span>
+          </a>
+          <a class="instagram-card" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Moments that matter — open Instagram">
+            <img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=500&q=80" alt="Moments that matter" loading="lazy"><span><i class="fa-brands fa-instagram"></i></span>
+          </a>
+        </div>
+        <a class="instagram-follow" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+          Follow us on Instagram <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </a>
+        <p class="instagram-note"><i class="fa-solid fa-circle-info"></i> These are visual placeholders. Replace them with your actual Instagram post URLs or connect an Instagram feed widget to show the latest posts automatically.</p>
+      </aside> -->
+    </section>
+
+    <section class="gallery-bottom-cta">
+      <div class="max-w-4xl mx-auto px-4 text-center">
+        <span class="gallery-kicker">Every child has a story</span>
+        <h2>Come make memories with us.</h2>
+        <p>Discover a warm, playful space where every little beginning matters.</p>
+        <a href="admissions.html">Explore admissions <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Accessible lightbox -->
+  <div class="lightbox" id="gallery-lightbox" role="dialog" aria-modal="true" aria-label="Image viewer" aria-hidden="true">
+    <button class="lightbox__backdrop" type="button" data-lightbox-close aria-label="Close image viewer"></button>
+    <div class="lightbox__panel">
+      <div class="lightbox__topbar">
+        <span id="lightbox-counter">1 / 12</span>
+        <div class="lightbox__top-actions">
+          <button type="button" id="lightbox-copy" class="lightbox__action"><i class="fa-solid fa-link"></i><span>Copy link</span></button>
+          <button type="button" data-lightbox-close class="lightbox__close" aria-label="Close image viewer"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+      </div>
+      <button type="button" class="lightbox__nav lightbox__prev" id="lightbox-prev" aria-label="Previous image"><i class="fa-solid fa-chevron-left"></i></button>
+      <figure class="lightbox__figure">
+        <img id="lightbox-image" src="" alt="">
+        <figcaption id="lightbox-caption"></figcaption>
+      </figure>
+      <button type="button" class="lightbox__nav lightbox__next" id="lightbox-next" aria-label="Next image"><i class="fa-solid fa-chevron-right"></i></button>
+      <p class="lightbox__hint">Use ← → to browse · Esc to close</p>
+    </div>
+  </div>
+  <div class="gallery-toast" id="gallery-toast" role="status" aria-live="polite"></div>
+
+  <!-- FOOTER -->
+  <footer class="bg-brand-navy text-white pt-14 pb-8 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 pb-12 border-b border-slate-700/80">
+        
+        <!-- Column 1: Logo & Social Media Icons (lg:col-span-4) -->
+        <div class="lg:col-span-4 space-y-4">
+          <div class="flex items-center gap-3">
+            
+            <div>
+              <img src="assets/logo.png" class="w-36 h-20">
+            </div>
+          </div>
+          <p class="text-slate-300 text-xs sm:text-sm leading-relaxed pr-4">
+            Nurturing confident, empathetic, and inquisitive young global citizens with international norms, 1:4 attention, live CCTV transparency, and purposeful play.
+          </p>
+          <!-- Social Media Icons -->
+          <div class="flex items-center gap-3 pt-1">
+            <a href="https://www.facebook.com/profile.php?id=61590018266630" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="w-9 h-9 rounded-xl bg-slate-800 hover:bg-brand-cyan text-slate-300 hover:text-white flex items-center justify-center transition-all">
+              <i class="fa-brands fa-facebook-f text-sm"></i>
+            </a>
+            <a href="https://www.instagram.com/seven.valley.international" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="w-9 h-9 rounded-xl bg-slate-800 hover:bg-brand-pink text-slate-300 hover:text-white flex items-center justify-center transition-all">
+              <i class="fa-brands fa-instagram text-sm"></i>
+            </a>
+            <!-- <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="w-9 h-9 rounded-xl bg-slate-800 hover:bg-red-500 text-slate-300 hover:text-white flex items-center justify-center transition-all">
+              <i class="fa-brands fa-youtube text-sm"></i>
+            </a> -->
+            <!-- <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="w-9 h-9 rounded-xl bg-slate-800 hover:bg-blue-600 text-slate-300 hover:text-white flex items-center justify-center transition-all">
+              <i class="fa-brands fa-linkedin-in text-sm"></i>
+            </a> -->
+            <a href="https://wa.me/919109357416" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="w-9 h-9 rounded-xl bg-slate-800 hover:bg-emerald-500 text-slate-300 hover:text-white flex items-center justify-center transition-all">
+              <i class="fa-brands fa-whatsapp text-sm"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Column 2: Explore (lg:col-span-2) -->
+        <div class="lg:col-span-2 space-y-3">
+          <h4 class="font-heading font-bold text-sm uppercase tracking-wider text-slate-100">Explore</h4>
+          <ul class="space-y-2 text-xs sm:text-sm text-slate-300">
+            <li><a href="index.html" class="hover:text-brand-cyan transition-colors">Home</a></li>
+            <li><a href="about.html" class="hover:text-brand-cyan transition-colors">About Seven Valleys</a></li>
+            <li><a href="programs.html" class="hover:text-brand-cyan transition-colors">Programs &amp; Curriculum</a></li>
+            <li><a href="admissions.html" class="hover:text-brand-cyan transition-colors">Admissions 2026-27</a></li>
+            <li><a href="#activities" class="hover:text-brand-cyan transition-colors">Co-Curricular Activities</a></li>
+            <li><a href="contact.html" class="hover:text-brand-cyan transition-colors">Schedule a Visit</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Get In Touch (lg:col-span-3) -->
+        <div class="lg:col-span-3 space-y-3">
+          <h4 class="font-heading font-bold text-sm uppercase tracking-wider text-slate-100">Get In Touch</h4>
+          <ul class="space-y-2.5 text-xs sm:text-sm text-slate-300">
+            <li class="flex items-start gap-2.5">
+              <i class="fa-solid fa-phone text-brand-cyan mt-1 text-xs"></i>
+              <div>
+                <div class="text-[11px] text-slate-400 font-bold uppercase">Call / WhatsApp Helpline</div>
+                <a href="tel:+919109357416" class="font-semibold text-white hover:text-brand-cyan transition-colors">+91 9109357416</a>
+              </div>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <i class="fa-solid fa-envelope text-brand-pink mt-1 text-xs"></i>
+              <div>
+                <div class="text-[11px] text-slate-400 font-bold uppercase">Email Inquiries</div>
+                <a href="mailto:sevenvalleysinternational@gmail.com" class="font-semibold text-white hover:text-brand-pink transition-colors">sevenvalleysinternational@gmail.com</a>
+              </div>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <i class="fa-solid fa-calendar-days text-brand-yellow mt-1 text-xs"></i>
+              <div>
+                <div class="text-[11px] text-slate-400 font-bold uppercase">Administrative Office</div>
+                <span class="text-slate-300">Mon - Sat: 8:30 AM to 5:00 PM</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Find Us (lg:col-span-3) -->
+        <div class="lg:col-span-3 space-y-3">
+          <h4 class="font-heading font-bold text-sm uppercase tracking-wider text-slate-100">Find Us</h4>
+          <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+            Seven Valleys International Preschool<br>
+            25, Balwant Nagar<br>
+            Gwalior MP, India 474002
+          </p>
+          <div class="pt-1">
+            <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-3 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-xs text-brand-cyan font-bold transition-all border border-slate-700">
+              <i class="fa-solid fa-map-location-dot"></i>
+              <span>Open in Google Maps</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ======================================================================
+           14. COPYRIGHT SECTION
+           ====================================================================== -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400 gap-4">
+        <div>
+          &copy; 2026 Seven Valleys International Preschool. All Rights Reserved.
+        </div>
+        <div class="flex items-center gap-6">
+          <a href="#" class="hover:text-white transition-colors">Child Safety Policy</a>
+          <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+          <a href="#" class="hover:text-white transition-colors">Terms of Admission</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp -->
+  <a href="https://wa.me/919109357416?text=Hello%20Seven%20Valleys%20Preschool,%20I%20would%20like%20to%20inquire%20about%20admissions." target="_blank" rel="noopener noreferrer" class="whatsapp-pulse fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-emerald-500 hover:bg-emerald-600 text-white flex items-center justify-center shadow-2xl transition-all" aria-label="Chat on WhatsApp">
+    <i class="fa-brands fa-whatsapp text-3xl"></i>
+  </a>
+
+
+  <script src="js/main.js"></script>
+  <script src="js/gallery.js"></script>
+</body>
+</html>

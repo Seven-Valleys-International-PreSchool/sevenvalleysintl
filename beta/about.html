@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | Seven Valleys International Preschool</title>
+  <meta name="description" content="Learn about Seven Valleys International Preschool's story, educational philosophy, leadership team, certified educators, and international standards.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Tailwind CSS CDN with custom config matching the official theme palette -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'brand-cyan': '#12C7D9',
+            'brand-pink': '#F01883',
+            'brand-yellow': '#FFC928',
+            'brand-bg-cyan': '#F5FBFD',
+            'brand-bg-pink': '#FFF1F8',
+            'brand-navy': '#24344D',
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            heading: ['"Outfit"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-white text-brand-navy antialiased selection:bg-brand-cyan/20 selection:text-brand-navy">
+
+  <!-- ==========================================================================
+       1. ANNOUNCEMENT BAR
+       ========================================================================== -->
+  <aside id="announcement-bar" aria-label="Announcement" class="bg-brand-navy text-white text-xs sm:text-sm py-2 px-4 border-b border-brand-cyan/20 transition-all duration-300">
+    <div class="max-w-7xl mx-auto flex items-center justify-between gap-3">
+      <div class="flex items-center gap-2 overflow-hidden text-ellipsis whitespace-nowrap">
+        <span class="inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-bold bg-brand-pink text-white uppercase tracking-wider animate-pulse">
+          Admissions Open
+        </span>
+        <span class="text-slate-200 truncate">
+          Session 2026-27 Enrollment is now live. Limited seats per cohort!
+        </span>
+      </div>
+      <div class="flex items-center gap-4 shrink-0">
+        <!-- Quick homepage variant links -->
+        <!-- <div class="hidden lg:flex items-center gap-1.5 text-[11px] bg-slate-800/80 px-2.5 py-1 rounded-lg border border-slate-700">
+          <span class="text-slate-400">Layouts:</span>
+          <a href="index1.html" class="text-slate-300 hover:text-white hover:underline">Static (1)</a>
+          <span class="text-slate-500">&bull;</span>
+          <span class="text-brand-yellow font-bold">Carousel (2)</span>
+          <span class="text-slate-500">&bull;</span>
+          <a href="index3.html" class="text-slate-300 hover:text-white hover:underline">Video (3)</a>
+        </div> -->
+        <a href="tel:+919109357416" class="hidden md:inline-flex items-center gap-1.5 text-brand-cyan hover:underline font-semibold">
+          <i class="fa-solid fa-phone text-xs"></i> +91 9109357416
+        </a>
+        <a href="admissions.html" class="inline-flex items-center gap-1 text-brand-yellow font-bold hover:underline">
+          <span>Apply Now</span>
+          <i class="fa-solid fa-arrow-right text-[10px]"></i>
+        </a>
+        <button id="announcement-dismiss" aria-label="Dismiss banner" class="text-slate-400 hover:text-white p-1 ml-1 transition-colors">
+          <i class="fa-solid fa-xmark text-xs"></i>
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ==========================================================================
+       2. HEADER WITH LOGO & NAVIGATION + CTA APPLY NOW
+       (Extra WhatsApp CTA removed from header)
+       ========================================================================== -->
+  <header id="main-header" class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-100 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <a href="index.html" class="flex items-center gap-3 group">
+          <!-- <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-brand-bg-cyan via-white to-brand-bg-pink border border-slate-200/80 flex items-center justify-center shadow-sm group-hover:scale-105 transition-transform">
+            <img src="assets/logo.png">
+          </div> -->
+          <div class="flex flex-col">
+            <img src="assets/logo.png" class="w-36 h-20">
+          </div>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden lg:flex items-center gap-8 text-sm font-semibold text-brand-navy">
+          <div class="relative group">
+            <a href="index.html" class="text-slate-600 hover:text-brand-navy transition-colors py-1">
+              <span>Home</span>
+              <!-- <i class="fa-solid fa-chevron-down text-[10px]"></i> -->
+            </a>
+          </div>
+          <a href="about.html" class="text-brand-pink transition-colors relative py-1 after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-brand-pink">About Us</a>
+          <a href="admissions.html" class="text-slate-600 hover:text-brand-navy transition-colors py-1">Admission</a>
+          <a href="programs.html" class="text-slate-600 hover:text-brand-navy transition-colors py-1">Programs</a>
+          <a href="gallery.html" class="text-slate-600 hover:text-brand-navy transition-colors py-1">Gallery</a>
+          <a href="contact.html" class="text-slate-600 hover:text-brand-navy transition-colors py-1">Contact Us</a>
+        </nav>
+
+        <!-- CTA Button -->
+        <div class="flex items-center gap-3">
+          <a href="admissions.html" class="inline-flex items-center justify-center px-5 py-2.5 rounded-xl font-bold text-xs sm:text-sm tracking-wide text-white bg-brand-pink hover:bg-[#d61272] shadow-sm hover:shadow-brand-pink/25 transition-all transform hover:-translate-y-0.5 active:translate-y-0">
+            APPLY NOW
+          </a>
+          <button id="mobile-menu-btn" aria-label="Open Navigation Menu" class="lg:hidden p-2 rounded-xl text-brand-navy hover:bg-slate-100 transition-colors">
+            <i class="fa-solid fa-bars-staggered text-xl"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div id="mobile-menu-backdrop" class="mobile-nav-backdrop fixed inset-0 bg-brand-navy/60 z-50 backdrop-blur-sm lg:hidden"></div>
+  <aside id="mobile-menu-panel" class="mobile-nav-panel fixed top-0 right-0 bottom-0 w-80 max-w-full bg-white z-50 shadow-2xl flex flex-col justify-between p-6 lg:hidden">
+    <div>
+      <div class="flex items-center justify-between pb-6 border-b border-slate-100">
+        <div class="flex items-center gap-2.5">
+          <!-- <div class="w-10 h-10 rounded-xl bg-brand-bg-cyan flex items-center justify-center">
+            <i class="fa-solid fa-shapes text-brand-cyan text-lg"></i>
+          </div> -->
+          <div>
+            <img src="assets/logo.png" class="w-36 h-20">
+          </div>
+        </div>
+        <button id="mobile-menu-close" class="w-9 h-9 rounded-lg bg-slate-100 text-slate-600 flex items-center justify-center hover:bg-slate-200">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <nav class="flex flex-col gap-2 mt-6 text-base font-semibold text-brand-navy">
+        <div class="space-y-1 bg-slate-50 p-2 rounded-xl">
+          <div class="text-[11px] font-bold uppercase tracking-wider text-slate-400 px-2 py-1">Home Page Layouts</div>
+          <a href="index.html" class="flex items-center justify-between px-3.5 py-3 rounded-xl hover:bg-slate-50 text-slate-700">
+            <span>Home</span>
+          </a>
+
+        </div>
+        <a href="about.html" class="flex items-center justify-between px-3.5 py-3 rounded-xl bg-brand-bg-pink text-brand-pink">About Us</a>
+        <a href="admissions.html" class="flex items-center justify-between px-3.5 py-3 rounded-xl hover:bg-slate-50 text-slate-700">Admission</a>
+        <a href="programs.html" class="flex items-center justify-between px-3.5 py-3 rounded-xl hover:bg-slate-50 text-slate-700">Programs</a>
+        <a href="gallery.html" class="flex items-center justify-between px-3.5 py-3 rounded-xl hover:bg-slate-50 text-slate-700">Gallery</a>
+        <a href="contact.html" class="flex items-center justify-between px-3.5 py-3 rounded-xl hover:bg-slate-50 text-slate-700">Contact Us</a>
+      </nav>
+    </div>
+
+    <div class="pt-6 border-t border-slate-100 space-y-3">
+      <a href="admissions.html" class="w-full flex items-center justify-center py-3 rounded-xl bg-brand-pink text-white font-bold text-sm shadow-sm">
+        APPLY NOW
+      </a>
+      <a href="https://wa.me/919109357416" target="_blank" rel="noopener noreferrer" class="w-full flex items-center justify-center gap-2 py-3 rounded-xl bg-emerald-50 text-emerald-700 font-bold text-sm border border-emerald-200">
+        <i class="fa-brands fa-whatsapp text-lg"></i>
+        <span>Chat on WhatsApp</span>
+      </a>
+    </div>
+  </aside>
+
+  <!-- HERO -->
+  <section class="relative py-12 md:py-16 bg-gradient-to-b from-brand-bg-cyan to-white border-b border-slate-100"  style="background: url('assets/page-hero.jpg');">
+    <!-- Top Decorative Scalloped Border Pattern Strip -->
+    <div class="border-scallop-strip absolute top-0 left-0 right-0 z-30"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center max-w-3xl space-y-3">
+      <span class="inline-block px-3.5 py-1 rounded-full bg-white text-brand-cyan text-xs font-extrabold uppercase tracking-wider border border-brand-cyan/20 shadow-xs">
+        Our Roots &amp; Mission
+      </span>
+      <h1 class="font-heading font-extrabold text-3xl sm:text-4xl lg:text-5xl text-slate-100 tracking-tight">
+        A Sanctuary of Joyful Discovery &amp; Gentle Growth
+      </h1>
+      <p class="text-slate-100 text-sm sm:text-base leading-relaxed">
+        Founded on the belief that preschool shouldn't be about rigid test preparation, but about cultivating emotional resilience, boundless curiosity, and enduring love for learning.
+      </p>
+    </div>
+  </section>
+
+  <!-- Who we are -->
+  <section id="who-we-are" class="overflow-hidden bg-white py-20 text-[#17191d] sm:py-28">
+    <div class="mx-auto grid max-w-7xl items-center gap-14 px-5 lg:grid-cols-[.9fr_1.1fr] lg:gap-16 lg:px-8">
+      <div class="max-w-xl">
+        <p class="mb-5 inline-flex items-center gap-2 text-sm font-bold uppercase tracking-[.2em] text-[#555b63]"><span class="h-2 w-2 rounded-full bg-[#12C7D9]"></span> Who we are</p>
+        <h2 class="text-4xl font-semibold leading-[1.08] tracking-[-.045em] sm:text-5xl lg:text-6xl">A home <br>away from <span class="italic text-[#777d85]">home.</span></h2>
+        <p class="mt-7 text-lg leading-8 text-[#60656d]">Where little hearts feel safe, curious minds blossom, and every new day brings a world of discovery. Welcome to Seven Valleys International PreSchool, a nurturing space where children take their first steps towards a joyful and meaningful learning journey.</p>
+        <p class="mt-4 leading-7 text-[#777d85]">As a newly established preschool, we are passionate about creating a safe, loving, and stimulating environment where every child feels valued, encouraged, and free to explore. We believe that the early years are the foundation for lifelong learning, and we are committed to helping every child grow with confidence, creativity, and a sense of belonging. At Seven Valleys International PreSchool, every little beginning matters.</p>
+        
+      </div>
+      <div class="who-collage relative mx-auto w-full max-w-[620px]" aria-label="Images representing people learning, creating and exploring">
+        <div class="who-image who-image--top-left"><img src="gallery/seven-valleys-preschool1.jpeg?auto=format&fit=crop&w=700&q=85" alt="Child playing and exploring" loading="lazy"></div>
+        <div class="who-image who-image--top-right"><img src="assets/learning.png?auto=format&fit=crop&w=700&q=85" alt="Child enjoying a creative activity" loading="lazy"></div>
+        <div class="who-image who-image--bottom"><img src="gallery/seven-valleys-preschool12.jpeg?auto=format&fit=crop&w=900&q=85" alt="Warm, playful learning environment" loading="lazy"></div>
+        <span class="who-collage__spark who-collage__spark--one" aria-hidden="true">✳</span><span class="who-collage__spark who-collage__spark--two" aria-hidden="true">✦</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- PHILOSOPHY: THE SEVEN VALLEYS -->
+  <section class="py-12 md:py-16 bg-white border-b border-slate-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-10 space-y-2">
+        <span class="inline-block px-3 py-1 rounded-full bg-brand-bg-pink text-brand-pink text-xs font-bold uppercase tracking-wider">
+          Our Foundation
+        </span>
+        <h2 class="font-heading font-extrabold text-2xl sm:text-3xl text-brand-navy tracking-tight">
+          The Seven Valleys of Child Development
+        </h2>
+        <p class="text-slate-600 text-sm">
+          Every child traverses these seven foundational realms during their early formative years.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+        
+        <!-- Valley 1 -->
+        <div class="p-5 rounded-2xl bg-brand-bg-cyan border border-brand-cyan/20 space-y-2">
+          <div class="w-10 h-10 rounded-xl bg-brand-cyan text-white flex items-center justify-center font-bold">1</div>
+          <h3 class="font-heading font-bold text-base text-brand-navy">Valley of Wonder</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">Inquiry-based play where children ask "Why?" and discover through sensory trial and reflection.</p>
+        </div>
+
+        <!-- Valley 2 -->
+        <div class="p-5 rounded-2xl bg-brand-bg-pink border border-brand-pink/20 space-y-2">
+          <div class="w-10 h-10 rounded-xl bg-brand-pink text-white flex items-center justify-center font-bold">2</div>
+          <h3 class="font-heading font-bold text-base text-brand-navy">Valley of Expression</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">Jolly Phonics, multi-lingual story circles, expressive theater and visual artwork.</p>
+        </div>
+
+        <!-- Valley 3 -->
+        <div class="p-5 rounded-2xl bg-[#FFF9E6] border border-brand-yellow/30 space-y-2">
+          <div class="w-10 h-10 rounded-xl bg-brand-yellow text-brand-navy flex items-center justify-center font-bold">3</div>
+          <h3 class="font-heading font-bold text-base text-brand-navy">Valley of Logic</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">Patterns, tactile Montessori sorting cubes, spatial balance and early algorithmic thinking.</p>
+        </div>
+
+        <!-- Valley 4 -->
+        <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 space-y-2">
+          <div class="w-10 h-10 rounded-xl bg-brand-navy text-white flex items-center justify-center font-bold">4</div>
+          <h3 class="font-heading font-bold text-base text-brand-navy">Valley of Harmony</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">Social-emotional coaching, conflict resolution, active listening and gentle empathy.</p>
+        </div>
+
+        <!-- Valley 5 -->
+        <div class="p-5 rounded-2xl bg-emerald-50 border border-emerald-200/60 space-y-2">
+          <div class="w-10 h-10 rounded-xl bg-emerald-600 text-white flex items-center justify-center font-bold">5</div>
+          <h3 class="font-heading font-bold text-base text-brand-navy">Valley of Agility</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">Gross motor agility on rubberized grounds, balance beams, splash waters, and kid-yoga.</p>
+        </div>
+
+        <!-- Valley 6 -->
+        <div class="p-5 rounded-2xl bg-brand-bg-cyan border border-brand-cyan/20 space-y-2">
+          <div class="w-10 h-10 rounded-xl bg-brand-cyan text-white flex items-center justify-center font-bold">6</div>
+          <h3 class="font-heading font-bold text-base text-brand-navy">Valley of Nature</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">Organic herbal gardens, earth sciences, caring for living plants, and zero-plastic ethics.</p>
+        </div>
+
+        <!-- Valley 7 -->
+        <div class="p-5 rounded-2xl bg-brand-bg-pink border border-brand-pink/20 space-y-2 lg:col-span-2 xl:col-span-2">
+          <div class="w-10 h-10 rounded-xl bg-brand-pink text-white flex items-center justify-center font-bold">7</div>
+          <h3 class="font-heading font-bold text-base text-brand-navy">Valley of Global Citizenship</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">Appreciation for diverse traditions, mutual respect, table etiquette, and moral confidence that prepares children to thrive in any primary school worldwide.</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- LEADERSHIP PROFILES -->
+  <section class="py-12 md:py-16 bg-brand-bg-cyan/40 border-b border-slate-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      
+      <div class="text-center max-w-2xl mx-auto space-y-2">
+        <span class="inline-block px-3 py-1 rounded-full bg-white text-brand-cyan text-xs font-bold uppercase tracking-wider shadow-xs">
+          The Founder
+        </span>
+        <h2 class="font-heading font-extrabold text-3xl text-brand-navy tracking-tight">
+          Founded by Visionary Educator
+        </h2>
+      </div>
+
+      <!-- Founded By -->
+      <div class="bg-white rounded-3xl p-6 sm:p-10 border border-brand-cyan/20 shadow-xs">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+          <div class="md:col-span-4 text-center">
+            <div class="w-44 h-44 rounded-2xl overflow-hidden mx-auto shadow-md border-4 border-brand-bg-cyan">
+              <img src="assets/principal.jpeg?q=80&w=700&auto=format&fit=crop" alt="Dr. Priyanka Singh, Founder" class="w-full h-full object-cover">
+            </div>
+            <div class="mt-3">
+              <h3 class="font-heading font-bold text-lg text-brand-navy">Dr. Priyanka Singh</h3>
+              <p class="text-xs font-bold text-brand-cyan uppercase">Principal &amp; Early Childhood Specialist</p>
+              <p class="text-xs text-slate-500">Ph.D. Child Psychology &bull; 18+ Years</p>
+            </div>
+          </div>
+          <div class="md:col-span-8 space-y-3">
+            <!-- <h4 class="font-heading font-bold text-xl text-brand-navy">"Preschool is where a child falls in love with learning."</h4> -->
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+              
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+              Duis aute irure dolor in reprehenderit in voluptate velit <strong>esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident</strong>, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+            <div class="flex flex-wrap gap-2 pt-2 text-xs font-semibold">
+              <span class="px-2.5 py-1 rounded-md bg-brand-bg-cyan text-brand-cyan">Reggio Certified</span>
+              <span class="px-2.5 py-1 rounded-md bg-brand-bg-pink text-brand-pink">Montessori Mentor</span>
+              <span class="px-2.5 py-1 rounded-md bg-emerald-50 text-emerald-700">Child Welfare Awardee</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Seven Valleys Advantages -->
+      <div class="bg-white rounded-3xl p-6 sm:p-10 border border-brand-pink/20 shadow-xs" style="
+            background: url('assets/the-tree.png');
+            background-repeat: no-repeat;
+            /* background-position: right; */
+        ">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+          <!-- <div class="md:col-span-4 text-center order-1 md:order-2">
+            <div class="w-44 h-44 rounded-2xl overflow-hidden mx-auto shadow-md border-4 border-brand-bg-pink">
+              <img src="gallery/seven-valleys-international-preschool-tree.jpg" alt="Mr. Rajesh Vardhan" class="w-full h-full object-cover">
+            </div>
+            
+          </div> -->
+
+          <div class="md:col-span-8 space-y-4 order-2 md:order-1">
+              <h4 class="font-heading font-bold text-xl text-brand-navy">
+                  Seven Valleys International Preschool Advantages
+              </h4>
+
+              <ol class="space-y-4">
+                  <li class="flex items-start gap-3">
+                      <span class="flex-shrink-0 flex items-center justify-center w-7 h-7 rounded-full bg-brand-navy text-white text-sm font-bold">1</span>
+                      <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                          <strong>1:4 Teacher–Child Ratio</strong> Following international childcare norms, we ensure every child gets personalized attention, emotional support, and responsive care.
+                      </p>
+                  </li>
+
+                  <li class="flex items-start gap-3">
+                      <span class="flex-shrink-0 flex items-center justify-center w-7 h-7 rounded-full bg-brand-navy text-white text-sm font-bold">2</span>
+                      <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                          <strong>Our Pedagogy</strong> 21st Century Readiness Curriculum that includes playway method, activity based learning and learning by doing.
+                      </p>
+                  </li>
+
+                  <li class="flex items-start gap-3">
+                      <span class="flex-shrink-0 flex items-center justify-center w-7 h-7 rounded-full bg-brand-navy text-white text-sm font-bold">3</span>
+                      <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                          <strong>Spacious Outdoor Play Area</strong> Our open green space lets children run, explore, and connect with nature every day.
+                      </p>
+                  </li>
+
+                  <li class="flex items-start gap-3">
+                      <span class="flex-shrink-0 flex items-center justify-center w-7 h-7 rounded-full bg-brand-navy text-white text-sm font-bold">4</span>
+                      <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                          <strong>Live CCTV Access for Parents</strong> Our real-time video access gives you peace of mind, wherever you are.
+                      </p>
+                  </li>
+
+                  <li class="flex items-start gap-3">
+                      <span class="flex-shrink-0 flex items-center justify-center w-7 h-7 rounded-full bg-brand-navy text-white text-sm font-bold">5</span>
+                      <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                          <strong>Open Door Policy</strong> We believe in full transparency. Parents are welcome to visit anytime—no appointments needed.
+                      </p>
+                  </li>
+
+                  <li class="flex items-start gap-3">
+                      <span class="flex-shrink-0 flex items-center justify-center w-7 h-7 rounded-full bg-brand-navy text-white text-sm font-bold">6</span>
+                      <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                          <strong>Regular Parent Involvement</strong> From annual celebrations to classroom showcases, we offer many opportunities for you to join your child’s learning journey.
+                      </p>
+                  </li>
+
+                  <li class="flex items-start gap-3">
+                      <span class="flex-shrink-0 flex items-center justify-center w-7 h-7 rounded-full bg-brand-navy text-white text-sm font-bold">7</span>
+                      <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                          <strong>Hospital-Grade Sterilization</strong> UV toy sanitizers and eco-friendly child-safe surface disinfectants used daily. Dedicated sick bay with registered nurse and tie-up with top pediatric centers.
+                      </p>
+                  </li>
+              </ol>
+          </div>
+        </div>
+      </div>
+
+      <!-- Principal Card -->
+      <!-- <div class="bg-white rounded-3xl p-6 sm:p-10 border border-brand-cyan/20 shadow-xs">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+          <div class="md:col-span-4 text-center">
+            <div class="w-44 h-44 rounded-2xl overflow-hidden mx-auto shadow-md border-4 border-brand-bg-cyan">
+              <img src="assets/principal.jpeg?q=80&w=700&auto=format&fit=crop" alt="Dr. Priyanka Singh" class="w-full h-full object-cover">
+            </div>
+            <div class="mt-3">
+              <h3 class="font-heading font-bold text-lg text-brand-navy">Dr. Priyanka Singh</h3>
+              <p class="text-xs font-bold text-brand-cyan uppercase">Principal &amp; Early Childhood Specialist</p>
+              <p class="text-xs text-slate-500">Ph.D. Child Psychology &bull; 18+ Years</p>
+            </div>
+          </div>
+          <div class="md:col-span-8 space-y-3">
+            <h4 class="font-heading font-bold text-xl text-brand-navy">"Preschool is where a child falls in love with learning."</h4>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+              Dr. Singh brings nearly two decades of international research in early neural development. Under her guidance, Seven Valleys curriculum integrates cognitive pacing with warm social bonding. Every educator at Seven Valleys undergoes 120+ hours of mandatory annual training in pediatric first aid, positive behavior management, and phonics instruction.
+            </p>
+            <div class="flex flex-wrap gap-2 pt-2 text-xs font-semibold">
+              <span class="px-2.5 py-1 rounded-md bg-brand-bg-cyan text-brand-cyan">Reggio Certified</span>
+              <span class="px-2.5 py-1 rounded-md bg-brand-bg-pink text-brand-pink">Montessori Mentor</span>
+              <span class="px-2.5 py-1 rounded-md bg-emerald-50 text-emerald-700">Child Welfare Awardee</span>
+            </div>
+          </div>
+        </div>
+      </div> -->
+
+      <!-- Director Card -->
+      <!-- <div class="bg-white rounded-3xl p-6 sm:p-10 border border-brand-pink/20 shadow-xs">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+          <div class="md:col-span-4 text-center order-1 md:order-2">
+            <div class="w-44 h-44 rounded-2xl overflow-hidden mx-auto shadow-md border-4 border-brand-bg-pink">
+              <img src="assets/director.jpeg?q=80&w=700&auto=format&fit=crop" alt="Mr. Rajesh Vardhan" class="w-full h-full object-cover">
+            </div>
+            <div class="mt-3">
+              <h3 class="font-heading font-bold text-lg text-brand-navy">Ms. Mahi Singh</h3>
+              <p class="text-xs font-bold text-brand-pink uppercase">Managing Director</p>
+            </div>
+          </div>
+          <div class="md:col-span-8 space-y-3 order-2 md:order-1">
+            <h4 class="font-heading font-bold text-xl text-brand-navy">"Uncompromised safety, transparency, and warmth."</h4>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+              Mr. Vardhan pioneered the live CCTV parent transparency model and the unnegotiable 1:4 child-teacher ratio at Seven Valleys. Having studied best educational systems across Scandinavia and Singapore, his vision is to deliver benchmark preschool infrastructure with an accessible, loving environment.
+            </p>
+            <div class="flex flex-wrap gap-2 pt-2 text-xs font-semibold">
+              <span class="px-2.5 py-1 rounded-md bg-brand-bg-pink text-brand-pink">Pioneer of CCTV Transparency</span>
+              <span class="px-2.5 py-1 rounded-md bg-brand-bg-cyan text-brand-cyan">Pediatric Safety Audits</span>
+            </div>
+          </div>
+        </div>
+      </div> -->
+
+    </div>
+  </section>
+
+  <!-- SAFETY & HYGIENE INFRASTRUCTURE -->
+  <!-- <section class="py-12 md:py-16 bg-white border-b border-slate-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-10 space-y-2">
+        <span class="inline-block px-3 py-1 rounded-full bg-slate-100 text-brand-navy text-xs font-bold uppercase tracking-wider">
+          Safety First Always
+        </span>
+        <h2 class="font-heading font-extrabold text-2xl sm:text-3xl text-brand-navy tracking-tight">
+          Built for Uncompromising Child Safety
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-xs">
+        <div class="p-4 rounded-2xl border border-slate-100 bg-slate-50 space-y-2">
+          <i class="fa-solid fa-video text-brand-cyan text-xl"></i>
+          <h4 class="font-heading font-bold text-sm text-brand-navy">High-Def Live CCTV</h4>
+          <p class="text-slate-500">Encrypted parent streaming for classrooms, corridors, and outdoor turf.</p>
+        </div>
+        <div class="p-4 rounded-2xl border border-slate-100 bg-slate-50 space-y-2">
+          <i class="fa-solid fa-shield-virus text-brand-pink text-xl"></i>
+          <h4 class="font-heading font-bold text-sm text-brand-navy">Hospital-Grade Sterilization</h4>
+          <p class="text-slate-500">UV toy sanitizers and eco-friendly child-safe surface disinfectants used daily.</p>
+        </div>
+        <div class="p-4 rounded-2xl border border-slate-100 bg-slate-50 space-y-2">
+          <i class="fa-solid fa-user-doctor text-amber-500 text-xl"></i>
+          <h4 class="font-heading font-bold text-sm text-brand-navy">Pediatric Care On-Call</h4>
+          <p class="text-slate-500">Dedicated sick bay with registered nurse and tie-up with top pediatric centers.</p>
+        </div>
+        <div class="p-4 rounded-2xl border border-slate-100 bg-slate-50 space-y-2">
+          <i class="fa-solid fa-fingerprint text-brand-cyan text-xl"></i>
+          <h4 class="font-heading font-bold text-sm text-brand-navy">Biometric Guard Gated Entry</h4>
+          <p class="text-slate-500">No unauthorized visitor entry; authorized parent ID cards for dismissal.</p>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- CTA BANNER -->
+  <section class="py-12 bg-brand-bg-cyan">
+    <div class="max-w-4xl mx-auto px-4 text-center space-y-4">
+      <h2 class="font-heading font-extrabold text-2xl sm:text-3xl text-brand-navy">
+        Experience Seven Valleys in Person
+      </h2>
+      <p class="text-sm text-slate-600 max-w-xl mx-auto">
+        Walk our campus, feel the warmth, and see our joyful toddlers at play. We welcome you with open arms.
+      </p>
+      <div class="flex flex-wrap items-center justify-center gap-3 pt-2">
+        <a href="contact.html" class="px-6 py-3 rounded-xl bg-brand-navy text-white hover:bg-slate-800 font-bold text-sm shadow-md transition-all">
+          Book a Campus Tour
+        </a>
+        <button onclick="chatWithUsDirectly('About Us Tour Booking')" class="px-6 py-3 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-sm shadow-md transition-all flex items-center gap-2">
+          <i class="fa-brands fa-whatsapp text-lg"></i>
+          <span>WhatsApp Us</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-brand-navy text-white pt-14 pb-8 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 pb-12 border-b border-slate-700/80">
+        
+        <!-- Column 1: Logo & Social Media Icons (lg:col-span-4) -->
+        <div class="lg:col-span-4 space-y-4">
+          <div class="flex items-center gap-3">
+            
+            <div>
+              <img src="assets/logo.png" class="w-36 h-20">
+            </div>
+          </div>
+          <p class="text-slate-300 text-xs sm:text-sm leading-relaxed pr-4">
+            Nurturing confident, empathetic, and inquisitive young global citizens with international norms, 1:4 attention, live CCTV transparency, and purposeful play.
+          </p>
+          <!-- Social Media Icons -->
+          <div class="flex items-center gap-3 pt-1">
+            <a href="https://www.facebook.com/profile.php?id=61590018266630" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="w-9 h-9 rounded-xl bg-slate-800 hover:bg-brand-cyan text-slate-300 hover:text-white flex items-center justify-center transition-all">
+              <i class="fa-brands fa-facebook-f text-sm"></i>
+            </a>
+            <a href="https://www.instagram.com/seven.valley.international" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="w-9 h-9 rounded-xl bg-slate-800 hover:bg-brand-pink text-slate-300 hover:text-white flex items-center justify-center transition-all">
+              <i class="fa-brands fa-instagram text-sm"></i>
+            </a>
+            <!-- <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="w-9 h-9 rounded-xl bg-slate-800 hover:bg-red-500 text-slate-300 hover:text-white flex items-center justify-center transition-all">
+              <i class="fa-brands fa-youtube text-sm"></i>
+            </a> -->
+            <!-- <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="w-9 h-9 rounded-xl bg-slate-800 hover:bg-blue-600 text-slate-300 hover:text-white flex items-center justify-center transition-all">
+              <i class="fa-brands fa-linkedin-in text-sm"></i>
+            </a> -->
+            <a href="https://wa.me/919109357416" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="w-9 h-9 rounded-xl bg-slate-800 hover:bg-emerald-500 text-slate-300 hover:text-white flex items-center justify-center transition-all">
+              <i class="fa-brands fa-whatsapp text-sm"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Column 2: Explore (lg:col-span-2) -->
+        <div class="lg:col-span-2 space-y-3">
+          <h4 class="font-heading font-bold text-sm uppercase tracking-wider text-slate-100">Explore</h4>
+          <ul class="space-y-2 text-xs sm:text-sm text-slate-300">
+            <li><a href="index.html" class="hover:text-brand-cyan transition-colors">Home</a></li>
+            <li><a href="about.html" class="hover:text-brand-cyan transition-colors">About Seven Valleys</a></li>
+            <li><a href="programs.html" class="hover:text-brand-cyan transition-colors">Programs &amp; Curriculum</a></li>
+            <li><a href="admissions.html" class="hover:text-brand-cyan transition-colors">Admissions 2026-27</a></li>
+            <li><a href="#activities" class="hover:text-brand-cyan transition-colors">Co-Curricular Activities</a></li>
+            <li><a href="contact.html" class="hover:text-brand-cyan transition-colors">Schedule a Visit</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Get In Touch (lg:col-span-3) -->
+        <div class="lg:col-span-3 space-y-3">
+          <h4 class="font-heading font-bold text-sm uppercase tracking-wider text-slate-100">Get In Touch</h4>
+          <ul class="space-y-2.5 text-xs sm:text-sm text-slate-300">
+            <li class="flex items-start gap-2.5">
+              <i class="fa-solid fa-phone text-brand-cyan mt-1 text-xs"></i>
+              <div>
+                <div class="text-[11px] text-slate-400 font-bold uppercase">Call / WhatsApp Helpline</div>
+                <a href="tel:+919109357416" class="font-semibold text-white hover:text-brand-cyan transition-colors">+91 9109357416</a>
+              </div>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <i class="fa-solid fa-envelope text-brand-pink mt-1 text-xs"></i>
+              <div>
+                <div class="text-[11px] text-slate-400 font-bold uppercase">Email Inquiries</div>
+                <a href="mailto:sevenvalleysinternational@gmail.com" class="font-semibold text-white hover:text-brand-pink transition-colors">sevenvalleysinternational@gmail.com</a>
+              </div>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <i class="fa-solid fa-calendar-days text-brand-yellow mt-1 text-xs"></i>
+              <div>
+                <div class="text-[11px] text-slate-400 font-bold uppercase">Administrative Office</div>
+                <span class="text-slate-300">Mon - Sat: 8:30 AM to 5:00 PM</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Find Us (lg:col-span-3) -->
+        <div class="lg:col-span-3 space-y-3">
+          <h4 class="font-heading font-bold text-sm uppercase tracking-wider text-slate-100">Find Us</h4>
+          <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+            Seven Valleys International Preschool<br>
+            25, Balwant Nagar<br>
+            Gwalior MP, India 474002
+          </p>
+          <div class="pt-1">
+            <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-3 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-xs text-brand-cyan font-bold transition-all border border-slate-700">
+              <i class="fa-solid fa-map-location-dot"></i>
+              <span>Open in Google Maps</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ======================================================================
+           14. COPYRIGHT SECTION
+           ====================================================================== -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400 gap-4">
+        <div>
+          &copy; 2026 Seven Valleys International Preschool. All Rights Reserved.
+        </div>
+        <div class="flex items-center gap-6">
+          <a href="#" class="hover:text-white transition-colors">Child Safety Policy</a>
+          <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+          <a href="#" class="hover:text-white transition-colors">Terms of Admission</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp -->
+  <a href="https://wa.me/919109357416?text=Hello%20Seven%20Valleys%20Preschool,%20I%20would%20like%20to%20inquire%20about%20admissions." target="_blank" rel="noopener noreferrer" class="whatsapp-pulse fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-emerald-500 hover:bg-emerald-600 text-white flex items-center justify-center shadow-2xl transition-all" aria-label="Chat on WhatsApp">
+    <i class="fa-brands fa-whatsapp text-3xl"></i>
+  </a>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
+

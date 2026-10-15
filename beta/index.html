@@ -1,0 +1,1145 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Seven Valleys International Preschool Gwalior</title>
+  <meta name="description" content="Seven Valleys International Preschool offers world-class early childhood education with a 1:4 teacher-child ratio, CCTV transparency, and holistic child development.">
+  
+  <!-- Google Fonts: Plus Jakarta Sans (body) & Outfit (headings) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'brand-cyan': '#12C7D9',
+            'brand-pink': '#F01883',
+            'brand-yellow': '#FFC928',
+            'brand-bg-cyan': '#F5FBFD',
+            'brand-bg-pink': '#FFF1F8',
+            'brand-navy': '#24344D',
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            heading: ['"Outfit"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-white text-brand-navy antialiased selection:bg-brand-cyan/20 selection:text-brand-navy">
+
+  <!-- ==========================================================================
+       1. ANNOUNCEMENT BAR
+       ========================================================================== -->
+  <aside id="announcement-bar" aria-label="Announcement" class="bg-brand-navy text-white text-xs sm:text-sm py-2 px-4 border-b border-brand-cyan/20 transition-all duration-300">
+    <div class="max-w-7xl mx-auto flex items-center justify-between gap-3">
+      <div class="flex items-center gap-2 overflow-hidden text-ellipsis whitespace-nowrap">
+        <span class="inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-bold bg-brand-pink text-white uppercase tracking-wider animate-pulse">
+          Admissions Open
+        </span>
+        <span class="text-slate-200 truncate">
+          Session 2026-27 Enrollment is now live. Limited seats per cohort!
+        </span>
+      </div>
+      <div class="flex items-center gap-4 shrink-0">
+        <!-- Quick homepage variant links -->
+        <!-- <div class="hidden lg:flex items-center gap-1.5 text-[11px] bg-slate-800/80 px-2.5 py-1 rounded-lg border border-slate-700">
+          <span class="text-slate-400">Layouts:</span>
+          <a href="index1.html" class="text-slate-300 hover:text-white hover:underline">Static (1)</a>
+          <span class="text-slate-500">&bull;</span>
+          <span class="text-brand-yellow font-bold">Carousel (2)</span>
+          <span class="text-slate-500">&bull;</span>
+          <a href="index3.html" class="text-slate-300 hover:text-white hover:underline">Video (3)</a>
+        </div> -->
+        <a href="tel:+919109357416" class="hidden md:inline-flex items-center gap-1.5 text-brand-cyan hover:underline font-semibold">
+          <i class="fa-solid fa-phone text-xs"></i> +91 9109357416
+        </a>
+        <a href="admissions.html" class="inline-flex items-center gap-1 text-brand-yellow font-bold hover:underline">
+          <span>Apply Now</span>
+          <i class="fa-solid fa-arrow-right text-[10px]"></i>
+        </a>
+        <button id="announcement-dismiss" aria-label="Dismiss banner" class="text-slate-400 hover:text-white p-1 ml-1 transition-colors">
+          <i class="fa-solid fa-xmark text-xs"></i>
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ==========================================================================
+       2. HEADER WITH LOGO & NAVIGATION + CTA APPLY NOW
+       (Extra WhatsApp CTA removed from header)
+       ========================================================================== -->
+  <header id="main-header" class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-100 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <a href="index.html" class="flex items-center gap-3 group">
+          <!-- <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-brand-bg-cyan via-white to-brand-bg-pink border border-slate-200/80 flex items-center justify-center shadow-sm group-hover:scale-105 transition-transform">
+            <img src="assets/logo.png">
+          </div> -->
+          <div class="flex flex-col">
+            <img src="assets/logo.png" class="w-36 h-20">
+          </div>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden lg:flex items-center gap-8 text-sm font-semibold text-brand-navy">
+          <div class="relative group">
+            <a href="index.html" class="text-brand-pink transition-colors flex items-center gap-1 py-1 after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-brand-pink">
+              <span>Home</span>
+              <!-- <i class="fa-solid fa-chevron-down text-[10px]"></i> -->
+            </a>
+          </div>
+          <a href="about.html" class="text-slate-600 hover:text-brand-navy transition-colors py-1">About Us</a>
+          <a href="admissions.html" class="text-slate-600 hover:text-brand-navy transition-colors py-1">Admission</a>
+          <a href="programs.html" class="text-slate-600 hover:text-brand-navy transition-colors py-1">Programs</a>
+          <a href="gallery.html" class="text-slate-600 hover:text-brand-navy transition-colors py-1">Gallery</a>
+          <a href="contact.html" class="text-slate-600 hover:text-brand-navy transition-colors py-1">Contact Us</a>
+        </nav>
+
+        <!-- CTA Button -->
+        <div class="flex items-center gap-3">
+          <a href="admissions.html" class="inline-flex items-center justify-center px-5 py-2.5 rounded-xl font-bold text-xs sm:text-sm tracking-wide text-white bg-brand-pink hover:bg-[#d61272] shadow-sm hover:shadow-brand-pink/25 transition-all transform hover:-translate-y-0.5 active:translate-y-0">
+            APPLY NOW
+          </a>
+          <button id="mobile-menu-btn" aria-label="Open Navigation Menu" class="lg:hidden p-2 rounded-xl text-brand-navy hover:bg-slate-100 transition-colors">
+            <i class="fa-solid fa-bars-staggered text-xl"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div id="mobile-menu-backdrop" class="mobile-nav-backdrop fixed inset-0 bg-brand-navy/60 z-50 backdrop-blur-sm lg:hidden"></div>
+  <aside id="mobile-menu-panel" class="mobile-nav-panel fixed top-0 right-0 bottom-0 w-80 max-w-full bg-white z-50 shadow-2xl flex flex-col justify-between p-6 lg:hidden">
+    <div>
+      <div class="flex items-center justify-between pb-6 border-b border-slate-100">
+        <div class="flex items-center gap-2.5">
+          <!-- <div class="w-10 h-10 rounded-xl bg-brand-bg-cyan flex items-center justify-center">
+            <i class="fa-solid fa-shapes text-brand-cyan text-lg"></i>
+          </div> -->
+          <div>
+            <img src="assets/logo.png" class="w-36 h-20">
+          </div>
+        </div>
+        <button id="mobile-menu-close" class="w-9 h-9 rounded-lg bg-slate-100 text-slate-600 flex items-center justify-center hover:bg-slate-200">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <nav class="flex flex-col gap-2 mt-6 text-base font-semibold text-brand-navy">
+        <div class="space-y-1 bg-slate-50 p-2 rounded-xl">
+          <!-- <div class="text-[11px] font-bold uppercase tracking-wider text-slate-400 px-2 py-1">Home Page Layouts</div> -->
+          <a href="index.html" class="flex items-center justify-between px-3.5 py-3 rounded-xl bg-brand-bg-pink text-brand-pink">
+            <span>Home</span>
+          </a>
+        </div>
+        <a href="about.html" class="flex items-center justify-between px-3.5 py-3 rounded-xl hover:bg-slate-50 text-slate-700">About Us</a>
+        <a href="admissions.html" class="flex items-center justify-between px-3.5 py-3 rounded-xl hover:bg-slate-50 text-slate-700">Admission</a>
+        <a href="programs.html" class="flex items-center justify-between px-3.5 py-3 rounded-xl hover:bg-slate-50 text-slate-700">Programs</a>
+        <a href="gallery.html" class="flex items-center justify-between px-3.5 py-3 rounded-xl hover:bg-slate-50 text-slate-700">Gallery</a>
+        <a href="contact.html" class="flex items-center justify-between px-3.5 py-3 rounded-xl hover:bg-slate-50 text-slate-700">Contact Us</a>
+      </nav>
+    </div>
+
+    <div class="pt-6 border-t border-slate-100 space-y-3">
+      <a href="admissions.html" class="w-full flex items-center justify-center py-3 rounded-xl bg-brand-pink text-white font-bold text-sm shadow-sm">
+        APPLY NOW
+      </a>
+      <a href="https://wa.me/919109357416" target="_blank" rel="noopener noreferrer" class="w-full flex items-center justify-center gap-2 py-3 rounded-xl bg-emerald-50 text-emerald-700 font-bold text-sm border border-emerald-200">
+        <i class="fa-brands fa-whatsapp text-lg"></i>
+        <span>Chat on WhatsApp</span>
+      </a>
+    </div>
+  </aside>
+
+  <!-- ==========================================================================
+       3. HERO SECTION (INDEX2: FULL-WIDTH CAROUSEL / SLIDER WITH BACKGROUND IMAGES
+          AND DECENT BORDER PATTERNS)
+       ========================================================================== -->
+  <section class="relative bg-brand-navy overflow-hidden min-h-[580px] md:min-h-[660px] flex items-center border-b border-slate-800">
+    
+    <!-- Top Decorative Scalloped Border Pattern Strip -->
+    <div class="border-scallop-strip absolute top-0 left-0 right-0 z-30"></div>
+
+    <!-- Carousel Full-Width Slides Container -->
+    <div class="hero-slider-wrapper w-full relative min-h-[580px] md:min-h-[660px]">
+      
+      <!-- Slide 1: Welcome & Global Excellence (Full-Width Background Image) -->
+      <!-- <div class="hero-slide active w-full h-full min-h-[580px] md:min-h-[660px] relative flex items-center"> -->
+      <div class="hero-slide active w-full h-full flex items-center">
+        <!-- FULL WIDTH BACKGROUND IMAGE -->
+        <img src="assets/seven-valleys-international-preschool-banner-image1-1.png?q=80&w=1920&auto=format&fit=crop" alt="Preschool learning" class="absolute inset-0 w-full h-full object-cover z-0">
+        <!-- Full-Width Gradient Overlay for high text contrast -->
+        <!-- <div class="absolute inset-0 bg-gradient-to-r from-brand-navy/95 via-brand-navy/80 to-brand-navy/50 z-10"></div> -->
+
+        <div class="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 w-full">
+          <div class="max-w-2xl space-y-5 text-left text-white">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/20 backdrop-blur-md border border-white/30 text-brand-navy text-xs font-bold shadow-xs">
+              <span class="w-2 h-2 rounded-full bg-brand-navy"></span>
+              Reggio &amp; Montessori Integrated
+            </div>
+            <h1 class="font-heading font-extrabold text-3xl sm:text-5xl lg:text-6xl tracking-tight text-slate-800 leading-tight drop-shadow-md">
+              Where Young Minds <br class="hidden sm:inline">
+              <span class="text-brand-cyan">
+                <!-- text-transparent bg-clip-text bg-gradient-to-r from-brand-cyan via-brand-pink to-brand-yellow -->
+                Bloom With Wonder
+              </span> &amp; Confidence.
+            </h1>
+            <p class="text-base sm:text-lg text-slate-800 max-w-xl leading-relaxed drop-shadow-sm font-normal">
+              Nurturing your child’s critical first five years with our caring 1:4 teacher-child ratio, live CCTV streaming, and joyous curiosity-driven classrooms.
+            </p>
+            <div class="flex flex-wrap items-center gap-3.5 pt-2">
+              <a href="admissions.html" class="px-7 py-3.5 rounded-xl font-bold text-sm text-white bg-brand-navy hover:bg-slate-800 shadow-xl hover:shadow-brand-pink/30 transition-all transform hover:-translate-y-0.5">
+                <i class="fa-solid fa-graduation-cap mr-2"></i> Apply for 2026-27
+              </a>
+              <a href="#tours" class="px-7 py-3.5 rounded-xl font-bold text-sm text-brand-navy bg-white hover:bg-slate-100 shadow-md transition-all">
+                <i class="fa-regular fa-calendar-check mr-2 text-brand-cyan"></i> Book School Tour
+              </a>
+            </div>
+            <!-- Trust metrics -->
+            <div class="grid grid-cols-3 gap-4 pt-5 border-t border-white/20 max-w-lg">
+              <div>
+                <div class="font-heading font-extrabold text-2xl text-slate-800">1 : 4</div>
+                <div class="text-xs text-slate-800">Teacher Ratio</div>
+              </div>
+              <div>
+                <div class="font-heading font-extrabold text-2xl text-slate-800">100%</div>
+                <div class="text-xs text-slate-800">Live CCTV Stream</div>
+              </div>
+              <div>
+                <div class="font-heading font-extrabold text-2xl text-slate-800">15,000+</div>
+                <div class="text-xs text-slate-800">Sq.ft Safe Campus</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 2: Hands-on Exploration & Play (Full-Width Background Image) -->
+      <!-- <div class="hero-slide w-full h-full min-h-[580px] md:min-h-[660px] relative flex items-center"> -->
+      <div class="hero-slide w-full h-full flex items-center">
+        <!-- FULL WIDTH BACKGROUND IMAGE -->
+        <img src="assets/seven-valleys-international-preschool-banner-image2-2.png?q=80&w=1920&auto=format&fit=crop" alt="Kids playing with colorful toys" class="absolute inset-0 w-full h-full object-cover z-0">
+        <!-- Full-Width Gradient Overlay -->
+        <!-- <div class="absolute inset-0 bg-gradient-to-r from-brand-navy/95 via-brand-navy/80 to-brand-navy/50 z-10"></div> -->
+
+        <div class="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 w-full">
+          <div class="max-w-2xl space-y-5 text-left text-white">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/20 backdrop-blur-md border border-white/30 text-brand-navy text-xs font-bold shadow-xs">
+              <span class="w-2 h-2 rounded-full bg-brand-navy"></span>
+              Hands-on STEAM &amp; Sensory Discovery
+            </div>
+            <h1 class="font-heading font-extrabold text-3xl sm:text-5xl lg:text-6xl tracking-tight text-slate-800 leading-tight drop-shadow-md">
+              Hands-on Exploration, <br class="hidden sm:inline">
+              <span class="text-brand-cyan">
+                <!-- text-transparent bg-clip-text bg-gradient-to-r from-brand-pink via-brand-yellow to-brand-cyan -->
+                Joyful Friendships
+              </span>, &amp; Lifelong Habits.
+            </h1>
+            <p class="text-base sm:text-lg text-slate-800 max-w-xl leading-relaxed drop-shadow-sm font-normal">
+              From splash pools and sensory gardens to phonics mastery, we foster self-expression, fine motor skills, and social intelligence in every child.
+            </p>
+            <div class="flex flex-wrap items-center gap-3.5 pt-2">
+              <a href="programs.html" class="px-7 py-3.5 rounded-xl font-bold text-sm text-white bg-brand-navy hover:bg-slate-800 shadow-xl hover:shadow-brand-cyan/30 transition-all transform hover:-translate-y-0.5">
+                <i class="fa-solid fa-cubes mr-2"></i> Explore Programs
+              </a>
+              <a href="#tours" class="px-7 py-3.5 rounded-xl font-bold text-sm text-brand-navy bg-white hover:bg-slate-100 shadow-md transition-all">
+                Book Campus Visit
+              </a>
+            </div>
+            <div class="grid grid-cols-3 gap-4 pt-5 border-t border-white/20 max-w-lg">
+              <div>
+                <div class="font-heading font-extrabold text-2xl text-slate-800">Reggio</div>
+                <div class="text-xs text-slate-800">Child-Led Play</div>
+              </div>
+              <div>
+                <div class="font-heading font-extrabold text-2xl text-slate-800">Montessori</div>
+                <div class="text-xs text-slate-800">Tactile Apparatus</div>
+              </div>
+              <div>
+                <div class="font-heading font-extrabold text-2xl text-slate-800">STEAM</div>
+                <div class="text-xs text-slate-800">Robotics &amp; Science</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 3: Care, Safety & Nutritious Meals (Full-Width Background Image) -->
+      <!-- <div class="hero-slide w-full h-full min-h-[580px] md:min-h-[660px] relative flex items-center"> -->
+      <div class="hero-slide w-full h-full flex items-center">
+        <!-- FULL WIDTH BACKGROUND IMAGE -->
+        <img src="assets/seven-valleys-international-preschool-banner-image3-3-3.png?q=80&w=1920&auto=format&fit=crop" alt="Teacher reading book" class="absolute inset-0 w-full h-full object-cover z-0">
+        <!-- Full-Width Gradient Overlay -->
+        <!-- <div class="absolute inset-0 bg-gradient-to-r from-brand-navy/95 via-brand-navy/80 to-brand-navy/50 z-10"></div> -->
+
+        <div class="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 w-full">
+          <div class="max-w-2xl space-y-5 text-left text-white">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/20 backdrop-blur-md border border-white/30 text-brand-navy text-xs font-bold shadow-xs">
+              <span class="w-2 h-2 rounded-full bg-brand-navy"></span>
+              Guarded Entry &amp; Doctor On-Call
+            </div>
+            <h1 class="font-heading font-extrabold text-3xl sm:text-5xl lg:text-6xl tracking-tight text-slate-800 leading-tight drop-shadow-md">
+              A Second Home Where <br class="hidden sm:inline">
+              <span class="text-brand-cyan">
+                <!-- text-transparent bg-clip-text bg-gradient-to-r from-brand-yellow via-brand-cyan to-brand-pink -->
+                Safety &amp; Love
+              </span> Come First.
+            </h1>
+            <p class="text-base sm:text-lg text-slate-800 max-w-xl leading-relaxed drop-shadow-sm font-normal">
+              Organic dietitian-designed hot meals, certified pediatric care, biometric check-ins, and an authentic open-door policy for parents at all times.
+            </p>
+            <div class="flex flex-wrap items-center gap-3.5 pt-2">
+              <a href="programs.html" class="px-7 py-3.5 rounded-xl font-bold text-sm text-white bg-brand-navy hover:bg-slate-800 shadow-xl hover:shadow-brand-cyan/30 transition-all transform hover:-translate-y-0.5">
+                <i class="fa-solid fa-shield-heart mr-2"></i> Our Safety Protocols
+              </a>
+              <a href="#why-us" class="px-7 py-3.5 rounded-xl font-bold text-sm text-brand-navy bg-white hover:bg-slate-100 shadow-md transition-all">
+                Why Seven Valleys?
+              </a>
+            </div>
+            <div class="grid grid-cols-3 gap-4 pt-5 border-t border-white/20 max-w-lg">
+              <div>
+                <div class="font-heading font-extrabold text-2xl text-slate-800">100%</div>
+                <div class="text-xs text-slate-800">Hygiene</div>
+              </div>
+              <div>
+                <div class="font-heading font-extrabold text-2xl text-slate-800">Doctor</div>
+                <div class="text-xs text-slate-800">On-Call Care</div>
+              </div>
+              <div>
+                <div class="font-heading font-extrabold text-2xl text-slate-800">Biometric</div>
+                <div class="text-xs text-slate-800">Guarded Entry</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Slider Nav Controls -->
+    <button id="hero-prev-btn" aria-label="Previous Slide" class="absolute left-4 sm:left-8 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/95 hover:bg-white text-brand-navy shadow-lg flex items-center justify-center transition-all z-30 border border-slate-200">
+      <i class="fa-solid fa-chevron-left text-sm"></i>
+    </button>
+    <button id="hero-next-btn" aria-label="Next Slide" class="absolute right-4 sm:right-8 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/95 hover:bg-white text-brand-navy shadow-lg flex items-center justify-center transition-all z-30 border border-slate-200">
+      <i class="fa-solid fa-chevron-right text-sm"></i>
+    </button>
+
+    <!-- Slide Indicators -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex items-center gap-2.5 z-30">
+      <button class="hero-dot w-8 h-2.5 rounded-full bg-brand-pink transition-all" aria-label="Go to slide 1"></button>
+      <button class="hero-dot w-3 h-2.5 rounded-full bg-white/50 transition-all" aria-label="Go to slide 2"></button>
+      <button class="hero-dot w-3 h-2.5 rounded-full bg-white/50 transition-all" aria-label="Go to slide 3"></button>
+    </div>
+
+    <!-- Bottom Decorative SVG Wavy Border Pattern -->
+    <div class="border-scallop-strip absolute bottom-0 left-0 right-0 z-50"></div>
+
+  </section>
+
+  <!-- ==========================================================================
+       4. PRINCIPAL WORDS SECTION
+       ========================================================================== -->
+  <section class="py-6 md:py-10 bg-slate-300 border-b border-slate-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-brand-bg-cyan rounded-3xl p-6 sm:p-10 border border-brand-cyan/20 shadow-sm">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div class="lg:col-span-4 text-center lg:text-left">
+            <div class="relative inline-block">
+              <div class="w-48 h-48 sm:w-56 sm:h-56 rounded-2xl overflow-hidden shadow-lg border-4 border-white mx-auto">
+                <img src="assets/principal.jpeg?q=80&w=700&auto=format&fit=crop" alt="Dr. Aarti Sharma" class="w-full h-full object-cover">
+              </div>
+              <div class="absolute -bottom-2 -right-2 bg-brand-pink text-white p-2 rounded-xl shadow-md">
+                <i class="fa-solid fa-quote-right text-base"></i>
+              </div>
+            </div>
+            <div class="mt-4">
+              <h3 class="font-heading font-extrabold text-lg text-brand-navy">Dr. Priyanka Singh</h3>
+              <p class="text-xs font-bold text-brand-cyan uppercase tracking-wider">Principal &amp; Early Childhood Specialist</p>
+              <p class="text-xs text-slate-500 mt-0.5">Ph.D. in Child Psychology &bull; 18+ Yrs Experience</p>
+            </div>
+          </div>
+          <div class="lg:col-span-8 space-y-4">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white text-brand-navy font-bold text-xs shadow-xs">
+              <span class="w-2 h-2 rounded-full bg-brand-cyan"></span> Principal's Desk
+            </div>
+            <h2 class="font-heading font-extrabold text-2xl sm:text-3xl text-brand-navy tracking-tight">
+              "Every Child is a Masterpiece in Progress."
+            </h2>
+            <div class="space-y-3 text-slate-600 text-sm sm:text-base leading-relaxed">
+              <p>At Seven Valleys International Preschool, we celebrate each toddler's pace, curiosity, and emotional security through our gentle 1:4 child-to-teacher ratio.</p>
+              <p>Our classrooms are purposeful play sanctuaries where children feel listened to, loved, and encouraged to be uniquely themselves.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       5. DIRECTOR WORDS SECTION
+       ========================================================================== -->
+  <section class="py-6 md:py-10 bg-brand-bg-pink/40 border-b border-slate-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-slate-300 rounded-3xl p-6 sm:p-10 border border-brand-pink/20 shadow-sm">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div class="lg:col-span-8 order-2 lg:order-1 space-y-4">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-bg-pink text-brand-pink font-bold text-xs">
+              <span class="w-2 h-2 rounded-full bg-brand-pink"></span> Director's Vision
+            </div>
+            <h2 class="font-heading font-extrabold text-2xl sm:text-3xl text-brand-navy tracking-tight">
+              "Building Future Leaders with Strong Moral Roots and Global Wings."
+            </h2>
+            <div class="space-y-3 text-slate-600 text-sm sm:text-base leading-relaxed">
+              <p>From investing in certified non-toxic play materials to providing real-time live CCTV parent accessibility, we eliminate every worry for modern parents.</p>
+            </div>
+            <div class="pt-2">
+              <a href="about.html" class="inline-flex items-center gap-2 text-sm font-bold text-brand-pink hover:underline">
+                <span>Read Full Leadership Story</span> <i class="fa-solid fa-arrow-right text-xs"></i>
+              </a>
+            </div>
+          </div>
+          <div class="lg:col-span-4 order-1 lg:order-2 text-center lg:text-right">
+            <div class="w-48 h-48 sm:w-56 sm:h-56 rounded-2xl overflow-hidden shadow-lg border-4 border-brand-bg-pink mx-auto">
+              <img src="assets/director.jpeg?q=80&w=700&auto=format&fit=crop" alt="Mr. Rajesh Vardhan" class="w-full h-full object-cover">
+            </div>
+            <div class="mt-4 text-center">
+              <h3 class="font-heading font-extrabold text-lg text-brand-navy">Ms. Mahi Singh</h3>
+              <p class="text-xs font-bold text-brand-pink uppercase tracking-wider">Managing Director</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       6. OUR PROGRAMS SECTION
+       ========================================================================== -->
+  <section class="py-6 md:py-10 bg-white border-b border-slate-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-10 space-y-2">
+        <span class="inline-block px-3 py-1 rounded-full bg-brand-bg-cyan text-brand-cyan text-xs font-extrabold uppercase tracking-wider">
+          Age-Appropriate Stages
+        </span>
+        <h2 class="font-heading font-extrabold text-3xl sm:text-4xl text-brand-navy tracking-tight">Our Flagship Programs</h2>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        <div class="lg:col-span-6 space-y-5">
+          <p class="font-bold text-brand-navy text-sm leading-relaxed">
+            Every age group at Seven Valleys follows an international curriculum blending Reggio Emilia child-led exploration with structured Montessori hands-on apparatus.
+          </p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+            <div class="p-4 rounded-2xl bg-brand-bg-cyan border border-brand-cyan/20">
+              <span class="text-xs font-bold px-2 py-0.5 rounded bg-brand-cyan text-white">1.5 - 2.5 Yrs</span>
+              <h4 class="font-heading font-bold text-base text-brand-navy mt-2">Toddlers / Junior Nursery</h4>
+            </div>
+            <div class="p-4 rounded-2xl bg-brand-bg-pink border border-brand-pink/20">
+              <span class="text-xs font-bold px-2 py-0.5 rounded bg-brand-pink text-white">2.5 - 3.5 Yrs</span>
+              <h4 class="font-heading font-bold text-base text-brand-navy mt-2">Nursery Program</h4>
+            </div>
+            <div class="p-4 rounded-2xl bg-[#FFF9E6] border border-brand-yellow/30">
+              <span class="text-xs font-bold px-2 py-0.5 rounded bg-brand-yellow text-brand-navy">3.5 - 4.5 Yrs</span>
+              <h4 class="font-heading font-bold text-base text-brand-navy mt-2">Junior Kindergarten</h4>
+            </div>
+            <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200">
+              <span class="text-xs font-bold px-2 py-0.5 rounded bg-brand-navy text-white">4.5 - 6 Yrs</span>
+              <h4 class="font-heading font-bold text-base text-brand-navy mt-2">Senior KG &amp; Daycare</h4>
+            </div>
+          </div>
+          <ul class="font-bold text-brand-navy text-sm space-y-3">
+            <li class="flex items-start gap-2">
+              <span class="text-green-600 font-bold">✓</span>
+              <span>Inspired by international benchmarks in early learning</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-green-600 font-bold">✓</span>
+              <span>Low child-to-staff ratio for individual care</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-green-600 font-bold">✓</span>
+              <span>Safe, nurturing, and stimulating environment</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-green-600 font-bold">✓</span>
+              <span>Founder-led curriculum, built by a child education specialist</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-green-600 font-bold">✓</span>
+              <span>Balanced approach: curiosity, play, and structure</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-green-600 font-bold">✓</span>
+              <span>Among the top choices for parents seeking the best preschool in Gwalior</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-green-600 font-bold">✓</span>
+              <span>100% transparency in operations</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-green-600 font-bold">✓</span>
+              <span>Trained, nurturing, and compassionate staff</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-green-600 font-bold">✓</span>
+              <span>Strong focus on holistic development</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-green-600 font-bold">✓</span>
+              <span>A parent-trusted daycare in Gwalior — peace of mind, happy kids</span>
+            </li>
+          </ul>
+          <div class="pt-2">
+            <a href="programs.html" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-brand-navy text-white text-sm font-bold hover:bg-slate-800 transition-all shadow-sm">
+              <span>View All Program Details</span> <i class="fa-solid fa-arrow-right text-xs"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="lg:col-span-6">
+          <div class="grid grid-cols-2 gap-4">
+            <div class="mosaic-img-cyan rounded-2xl overflow-hidden shadow-sm bg-white aspect-square">
+              <img src="assets/kid-doctor.png?q=80&w=700&auto=format&fit=crop" alt="Arts Studio" class="w-full h-full object-cover">
+            </div>
+            <div class="mosaic-img-pink rounded-2xl overflow-hidden shadow-sm bg-white aspect-square mt-6">
+              <img src="assets/soft-hand-teaching.png?q=80&w=700&auto=format&fit=crop" alt="Sensory Arena" class="w-full h-full object-cover">
+            </div>
+            <div class="mosaic-img-yellow rounded-2xl overflow-hidden shadow-sm bg-white aspect-square -mt-6">
+              <img src="assets/seven-valleys-student1.png?q=80&w=700&auto=format&fit=crop" alt="Outdoor Zone" class="w-full h-full object-cover">
+            </div>
+            <div class="mosaic-img-slate rounded-2xl overflow-hidden shadow-sm bg-white aspect-square">
+              <img src="assets/seven-valley-student2.png?q=80&w=700&auto=format&fit=crop" alt="STEM Lab" class="w-full h-full object-cover">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       7. ADMISSIONS SECTION
+       ========================================================================== -->
+  <section class="py-6 md:py-10 bg-brand-bg-cyan/50 border-b border-slate-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-[#FFF9E6] rounded-3xl p-6 sm:p-10 border border-slate-200/80 shadow-sm">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          <div class="lg:col-span-5 relative">
+            <div class="rounded-3xl overflow-hidden shadow-lg border-4 border-brand-bg-cyan">
+              <img src="assets/seven-valleys-student3.jpg?q=80&w=900&auto=format" alt="Admissions Tour" class="w-full h-80 sm:h-96 object-cover">
+            </div>
+          </div>
+          <div class="lg:col-span-7 space-y-4">
+            <span class="px-3 py-1 rounded-full bg-brand-bg-pink text-brand-pink text-xs font-bold uppercase">Hassle-Free Admissions</span>
+            <h2 class="font-heading font-extrabold text-2xl sm:text-3xl lg:text-4xl text-brand-navy">Begin Your Child’s Brightest Journey</h2>
+            <p class="text-slate-600 text-sm">Gentle 4-step admission process with no formal tests for toddlers.</p>
+            <div class="flex flex-wrap items-center gap-3 pt-2">
+              <a href="#tours" class="px-6 py-3.5 rounded-xl font-bold text-sm bg-brand-navy text-white hover:bg-slate-800 shadow-md transition-all">Book School Tour</a>
+              <button onclick="chatWithUsDirectly('Admissions Inquiry')" class="px-6 py-3.5 rounded-xl font-bold text-sm bg-emerald-50 text-emerald-700 hover:bg-emerald-100 border border-emerald-300 transition-all flex items-center gap-2">
+                <i class="fa-brands fa-whatsapp text-lg"></i> <span>Chat with us on WhatsApp</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       8. WHY SEVEN VALLEYS SECTION (6 CARDS WITH ZOOM EFFECT)
+       ========================================================================== -->
+  <section id="why-us" class="py-6 md:py-16 bg-white border-b border-slate-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-10 space-y-2">
+        <span class="px-3 py-1 rounded-full bg-brand-bg-pink text-brand-pink text-xs font-bold uppercase">The Advantage</span>
+        <h2 class="font-heading font-extrabold text-3xl sm:text-4xl text-brand-navy">Why Parents Choose Seven Valleys</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="group bg-white rounded-2xl border border-slate-200/90 shadow-xs hover:shadow-lg transition-all overflow-hidden">
+          <div class="card-zoom-container h-48"><img src="assets/saven-vallyes-international-preschool-ratio.jpg?q=80&w=700&auto=format&fit=crop" class="w-full h-full object-cover"></div>
+          <div class="p-5"><h3 class="font-heading font-bold text-lg text-brand-navy">1. International Norm: 1:4 Child to Teacher Ratio</h3></div>
+        </div>
+        <div class="group bg-white rounded-2xl border border-slate-200/90 shadow-xs hover:shadow-lg transition-all overflow-hidden">
+          <div class="card-zoom-container h-48"><img src="assets/saven-vallyes-international-preschool-learning.jpg?q=80&w=700&auto=format&fit=crop" class="w-full h-full object-cover"></div>
+          <div class="p-5"><h3 class="font-heading font-bold text-lg text-brand-navy">2. Our Pedagogy : 21st Century Readiness Curriculum </h3></div>
+        </div>
+        <div class="group bg-white rounded-2xl border border-slate-200/90 shadow-xs hover:shadow-lg transition-all overflow-hidden">
+          <div class="card-zoom-container h-48"><img src="assets/saven-vallyes-international-preschool-values.jpg?q=80&w=700&auto=format&fit=crop" class="w-full h-full object-cover"></div>
+          <div class="p-5"><h3 class="font-heading font-bold text-lg text-brand-navy">3. Rooted In Culture &amp; Growing With Values</h3></div>
+        </div>
+        <div class="group bg-white rounded-2xl border border-slate-200/90 shadow-xs hover:shadow-lg transition-all overflow-hidden">
+          <div class="card-zoom-container h-48"><img src="assets/saven-vallyes-international-preschool-safety.jpg?q=80&w=700&auto=format&fit=crop" class="w-full h-full object-cover"></div>
+          <div class="p-5"><h3 class="font-heading font-bold text-lg text-brand-navy">4. Full Transparency With Live CCTV Access</h3></div>
+        </div>
+        <div class="group bg-white rounded-2xl border border-slate-200/90 shadow-xs hover:shadow-lg transition-all overflow-hidden">
+          <div class="card-zoom-container h-48"><img src="assets/saven-vallyes-international-preschool-playarea.jpg?q=80&w=700&auto=format&fit=crop" class="w-full h-full object-cover"></div>
+          <div class="p-5"><h3 class="font-heading font-bold text-lg text-brand-navy">5. Large Outdoor Play Area &amp; Nature Arena</h3></div>
+        </div>
+        <div class="group bg-white rounded-2xl border border-slate-200/90 shadow-xs hover:shadow-lg transition-all overflow-hidden">
+          <div class="card-zoom-container h-48"><img src="assets/ope-door-policy.jpg?q=80&w=700&auto=format&fit=crop" class="w-full h-full object-cover"></div>
+          <div class="p-5"><h3 class="font-heading font-bold text-lg text-brand-navy">6. Authentic Open-Door Policy for Parents</h3></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       9. OUR ACTIVITIES SECTION (10 CARDS)
+       ========================================================================== -->
+  <section class="py-6 md:py-10 bg-slate-300 border-b border-slate-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-10 space-y-2">
+        <span class="px-3 py-1 rounded-full bg-white text-brand-cyan text-xs font-bold uppercase">Clubs &amp; Fun</span>
+        <h2 class="font-heading font-extrabold text-3xl sm:text-4xl text-brand-navy">Everyday Learning Activities</h2>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+        <div class="bg-white rounded-2xl p-4 border border-slate-100 shadow-xs">
+          <i class="fa-solid fa-hand-sparkles text-brand-cyan text-xl mb-2"></i>
+          <h4 class="font-heading font-bold text-sm text-brand-navy">Sensory &amp; Messy Play</h4>
+        </div>
+        <div class="bg-white rounded-2xl p-4 border border-slate-100 shadow-xs">
+          <i class="fa-solid fa-music text-brand-pink text-xl mb-2"></i>
+          <h4 class="font-heading font-bold text-sm text-brand-navy">Music &amp; Rhymes</h4>
+        </div>
+        <div class="bg-white rounded-2xl p-4 border border-slate-100 shadow-xs">
+          <i class="fa-solid fa-utensils text-amber-500 text-xl mb-2"></i>
+          <h4 class="font-heading font-bold text-sm text-brand-navy">Little Chef's Kitchen</h4>
+        </div>
+        <div class="bg-white rounded-2xl p-4 border border-slate-100 shadow-xs">
+          <i class="fa-solid fa-flask text-brand-cyan text-xl mb-2"></i>
+          <h4 class="font-heading font-bold text-sm text-brand-navy">Junior STEM Lab</h4>
+        </div>
+        <div class="bg-white rounded-2xl p-4 border border-slate-100 shadow-xs">
+          <i class="fa-solid fa-water text-blue-500 text-xl mb-2"></i>
+          <h4 class="font-heading font-bold text-sm text-brand-navy">Splash &amp; Water Fun</h4>
+        </div>
+        <div class="bg-white rounded-2xl p-4 border border-slate-100 shadow-xs">
+          <i class="fa-solid fa-seedling text-emerald-600 text-xl mb-2"></i>
+          <h4 class="font-heading font-bold text-sm text-brand-navy">Nature &amp; Gardening</h4>
+        </div>
+        <div class="bg-white rounded-2xl p-4 border border-slate-100 shadow-xs">
+          <i class="fa-solid fa-masks-theater text-purple-600 text-xl mb-2"></i>
+          <h4 class="font-heading font-bold text-sm text-brand-navy">Dramatic Role Play</h4>
+        </div>
+        <div class="bg-white rounded-2xl p-4 border border-slate-100 shadow-xs">
+          <i class="fa-solid fa-person-running text-brand-pink text-xl mb-2"></i>
+          <h4 class="font-heading font-bold text-sm text-brand-navy">Kids Yoga &amp; Agility</h4>
+        </div>
+        <div class="bg-white rounded-2xl p-4 border border-slate-100 shadow-xs">
+          <i class="fa-solid fa-shield-halved text-amber-600 text-xl mb-2"></i>
+          <h4 class="font-heading font-bold text-sm text-brand-navy">Junior Taekwondo</h4>
+        </div>
+        <div class="bg-white rounded-2xl p-4 border border-slate-100 shadow-xs">
+          <i class="fa-solid fa-palette text-brand-cyan text-xl mb-2"></i>
+          <h4 class="font-heading font-bold text-sm text-brand-navy">Pottery &amp; Clay Art</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       10. TESTIMONIALS SECTION (NEW REDESIGN AS REQUESTED)
+       Left side: Static image with trust badges
+       Right side: Centralized carousel with parent image, ranking, designation & review date
+       ========================================================================== -->
+  <section class="py-6 md:py-10 bg-white border-b border-slate-100" style="background: url('assets/page-hero.jpg');">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-12 space-y-2">
+        <span class="inline-block px-3.5 py-1 rounded-full bg-brand-bg-pink text-brand-pink text-xs font-bold uppercase tracking-wider">
+          Parent Testimonials
+        </span>
+        <h2 class="font-heading font-extrabold text-3xl sm:text-4xl text-brand-bg-cyan tracking-tight">
+          Loved by Parents, Cherished by Children
+        </h2>
+        <p class="text-sm text-slate-100">
+          Hear firsthand experiences from parents whose children blossom in our classrooms every day.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+        
+        <!-- Left Side: Static Image with Trust Badges -->
+        <div class="lg:col-span-5 relative">
+          <div class="relative mx-auto rounded-3xl overflow-hidden shadow-xl border-4 border-white ring-4 ring-brand-bg-pink">
+            <img src="assets/loved-by-parents.png?q=80&w=800&auto=format&fit=crop" alt="Happy parent and child" class="w-full h-80 sm:h-96 object-cover">
+            
+            <!-- <div class="absolute inset-0 bg-gradient-to-t from-brand-navy/85 via-transparent to-transparent flex flex-col justify-end p-6 text-white">
+              <div class="flex items-center gap-1 text-brand-yellow text-base mb-1">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                <span class="text-white text-sm font-bold ml-1.5">4.9 / 5.0 Rating</span>
+              </div>
+              <p class="text-xs text-slate-200">
+                Based on 1,200+ parent reviews across batches &amp; daycare.
+              </p>
+            </div> -->
+          </div>
+
+          <div class="absolute -bottom-4 -right-2 sm:right-4 bg-white rounded-2xl shadow-xl p-3 border border-slate-100 flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center font-bold text-lg">
+              <i class="fa-solid fa-shield-heart"></i>
+            </div>
+            <div>
+              <div class="text-xs font-bold text-brand-navy">100% Parent Peace of Mind</div>
+              <div class="text-[11px] text-slate-500">Live CCTV &bull; 1:4 Child-Teacher Ratio</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Side: Centralized Carousel -->
+        <div class="lg:col-span-7 bg-brand-bg-cyan rounded-3xl p-6 sm:p-10 border border-brand-cyan/20 shadow-sm relative">
+          
+          <div class="flex items-center justify-between pb-4 mb-4 border-b border-brand-cyan/20">
+            <div class="flex items-center gap-2">
+              <span class="text-xs font-bold uppercase tracking-wider text-brand-cyan">Parent Spotlight</span>
+              <span id="review-count-display" class="text-xs font-bold text-slate-400 bg-white px-2 py-0.5 rounded-full border border-slate-200">1 / 5</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <button id="review-prev-btn" aria-label="Previous Review" class="w-9 h-9 rounded-xl bg-white hover:bg-slate-100 text-brand-navy border border-slate-200 flex items-center justify-center transition-all shadow-2xs">
+                <i class="fa-solid fa-chevron-left text-xs"></i>
+              </button>
+              <button id="review-next-btn" aria-label="Next Review" class="w-9 h-9 rounded-xl bg-brand-pink hover:bg-[#d61272] text-white flex items-center justify-center transition-all shadow-xs">
+                <i class="fa-solid fa-chevron-right text-xs"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="relative min-h-[260px] flex items-center">
+            
+            <!-- Slide 1 -->
+            <div class="testimonial-slide active w-full space-y-4">
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                <div class="flex items-center gap-3.5">
+                  <div class="w-14 h-14 rounded-2xl overflow-hidden shadow-sm border-2 border-white shrink-0">
+                    <img src="assets/parent1-review.png?q=80&w=200&auto=format&fit=crop" alt="Mrs. Kishmat Sharma" class="w-full h-full object-cover">
+                  </div>
+                  <div>
+                    <h3 class="font-heading font-extrabold text-base sm:text-lg text-brand-navy leading-tight">Mrs. Kishmat Sharma</h3>
+                    <p class="text-xs font-semibold text-brand-pink">House Wife</p>
+                    <p class="text-[11px] text-slate-500 font-medium">Parent of Kabir (Junior KG)</p>
+                  </div>
+                </div>
+                <div class="text-left sm:text-right shrink-0">
+                  <div class="flex items-center sm:justify-end gap-1 text-brand-yellow text-sm">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                  </div>
+                  <div class="text-[11px] text-slate-400 mt-0.5">Reviewed on October 4, 2026</div>
+                </div>
+              </div>
+              <blockquote class="text-sm sm:text-base text-brand-navy font-medium italic leading-relaxed pt-2 border-t border-brand-cyan/20">
+                "The 1:4 child-to-teacher ratio is not just on paper, you can literally feel it! Kabir was very shy and hesitant with other toddlers. Within 3 months at Seven Valleys, he is singing rhymes with immense joy and making friends effortlessly."
+              </blockquote>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="testimonial-slide w-full space-y-4">
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                <div class="flex items-center gap-3.5">
+                  <div class="w-14 h-14 rounded-2xl overflow-hidden shadow-sm border-2 border-white shrink-0">
+                    <img src="assets/parent2-review.png?q=80&w=200&auto=format&fit=crop" alt="Dr. Vijmendra Grover" class="w-full h-full object-cover">
+                  </div>
+                  <div>
+                    <h3 class="font-heading font-extrabold text-base sm:text-lg text-brand-navy leading-tight">Dr. Vijmendra Grover</h3>
+                    <p class="text-xs font-semibold text-brand-pink">Asst. Professor in Manipal University</p>
+                    <p class="text-[11px] text-slate-500 font-medium">Parent of Ananya (Nursery)</p>
+                  </div>
+                </div>
+                <div class="text-left sm:text-right shrink-0">
+                  <div class="flex items-center sm:justify-end gap-1 text-brand-yellow text-sm">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                  </div>
+                  <div class="text-[11px] text-slate-400 mt-0.5">Reviewed on September 18, 2026</div>
+                </div>
+              </div>
+              <blockquote class="text-sm sm:text-base text-brand-navy font-medium italic leading-relaxed pt-2 border-t border-brand-cyan/20">
+                "As doctors, our primary concern was hygiene, allergen-free nutrition, and pediatric emergency readiness. Seven Valleys exceeded all benchmarks. The freshly cooked warm food smells delicious, and the teachers handle every toddler with medical-grade empathy."
+              </blockquote>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="testimonial-slide w-full space-y-4">
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                <div class="flex items-center gap-3.5">
+                  <div class="w-14 h-14 rounded-2xl overflow-hidden shadow-sm border-2 border-white shrink-0">
+                    <img src="assets/parent3-review.png?q=80&w=200&auto=format&fit=crop" alt="Dr. Reena Sharma" class="w-full h-full object-cover">
+                  </div>
+                  <div>
+                    <h3 class="font-heading font-extrabold text-base sm:text-lg text-brand-navy leading-tight">Dr. Reena Sharma</h3>
+                    <p class="text-xs font-semibold text-brand-pink">Asst. Professor in Prestige College</p>
+                    <p class="text-[11px] text-slate-500 font-medium">Mother of Rayan (Junior Nursery)</p>
+                  </div>
+                </div>
+                <div class="text-left sm:text-right shrink-0">
+                  <div class="flex items-center sm:justify-end gap-1 text-brand-yellow text-sm">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                  </div>
+                  <div class="text-[11px] text-slate-400 mt-0.5">Reviewed on August 29, 2026</div>
+                </div>
+              </div>
+              <blockquote class="text-sm sm:text-base text-brand-navy font-medium italic leading-relaxed pt-2 border-t border-brand-cyan/20">
+                "The annual event activities where parents participate alongside kids are simply unforgettable. I was brought to tears seeing little Rayan do his gentle roleplay on stage without fear."
+              </blockquote>
+            </div>
+
+            <!-- Slide 4 -->
+            <!-- <div class="testimonial-slide w-full space-y-4">
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                <div class="flex items-center gap-3.5">
+                  <div class="w-14 h-14 rounded-2xl overflow-hidden shadow-sm border-2 border-white shrink-0">
+                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=200&auto=format&fit=crop" alt="Gaurav Kulkarni" class="w-full h-full object-cover">
+                  </div>
+                  <div>
+                    <h3 class="font-heading font-extrabold text-base sm:text-lg text-brand-navy leading-tight">Gaurav &amp; Pooja Kulkarni</h3>
+                    <p class="text-xs font-semibold text-brand-pink">Chartered Accountant &amp; Financial Analyst</p>
+                    <p class="text-[11px] text-slate-500 font-medium">Parents of Advika (Senior KG)</p>
+                  </div>
+                </div>
+                <div class="text-left sm:text-right shrink-0">
+                  <div class="flex items-center sm:justify-end gap-1 text-brand-yellow text-sm">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                  </div>
+                  <div class="text-[11px] text-slate-400 mt-0.5">Reviewed on August 12, 2026</div>
+                </div>
+              </div>
+              <blockquote class="text-sm sm:text-base text-brand-navy font-medium italic leading-relaxed pt-2 border-t border-brand-cyan/20">
+                "Advika cleared admissions for two premier primary schools effortlessly thanks to Seven Valleys' Senior KG curriculum. She was fluent in phonics, could write confidently, and showed great problem-solving agility."
+              </blockquote>
+            </div> -->
+
+            <!-- Slide 5 -->
+            <!-- <div class="testimonial-slide w-full space-y-4">
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                <div class="flex items-center gap-3.5">
+                  <div class="w-14 h-14 rounded-2xl overflow-hidden shadow-sm border-2 border-white shrink-0">
+                    <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=200&auto=format&fit=crop" alt="Sneha Kapoor" class="w-full h-full object-cover">
+                  </div>
+                  <div>
+                    <h3 class="font-heading font-extrabold text-base sm:text-lg text-brand-navy leading-tight">Sneha Kapoor</h3>
+                    <p class="text-xs font-semibold text-brand-pink">Senior Product Marketing Director</p>
+                    <p class="text-[11px] text-slate-500 font-medium">Mother of Vivaan (Daycare &amp; Nursery)</p>
+                  </div>
+                </div>
+                <div class="text-left sm:text-right shrink-0">
+                  <div class="flex items-center sm:justify-end gap-1 text-brand-yellow text-sm">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                  </div>
+                  <div class="text-[11px] text-slate-400 mt-0.5">Reviewed on July 30, 2026</div>
+                </div>
+              </div>
+              <blockquote class="text-sm sm:text-base text-brand-navy font-medium italic leading-relaxed pt-2 border-t border-brand-cyan/20">
+                "As a working mother, finding a dependable daycare was terrifying until I found Seven Valleys. The staff updates me on WhatsApp, the nap rooms are so peaceful, and my son runs with open arms to his teachers each morning."
+              </blockquote>
+            </div> -->
+
+          </div>
+
+          <!-- Dot Indicators -->
+          <div class="flex items-center justify-center gap-2 pt-4">
+            <button class="testimonial-dot w-8 h-2.5 rounded-full bg-brand-pink transition-all" aria-label="Slide 1"></button>
+            <button class="testimonial-dot w-2.5 h-2.5 rounded-full bg-slate-300 transition-all" aria-label="Slide 2"></button>
+            <button class="testimonial-dot w-2.5 h-2.5 rounded-full bg-slate-300 transition-all" aria-label="Slide 3"></button>
+            <button class="testimonial-dot w-2.5 h-2.5 rounded-full bg-slate-300 transition-all" aria-label="Slide 4"></button>
+            <button class="testimonial-dot w-2.5 h-2.5 rounded-full bg-slate-300 transition-all" aria-label="Slide 5"></button>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       11. FAQS SECTION
+       ========================================================================== -->
+  <section class="py-6 md:py-10 bg-white border-b border-slate-100" style="
+          background: url(assets/the-tree1.png);
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: bottom;
+      ">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-10 space-y-2">
+        <span class="px-3 py-1 rounded-full bg-white text-brand-cyan text-xs font-bold uppercase">Common Queries</span>
+        <h2 class="font-heading font-extrabold text-3xl sm:text-4xl text-brand-navy">Frequently Asked Questions</h2>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center" >
+        <div class="lg:col-span-6 space-y-5">
+          <div class="faq-intro">
+            <!-- <span class="eyebrow coral-text">Parents, we've got you</span> -->
+            <!-- <h2 class="py-6 font-heading font-extrabold text-3xl sm:text-4xl text-brand-navy">Questions?<br><em>Let's make it easy.</em></h2> -->
+            <!-- <p>Here are answers to some of the questions families ask us most often.</p> -->
+            <!-- <img src="assets/rainbow.png?q=80&w=100&auto=format" class="py-6" alt="" aria-hidden="true"> -->
+            <!-- <a class="btn btn-primary" href="#contact">Ask us anything <span>→</span></a> -->
+            <a href="#tours" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-brand-navy text-white text-sm font-bold hover:bg-slate-800 transition-all shadow-sm">
+              <span>Ask us anything </span> <span>→</span>
+            </a>
+          </div>
+        </div>
+        <div class="lg:col-span-6">
+          <div class="space-y-3.5">
+            <div class="faq-item active bg-white rounded-2xl border border-slate-500 shadow-xs">
+              <button class="faq-trigger w-full px-5 py-4 text-left flex items-center justify-between gap-4 font-heading font-bold text-base text-brand-navy">
+                <span>What is the minimum age eligibility for admission?</span>
+                <i class="faq-icon fa-solid fa-chevron-down text-brand-cyan text-xs"></i>
+              </button>
+              <div class="faq-content px-5 pb-4 text-xs sm:text-sm text-slate-600">
+                Our Junior Nursery program accepts toddlers starting from 1.5 years old. Nursery admission requires a minimum age of 2.5 years by June 1st.
+              </div>
+            </div>
+            <div class="faq-item bg-white rounded-2xl border border-slate-500 shadow-xs">
+              <button class="faq-trigger w-full px-5 py-4 text-left flex items-center justify-between gap-4 font-heading font-bold text-base text-brand-navy">
+                <span>How does the 1:4 child to teacher ratio work practically?</span>
+                <i class="faq-icon fa-solid fa-chevron-down text-brand-cyan text-xs"></i>
+              </button>
+              <div class="faq-content px-5 pb-4 text-xs sm:text-sm text-slate-600">
+                In our toddler cohorts, every group of 8 to 12 children is managed simultaneously by 2 lead certified educators plus 1 trained caregiver assistant.
+              </div>
+            </div>
+            <div class="faq-item bg-white rounded-2xl border border-slate-500 shadow-xs">
+              <button class="faq-trigger w-full px-5 py-4 text-left flex items-center justify-between gap-4 font-heading font-bold text-base text-brand-navy">
+                <span>What does a typical day look like?</span>
+                <i class="faq-icon fa-solid fa-chevron-down text-brand-cyan text-xs"></i>
+              </button>
+              <div class="faq-content px-5 pb-4 text-xs sm:text-sm text-slate-600">
+                Children enjoy a balanced rhythm of arrival, free play, circle time, guided activities, outdoor play, meals and quiet time.
+              </div>
+            </div>
+            <div class="faq-item bg-white rounded-2xl border border-slate-500 shadow-xs">
+              <button class="faq-trigger w-full px-5 py-4 text-left flex items-center justify-between gap-4 font-heading font-bold text-base text-brand-navy">
+                <span>How do you keep children safe?</span>
+                <i class="faq-icon fa-solid fa-chevron-down text-brand-cyan text-xs"></i>
+              </button>
+              <div class="faq-content px-5 pb-4 text-xs sm:text-sm text-slate-600">
+                We use supervised entry and exit, age-appropriate spaces, trained staff and clear child-safety routines throughout the day.
+              </div>
+            </div>
+            <div class="faq-item bg-white rounded-2xl border border-slate-500 shadow-xs">
+              <button class="faq-trigger w-full px-5 py-4 text-left flex items-center justify-between gap-4 font-heading font-bold text-base text-brand-navy">
+                <span>Do you provide meals and snacks?</span>
+                <i class="faq-icon fa-solid fa-chevron-down text-brand-cyan text-xs"></i>
+              </button>
+              <div class="faq-content px-5 pb-4 text-xs sm:text-sm text-slate-600">
+                We do not have provision for meals and snacks. The children should bring home made meals. We teach them to share their meal with others.
+              </div>
+            </div>
+            <div class="faq-item bg-white rounded-2xl border border-slate-500 shadow-xs">
+              <button class="faq-trigger w-full px-5 py-4 text-left flex items-center justify-between gap-4 font-heading font-bold text-base text-brand-navy">
+                <span>How do I apply for admission?</span>
+                <i class="faq-icon fa-solid fa-chevron-down text-brand-cyan text-xs"></i>
+              </button>
+              <div class="faq-content px-5 pb-4 text-xs sm:text-sm text-slate-600">
+                Send us an enquiry, book a campus visit and our admissions team will guide you through availability, documentation and next steps.
+              </div>
+            </div>
+            <div class="faq-item bg-white rounded-2xl border border-slate-500 shadow-xs">
+              <button class="faq-trigger w-full px-5 py-4 text-left flex items-center justify-between gap-4 font-heading font-bold text-base text-brand-navy">
+                <span>Can parents visit the school before enrolling?</span>
+                <i class="faq-icon fa-solid fa-chevron-down text-brand-cyan text-xs"></i>
+              </button>
+              <div class="faq-content px-5 pb-4 text-xs sm:text-sm text-slate-600">
+                Absolutely. We encourage families to visit, meet the team and see the learning spaces before making a decision.
+              </div>
+            </div>
+            <div class="faq-item bg-white rounded-2xl border border-slate-500 shadow-xs">
+              <button class="faq-trigger w-full px-5 py-4 text-left flex items-center justify-between gap-4 font-heading font-bold text-base text-brand-navy">
+                <span>Do you offer a settling-in period?</span>
+                <i class="faq-icon fa-solid fa-chevron-down text-brand-cyan text-xs"></i>
+              </button>
+              <div class="faq-content px-5 pb-4 text-xs sm:text-sm text-slate-600">
+                Yes. We work with families to make the transition gentle, predictable and reassuring for both child and parent.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <!-- ==========================================================================
+       12. CONTACT FORM SECTION
+       ========================================================================== -->
+  <section id="tours" class="py-6 md:py-10 bg-brand-cyan border-b border-slate-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-gradient-to-br from-brand-bg-cyan via-white to-brand-bg-pink rounded-3xl p-6 sm:p-10 lg:p-12 border border-slate-200/80 shadow-md">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+          <div class="lg:col-span-5 space-y-6">
+            <div>
+              <span class="px-3 py-1 rounded-full bg-brand-pink text-white text-xs font-bold uppercase">Schedule a Visit</span>
+              <h2 class="font-heading font-extrabold text-2xl sm:text-3xl lg:text-4xl text-brand-navy tracking-tight mt-2">
+                Come see where the magic happens.
+              </h2>
+              <p class="text-sm text-slate-600 mt-2">Take a guided campus tour and meet our educators.</p>
+            </div>
+            <div class="space-y-3 text-xs">
+              <div class="flex items-center gap-3"><i class="fa-brands fa-whatsapp text-emerald-600 text-lg"></i> <span class="font-bold text-brand-navy">+91 9109357416</span></div>
+              <div class="flex items-center gap-3"><i class="fa-solid fa-clock text-brand-cyan text-base"></i> <span>Mon – Sat: 8:30 AM – 4:00 PM</span></div>
+            </div>
+          </div>
+          <div class="lg:col-span-7 bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 shadow-sm">
+            <h3 class="font-heading font-extrabold text-lg text-brand-navy mb-4">Book a Guided Campus Tour</h3>
+            <form data-whatsapp-form data-form-title="Campus Tour Booking" class="space-y-4">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <input type="text" name="parentName" required placeholder="Parent's Full Name *" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-xs sm:text-sm">
+                <input type="tel" name="phone" required placeholder="WhatsApp Number *" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-xs sm:text-sm">
+              </div>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <input type="email" name="email" placeholder="Email Address" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-xs sm:text-sm">
+                <input type="text" name="childName" placeholder="Child's Name" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-xs sm:text-sm">
+              </div>
+              <button type="submit" class="w-full py-3.5 px-6 rounded-xl font-bold text-sm bg-brand-navy text-white hover:bg-slate-800 shadow-md flex items-center justify-center gap-2 transition-all">
+                <i class="fa-brands fa-whatsapp text-lg"></i>
+                <span>Send Details</span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       13. FOOTER & 14. COPYRIGHT
+       ========================================================================== -->
+  <footer class="bg-brand-navy text-white pt-14 pb-8 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 pb-12 border-b border-slate-700/80">
+        
+        <!-- Column 1: Logo & Social Media Icons (lg:col-span-4) -->
+        <div class="lg:col-span-4 space-y-4">
+          <div class="flex items-center gap-3">
+            
+            <div>
+              <img src="assets/logo.png" class="w-36 h-20">
+            </div>
+          </div>
+          <p class="text-slate-300 text-xs sm:text-sm leading-relaxed pr-4">
+            Nurturing confident, empathetic, and inquisitive young global citizens with international norms, 1:4 attention, live CCTV transparency, and purposeful play.
+          </p>
+          <!-- Social Media Icons -->
+          <div class="flex items-center gap-3 pt-1">
+            <a href="https://www.facebook.com/profile.php?id=61590018266630" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="w-9 h-9 rounded-xl bg-slate-800 hover:bg-brand-cyan text-slate-300 hover:text-white flex items-center justify-center transition-all">
+              <i class="fa-brands fa-facebook-f text-sm"></i>
+            </a>
+            <a href="https://www.instagram.com/seven.valley.international" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="w-9 h-9 rounded-xl bg-slate-800 hover:bg-brand-pink text-slate-300 hover:text-white flex items-center justify-center transition-all">
+              <i class="fa-brands fa-instagram text-sm"></i>
+            </a>
+            <!-- <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="w-9 h-9 rounded-xl bg-slate-800 hover:bg-red-500 text-slate-300 hover:text-white flex items-center justify-center transition-all">
+              <i class="fa-brands fa-youtube text-sm"></i>
+            </a> -->
+            <!-- <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="w-9 h-9 rounded-xl bg-slate-800 hover:bg-blue-600 text-slate-300 hover:text-white flex items-center justify-center transition-all">
+              <i class="fa-brands fa-linkedin-in text-sm"></i>
+            </a> -->
+            <a href="https://wa.me/919109357416" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="w-9 h-9 rounded-xl bg-slate-800 hover:bg-emerald-500 text-slate-300 hover:text-white flex items-center justify-center transition-all">
+              <i class="fa-brands fa-whatsapp text-sm"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Column 2: Explore (lg:col-span-2) -->
+        <div class="lg:col-span-2 space-y-3">
+          <h4 class="font-heading font-bold text-sm uppercase tracking-wider text-slate-100">Explore</h4>
+          <ul class="space-y-2 text-xs sm:text-sm text-slate-300">
+            <li><a href="index.html" class="hover:text-brand-cyan transition-colors">Home</a></li>
+            <li><a href="about.html" class="hover:text-brand-cyan transition-colors">About Seven Valleys</a></li>
+            <li><a href="programs.html" class="hover:text-brand-cyan transition-colors">Programs &amp; Curriculum</a></li>
+            <li><a href="admissions.html" class="hover:text-brand-cyan transition-colors">Admissions 2026-27</a></li>
+            <li><a href="#activities" class="hover:text-brand-cyan transition-colors">Co-Curricular Activities</a></li>
+            <li><a href="contact.html" class="hover:text-brand-cyan transition-colors">Schedule a Visit</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Get In Touch (lg:col-span-3) -->
+        <div class="lg:col-span-3 space-y-3">
+          <h4 class="font-heading font-bold text-sm uppercase tracking-wider text-slate-100">Get In Touch</h4>
+          <ul class="space-y-2.5 text-xs sm:text-sm text-slate-300">
+            <li class="flex items-start gap-2.5">
+              <i class="fa-solid fa-phone text-brand-cyan mt-1 text-xs"></i>
+              <div>
+                <div class="text-[11px] text-slate-400 font-bold uppercase">Call / WhatsApp Helpline</div>
+                <a href="tel:+919109357416" class="font-semibold text-white hover:text-brand-cyan transition-colors">+91 9109357416</a>
+              </div>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <i class="fa-solid fa-envelope text-brand-pink mt-1 text-xs"></i>
+              <div>
+                <div class="text-[11px] text-slate-400 font-bold uppercase">Email Inquiries</div>
+                <a href="mailto:sevenvalleysinternational@gmail.com" class="font-semibold text-white hover:text-brand-pink transition-colors">sevenvalleysinternational@gmail.com</a>
+              </div>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <i class="fa-solid fa-calendar-days text-brand-yellow mt-1 text-xs"></i>
+              <div>
+                <div class="text-[11px] text-slate-400 font-bold uppercase">Administrative Office</div>
+                <span class="text-slate-300">Mon - Sat: 8:30 AM to 5:00 PM</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Find Us (lg:col-span-3) -->
+        <div class="lg:col-span-3 space-y-3">
+          <h4 class="font-heading font-bold text-sm uppercase tracking-wider text-slate-100">Find Us</h4>
+          <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+            Seven Valleys International Preschool<br>
+            25, Balwant Nagar<br>
+            Gwalior MP, India 474002
+          </p>
+          <div class="pt-1">
+            <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-3 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-xs text-brand-cyan font-bold transition-all border border-slate-700">
+              <i class="fa-solid fa-map-location-dot"></i>
+              <span>Open in Google Maps</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ======================================================================
+           14. COPYRIGHT SECTION
+           ====================================================================== -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400 gap-4">
+        <div>
+          &copy; 2026 Seven Valleys International Preschool. All Rights Reserved.
+        </div>
+        <div class="flex items-center gap-6">
+          <a href="#" class="hover:text-white transition-colors">Child Safety Policy</a>
+          <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+          <a href="#" class="hover:text-white transition-colors">Terms of Admission</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp -->
+  <a href="https://wa.me/919109357416?text=Hello%20Seven%20Valleys%20Preschool,%20I%20would%20like%20to%20inquire%20about%20admissions." target="_blank" rel="noopener noreferrer" class="whatsapp-pulse fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-emerald-500 hover:bg-emerald-600 text-white flex items-center justify-center shadow-2xl transition-all" aria-label="Chat on WhatsApp">
+    <i class="fa-brands fa-whatsapp text-3xl"></i>
+  </a>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
+
