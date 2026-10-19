@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Gallery | Seven Valleys International Preschool">
+  <title>Gallery | Seven Valleys International Preschool</title>
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://sevenvalleysinternational.com/homecss/style.css">
+
+  <link rel="stylesheet" href="css/gallery.css">
+
+  <!-- Elfsight Instagram Feed | Untitled Instagram Feed -->
+  <script src="https://elfsightcdn.com/platform.js" async></script>
+</head>
+
+<body>
+
+  <div class="announcement">
+    <div class="container announcement-inner">
+      <span class="announcement-badge">✨ Admissions Open</span>
+      <span>Now enrolling for the new academic year — schedule a school visit today.</span>
+      <a href="contact.html">Enquire now <span>→</span></a>
+    </div>
+  </div>
+
+  <header class="site-header" id="top">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html" aria-label="Seven Valleys International Preschool home">
+        <img src="https://sevenvalleysinternational.com/homeimages/logo.png" alt="Seven Valleys International Preschool logo">
+      </a>
+
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="seven-valleys-international-preschool-about.html">About</a>
+        <a href="seven-valleys-international-preschool-academics.html">Academics</a>
+        <a href="seven-valleys-international-preschool-day-care.html">Day Care</a>
+        <a class="active" href="seven-valleys-international-preschool-gallery.html">Gallery</a>
+        <a href="seven-valleys-international-preschool-faqs.html">FAQs</a>
+        <a href="seven-valleys-international-preschool-contact.html">Contact</a>
+      </nav>
+
+      <a class="btn btn-primary nav-cta" href="index.html#contact">Book a Visit <span>→</span></a>
+
+      <button class="menu-btn" aria-label="Open navigation" aria-expanded="false" aria-controls="mobileDrawer">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <aside class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+    <div class="drawer-top">
+      <img src="https://sevenvalleysinternational.com/homeimages/logo.png" alt="Seven Valleys International Preschool">
+      <button class="drawer-close" aria-label="Close navigation">×</button>
+    </div>
+    <nav aria-label="Mobile navigation">
+      <a href="index.html">Home</a>
+      <a href="seven-valleys-international-preschool-about.html">About</a>
+      <a href="seven-valleys-international-preschool-academics.html">Academics</a>
+      <a href="seven-valleys-international-preschool-day-care.html">Day Care</a>
+      <a class="active" href="seven-valleys-international-preschool-gallery.html">Gallery</a>
+      <a href="seven-valleys-international-preschool-faqs.html">FAQs</a>
+      <a href="seven-valleys-international-preschool-contact.html">Contact</a>
+    </nav>
+    <div class="drawer-card">
+      <strong>Come say hello! 🌈</strong>
+      <p>Book a friendly campus tour and meet our teachers.</p>
+      <a class="btn btn-secondary" href="contact.html">Book a Visit</a>
+    </div>
+  </aside>
+  <div class="drawer-backdrop"></div>
+
+  <!-- Gallery Hero -->
+  <section class="gallery-hero">
+    <div class="container gallery-hero-inner">
+      <div class="gallery-kicker">📸 Little moments, big memories</div>
+      <h1>Our <span>Gallery</span></h1>
+      <p>
+        Take a peek into the joyful world of Seven Valleys — where little
+        learners explore, create, play and grow every day.
+      </p>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <main class="gallery-section">
+    <div class="container">
+
+      <div class="gallery-layout">
+        <div class="gallery-main-column">
+      <div class="gallery-heading">
+        <h2>Life at Seven Valleys</h2>
+        <p>Explore our preschool moments by category.</p>
+      </div>
+
+      <!-- Filter tabs -->
+      <div class="gallery-filters" role="tablist" aria-label="Gallery categories">
+        <button class="gallery-filter active" type="button" role="tab" aria-selected="true" data-filter="all">
+          All
+        </button>
+        <button class="gallery-filter" type="button" role="tab" aria-selected="false" data-filter="classroom">
+          Classroom
+        </button>
+        <button class="gallery-filter" type="button" role="tab" aria-selected="false" data-filter="activities">
+          Activities
+        </button>
+        <button class="gallery-filter" type="button" role="tab" aria-selected="false" data-filter="outdoor">
+          Outdoor
+        </button>
+        <button class="gallery-filter" type="button" role="tab" aria-selected="false" data-filter="events">
+          Events
+        </button>
+        <button class="gallery-filter" type="button" role="tab" aria-selected="false" data-filter="daycare">
+          Day Care
+        </button>
+      </div>
+
+      <!--
+        IMAGE SETUP:
+        Replace each placeholder URL below with your own image.
+        Recommended folder:
+        assets//gallery/
+        Example:
+        src="assets//gallery/classroom-01.jpg"
+      -->
+      <div class="gallery-grid" id="galleryGrid">
+
+        <article class="gallery-item"
+          tabindex="0"
+          role="button"
+          data-category="classroom"
+          data-title="Happy Learning"
+          data-description="Curious minds discovering something new."
+          data-image="https://sevenvalleysinternational.com/homegallery/seven-valleys-preschool23.png?auto=format&fit=crop&w=1400&q=85">
+          <img src="https://sevenvalleysinternational.com/homegallery/seven-valleys-preschool23.png?auto=format&fit=crop&w=800&q=80"
+               alt="Children learning together in a classroom" loading="lazy">
+          <div class="gallery-caption">
+            <strong>Happy Learning</strong>
+            <small>Classroom</small>
+          </div>
+        </article>
+
+        <article class="gallery-item"
+          tabindex="0"
+          role="button"
+          data-category="activities"
+          data-title="Creative Time"
+          data-description="Making, painting and expressing little ideas."
+          data-image="https://sevenvalleysinternational.com/homegallery/seven-valleys-preschool13.jpeg?auto=format&fit=crop&w=1400&q=85">
+          <img src="https://sevenvalleysinternational.com/homegallery/seven-valleys-preschool13.jpeg?auto=format&fit=crop&w=800&q=80"
+               alt="Children enjoying a creative activity" loading="lazy">
+          <div class="gallery-caption">
+            <strong>Creative Time</strong>
+            <small>Activities</small>
+          </div>
+        </article>
+
+        <article class="gallery-item"
+          tabindex="0"
+          role="button"
+          data-category="outdoor"
+          data-title="Outdoor Adventures"
+          data-description="Fresh air, active play and plenty of smiles."
+          data-image="https://sevenvalleysinternational.com/homegallery/seven-valleys-preschool2.jpeg?auto=format&fit=crop&w=1400&q=85">
+          <img src="https://sevenvalleysinternational.com/homegallery/seven-valleys-preschool2.jpeg?auto=format&fit=crop&w=800&q=80"
+               alt="Children playing outdoors" loading="lazy">
+          <div class="gallery-caption">
+            <strong>Outdoor Adventures</strong>
+            <small>Outdoor</small>
+          </div>
+        </article>
+
+        <article class="gallery-item"
+          tabindex="0"
+          role="button"
+          data-category="events"
+          data-title="Special Celebrations"
+          data-description="Celebrating happy moments together."
+          data-image="https://sevenvalleysinternational.com/homegallery/seven-valleys-preschool14.jpeg?auto=format&fit=crop&w=1400&q=85">
+          <img src="https://sevenvalleysinternational.com/homegallery/seven-valleys-preschool14.jpeg?auto=format&fit=crop&w=800&q=80"
+               alt="Children celebrating together" loading="lazy">
+          <div class="gallery-caption">
+            <strong>Special Celebrations</strong>
+            <small>Events</small>
+          </div>
+        </article>
+
+        <article class="gallery-item"
+          tabindex="0"
+          role="button"
+          data-category="daycare"
+          data-title="Day Care Moments"
+          data-description="A warm and caring space for every little one."
+          data-image="https://sevenvalleysinternational.com/homegallery/seven-valleys-preschool15.jpeg?auto=format&fit=crop&w=1400&q=85">
+          <img src="https://sevenvalleysinternational.com/homegallery/seven-valleys-preschool15.jpeg?auto=format&fit=crop&w=800&q=80"
+               alt="Children enjoying a comfortable learning space" loading="lazy">
+          <div class="gallery-caption">
+            <strong>Day Care Moments</strong>
+            <small>Day Care</small>
+          </div>
+        </article>
+
+        <article class="gallery-item"
+          tabindex="0"
+          role="button"
+          data-category="classroom"
+          data-title="Story Time"
+          data-description="Listening, imagining and learning through stories."
+          data-image="https://sevenvalleysinternational.com/homegallery/seven-valleys-preschool16.jpeg?auto=format&fit=crop&w=1400&q=85">
+          <img src="https://sevenvalleysinternational.com/homegallery/seven-valleys-preschool16.jpeg?auto=format&fit=crop&w=800&q=80"
+               alt="Children enjoying story time" loading="lazy">
+          <div class="gallery-caption">
+            <strong>Story Time</strong>
+            <small>Classroom</small>
+          </div>
+        </article>
+
+        <article class="gallery-item"
+          tabindex="0"
+          role="button"
+          data-category="activities"
+          data-title="Little Creators"
+          data-description="Hands-on activities that turn ideas into something special."
+          data-image="https://sevenvalleysinternational.com/homegallery/seven-valleys-preschool17.jpeg?auto=format&fit=crop&w=1400&q=85">
+          <img src="https://sevenvalleysinternational.com/homegallery/seven-valleys-preschool17.jpeg?auto=format&fit=crop&w=800&q=80"
+               alt="Children doing hands-on creative work" loading="lazy">
+          <div class="gallery-caption">
+            <strong>Little Creators</strong>
+            <small>Activities</small>
+          </div>
+        </article>
+
+        <article class="gallery-item"
+          tabindex="0"
+          role="button"
+          data-category="outdoor"
+          data-title="Play & Explore"
+          data-description="Learning through movement, play and discovery."
+          data-image="https://sevenvalleysinternational.com/homegallery/seven-valleys-preschool7.jpeg?auto=format&fit=crop&w=1400&q=85">
+          <img src="https://sevenvalleysinternational.com/homegallery/seven-valleys-preschool7.jpeg?auto=format&fit=crop&w=800&q=80"
+               alt="Children exploring outdoors" loading="lazy">
+          <div class="gallery-caption">
+            <strong>Play & Explore</strong>
+            <small>Outdoor</small>
+          </div>
+        </article>
+
+        <article class="gallery-item"
+          tabindex="0"
+          role="button"
+          data-category="events"
+          data-title="Fun Together"
+          data-description="Building friendships and making memories."
+          data-image="https://sevenvalleysinternational.com/homegallery/seven-valleys-preschool24.png?auto=format&fit=crop&w=1400&q=85">
+          <img src="https://sevenvalleysinternational.com/homegallery/seven-valleys-preschool24.png?auto=format&fit=crop&w=800&q=80"
+               alt="Children having fun together" loading="lazy">
+          <div class="gallery-caption">
+            <strong>Fun Together</strong>
+            <small>Events</small>
+          </div>
+        </article>
+
+        <article class="gallery-item"
+          tabindex="0"
+          role="button"
+          data-category="daycare"
+          data-title="Caring Spaces"
+          data-description="Comfortable spaces designed for little learners."
+          data-image="https://sevenvalleysinternational.com/homegallery/seven-valleys-preschool18.jpeg?auto=format&fit=crop&w=1400&q=85">
+          <img src="https://sevenvalleysinternational.com/homegallery/seven-valleys-preschool18.jpeg?auto=format&fit=crop&w=800&q=80"
+               alt="Children in a caring learning environment" loading="lazy">
+          <div class="gallery-caption">
+            <strong>Caring Spaces</strong>
+            <small>Day Care</small>
+          </div>
+        </article>
+
+        <article class="gallery-item"
+          tabindex="0"
+          role="button"
+          data-category="classroom"
+          data-title="Learning Together"
+          data-description="Every question is the beginning of an adventure."
+          data-image="https://sevenvalleysinternational.com/homegallery/seven-valleys-preschool9.jpeg?auto=format&fit=crop&w=1400&q=85">
+          <img src="https://sevenvalleysinternational.com/homegallery/seven-valleys-preschool9.jpeg?auto=format&fit=crop&w=800&q=80"
+               alt="Children learning together" loading="lazy">
+          <div class="gallery-caption">
+            <strong>Learning Together</strong>
+            <small>Classroom</small>
+          </div>
+        </article>
+
+        <article class="gallery-item"
+          tabindex="0"
+          role="button"
+          data-category="activities"
+          data-title="Messy & Magical"
+          data-description="Sensory play and joyful hands-on discovery."
+          data-image="https://sevenvalleysinternational.com/homegallery/seven-valleys-preschool8.jpeg?auto=format&fit=crop&w=1400&q=85">
+          <img src="https://sevenvalleysinternational.com/homegallery/seven-valleys-preschool8.jpeg?auto=format&fit=crop&w=800&q=80"
+               alt="Children enjoying hands-on play" loading="lazy">
+          <div class="gallery-caption">
+            <strong>Messy & Magical</strong>
+            <small>Activities</small>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="gallery-empty" id="galleryEmpty">
+        <h3>No photos in this category yet</h3>
+        <p>More happy moments will be added soon.</p>
+      </div>
+        </div>
+
+        <aside class="gallery-sidebar" aria-label="Instagram updates">
+          <div class="instagram-head">
+            <div class="instagram-brand">
+              <span class="instagram-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+                  <circle cx="12" cy="12" r="4"></circle>
+                  <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"></circle>
+                </svg>
+              </span>
+              <span>Instagram</span>
+            </div>
+            <a class="instagram-follow" href="https://www.instagram.com/seven.valley.international/" target="_blank" rel="noopener noreferrer">Follow</a>
+          </div>
+          <p class="instagram-handle">@seven.valley.international</p>
+          <!-- Elfsight Instagram Feed | Untitled Instagram Feed -->
+          <div class="elfsight-app-e3be2d59-2304-4fdd-9f16-1c1f8333c286" data-elfsight-app-lazy></div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <div class="lightbox-content">
+
+      <button class="lightbox-close" id="lightboxClose" type="button" aria-label="Close gallery">
+        &times;
+      </button>
+
+      <button class="lightbox-prev" id="lightboxPrev" type="button" aria-label="Previous image">
+        &#8249;
+      </button>
+
+      <div class="lightbox-media-wrap">
+        <img class="lightbox-image" id="lightboxImage" src="" alt="">
+        <div class="lightbox-info">
+          <h3 id="lightboxTitle"></h3>
+          <p id="lightboxDescription"></p>
+          <div class="lightbox-actions">
+            <button class="copy-image-link" id="copyImageLink" type="button">↗ Copy image link</button>
+          </div>
+          <p class="copy-link-status" id="copyLinkStatus" role="status" aria-live="polite"></p>
+        </div>
+      </div>
+
+      <button class="lightbox-next" id="lightboxNext" type="button" aria-label="Next image">
+        &#8250;
+      </button>
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-premise" aria-hidden="true"></div>
+    <div class="container footer-main">
+      <div class="footer-brand">
+        <img src="https://sevenvalleysinternational.com/homeimages/logo.png" alt="Seven Valleys International Preschool">
+        <p>A joyful place to learn, play, grow and belong.</p>
+        <div class="socials">
+          <a href="https://www.facebook.com/profile.php?id=61590018266630" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path></svg></a>
+          <a href="https://www.instagram.com/seven.valley.international" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1"></circle></svg></a>
+          <!-- <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="4"></rect><path d="M10 9l5 3-5 3z" fill="#fff" stroke="none"></path></svg></a> -->
+        </div>
+      </div>
+
+      <div>
+        <h3>Explore</h3>
+        <a href="index.html">Home</a>
+        <a href="seven-valleys-international-preschool-about.html">About</a>
+        <a href="seven-valleys-international-preschool-academics.html">Academics</a>
+        <a href="seven-valleys-international-preschool-day-care.html">Day Care</a>
+        <a href="seven-valleys-international-preschool-gallery.html">Gallery</a>
+        <a href="seven-valleys-international-preschool-faqs.html">FAQs</a>
+        <a href="seven-valleys-international-preschool-contact.html">Contact</a>
+      </div>
+
+      <div>
+        <h3>Get in touch</h3>
+        <p>Mon – Sat, 8:00 AM – 6:30 PM</p>
+        <a href="tel:+919109357416">+91 91093 57416</a>
+        <a href="mailto:sevenvalleysinternational@gmail.com">sevenvalleysinternational@gmail.com</a>
+      </div>
+
+      <div>
+        <h3>Find us</h3>
+        <p>Seven Valleys International Preschool<br>25, Balwant Nagar<br>Gwalior MP, India 474002</p>
+        <a class="direction-link" href="https://www.google.com/maps/search/?api=1&query=Seven+Valleys+International+Preschool%2C+25+Balwant+Nagar%2C+Gwalior%2C+Madhya+Pradesh+474002" target="_blank" rel="noopener">Get Directions ↗</a>
+
+        <a class="direction-link" href="https://schoolos360.wasmer.app" target="_blank" rel="noopener">Staff & Internal Portal  ↗</a>
+      </div>
+    </div>
+
+    <div class="copyright">
+      <div class="container">
+        <span>© 2026 Seven Valleys International Preschool. All rights reserved.</span>
+        <!-- <span>Made for little dreamers ✦</span> -->
+        <div class="flex items-center gap-6">
+          <a href="seven-valleys-international-preschool-child-safety-policy.html" class="hover:text-white transition-colors">Child Safety Policy</a> |
+          <a href="seven-valleys-international-preschool-privacy-policy.html" class="hover:text-white transition-colors">Privacy Policy</a> | 
+          <a href="seven-valleys-international-preschool-terms-of-admission.html" class="hover:text-white transition-colors">Terms of Admission</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const filters = Array.from(document.querySelectorAll(".gallery-filter"));
+      const items = Array.from(document.querySelectorAll(".gallery-item"));
+      const emptyState = document.getElementById("galleryEmpty");
+
+      const lightbox = document.getElementById("lightbox");
+      const lightboxImage = document.getElementById("lightboxImage");
+      const lightboxTitle = document.getElementById("lightboxTitle");
+      const lightboxDescription = document.getElementById("lightboxDescription");
+      const lightboxClose = document.getElementById("lightboxClose");
+      const lightboxPrev = document.getElementById("lightboxPrev");
+      const lightboxNext = document.getElementById("lightboxNext");
+      const copyImageLink = document.getElementById("copyImageLink");
+      const copyLinkStatus = document.getElementById("copyLinkStatus");
+
+      let currentFilter = "all";
+      let visibleItems = [];
+      let currentIndex = 0;
+
+      function updateVisibleItems() {
+        visibleItems = items.filter(function (item) {
+          return currentFilter === "all" || item.dataset.category === currentFilter;
+        });
+      }
+
+      function applyFilter(filter) {
+        currentFilter = filter;
+
+        filters.forEach(function (button) {
+          const active = button.dataset.filter === filter;
+          button.classList.toggle("active", active);
+          button.setAttribute("aria-selected", active ? "true" : "false");
+        });
+
+        items.forEach(function (item) {
+          const show = filter === "all" || item.dataset.category === filter;
+          item.hidden = !show;
+        });
+
+        updateVisibleItems();
+        emptyState.classList.toggle("show", visibleItems.length === 0);
+      }
+
+      function openLightbox(index) {
+        if (!visibleItems.length) return;
+
+        currentIndex = index;
+        const item = visibleItems[currentIndex];
+
+        lightboxImage.src = item.dataset.image || item.querySelector("img").src;
+        lightboxImage.alt = item.querySelector("img").alt || item.dataset.title || "Gallery image";
+        lightboxTitle.textContent = item.dataset.title || "";
+        lightboxDescription.textContent = item.dataset.description || "";
+        copyLinkStatus.textContent = "";
+
+        lightbox.classList.add("open");
+        lightbox.setAttribute("aria-hidden", "false");
+        document.body.classList.add("lightbox-open");
+
+        // Keep focus inside the lightbox on open.
+        lightboxClose.focus();
+      }
+
+      async function copyCurrentImageLink() {
+        const imageUrl = lightboxImage.src;
+        if (!imageUrl) return;
+
+        try {
+          if (navigator.clipboard && window.isSecureContext) {
+            await navigator.clipboard.writeText(imageUrl);
+          } else {
+            const temporaryInput = document.createElement("textarea");
+            temporaryInput.value = imageUrl;
+            temporaryInput.setAttribute("readonly", "");
+            temporaryInput.style.position = "fixed";
+            temporaryInput.style.opacity = "0";
+            document.body.appendChild(temporaryInput);
+            temporaryInput.select();
+            const copied = document.execCommand("copy");
+            temporaryInput.remove();
+            if (!copied) throw new Error("Copy command was not successful");
+          }
+          copyLinkStatus.textContent = "Image link copied. You can now share it.";
+        } catch (error) {
+          copyLinkStatus.textContent = "Unable to copy automatically. Open the image in a new tab and copy its address.";
+        }
+      }
+
+      function closeLightbox() {
+        lightbox.classList.remove("open");
+        lightbox.setAttribute("aria-hidden", "true");
+        document.body.classList.remove("lightbox-open");
+
+        // Stop loading the large image when closed.
+        lightboxImage.src = "";
+      }
+
+      function showNext() {
+        if (!visibleItems.length) return;
+        currentIndex = (currentIndex + 1) % visibleItems.length;
+        openLightbox(currentIndex);
+      }
+
+      function showPrevious() {
+        if (!visibleItems.length) return;
+        currentIndex = (currentIndex - 1 + visibleItems.length) % visibleItems.length;
+        openLightbox(currentIndex);
+      }
+
+      filters.forEach(function (button) {
+        button.addEventListener("click", function () {
+          applyFilter(button.dataset.filter);
+        });
+      });
+
+      items.forEach(function (item) {
+        item.addEventListener("click", function () {
+          updateVisibleItems();
+          openLightbox(visibleItems.indexOf(item));
+        });
+
+        item.addEventListener("keydown", function (event) {
+          if (event.key === "Enter" || event.key === " ") {
+            event.preventDefault();
+            updateVisibleItems();
+            openLightbox(visibleItems.indexOf(item));
+          }
+        });
+      });
+
+      lightboxClose.addEventListener("click", closeLightbox);
+      copyImageLink.addEventListener("click", copyCurrentImageLink);
+      lightboxNext.addEventListener("click", showNext);
+      lightboxPrev.addEventListener("click", showPrevious);
+
+      // Close when clicking the dark backdrop.
+      lightbox.addEventListener("click", function (event) {
+        if (event.target === lightbox) {
+          closeLightbox();
+        }
+      });
+
+      document.addEventListener("keydown", function (event) {
+        if (!lightbox.classList.contains("open")) return;
+
+        if (event.key === "Escape") closeLightbox();
+        if (event.key === "ArrowRight") showNext();
+        if (event.key === "ArrowLeft") showPrevious();
+      });
+
+      // Simple touch swipe support.
+      let touchStartX = 0;
+
+      lightbox.addEventListener("touchstart", function (event) {
+        touchStartX = event.changedTouches[0].screenX;
+      }, { passive: true });
+
+      lightbox.addEventListener("touchend", function (event) {
+        const touchEndX = event.changedTouches[0].screenX;
+        const distance = touchEndX - touchStartX;
+
+        if (Math.abs(distance) < 50) return;
+
+        if (distance < 0) {
+          showNext();
+        } else {
+          showPrevious();
+        }
+      }, { passive: true });
+
+      // Initial state.
+      applyFilter("all");
+
+      /*
+        MOBILE MENU
+        Self-contained so this page works with the existing styles.css.
+      */
+      const menuToggle = document.querySelector(".menu-toggle");
+      const nav = document.querySelector(".main-nav");
+
+      if (menuToggle && nav) {
+        menuToggle.addEventListener("click", function () {
+          const isOpen = nav.classList.toggle("open");
+          menuToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+        });
+
+        nav.querySelectorAll("a").forEach(function (link) {
+          link.addEventListener("click", function () {
+            nav.classList.remove("open");
+            menuToggle.setAttribute("aria-expanded", "false");
+          });
+        });
+      }
+    });
+  </script>
+
+</body>
+</html>
