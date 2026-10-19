@@ -343,19 +343,3 @@ h1, h2, h3, h4, h5, h6, .font-heading {
 
 
 
-/* Who we are: overlapping circular image collage */
-.who-collage { min-height: 560px; }
-.who-image { position:absolute; z-index:2; overflow:hidden; aspect-ratio:1/1; border:9px solid #fff; border-radius:50%; background:#f7f5f2; box-shadow:0 0 0 1px rgba(20,24,30,.035); transition:border-color .28s ease, transform .28s ease, box-shadow .28s ease; }
-.who-image img { width:100%; height:100%; object-fit:cover; transition:transform .45s ease; }
-.who-image:hover { z-index:5; transform:scale(1.035); box-shadow:0 12px 34px rgba(20,24,30,.14); }
-.who-image:hover img { transform:scale(1.06); }
-.who-image--top-left { width:61%; top:0; left:0; } .who-image--top-right { width:61%; top:0; right:0; } .who-image--bottom { width:76%; top:39%; left:12%; }
-.who-image--top-left:hover { border-color:#12C7D9; } .who-image--top-right:hover { border-color:#F01883; } .who-image--bottom:hover { border-color:#FFC928; }
-.who-collage__spark { position:absolute; z-index:6; display:grid; place-items:center; width:42px; height:42px; border-radius:50%; background:#17191d; color:#fff; box-shadow:0 5px 18px rgba(0,0,0,.12); }
-.who-collage__spark--one { top:43%; left:4%; color:#12C7D9; } .who-collage__spark--two { right:4%; bottom:5%; color:#F01883; }
-@media(max-width:640px){.who-collage{min-height:390px;margin-top:0}.who-image{border-width:6px}.who-image--bottom{top:40%}.who-collage__spark{width:32px;height:32px}}
-@media(prefers-reduced-motion:reduce){.who-image,.who-image img{transition:none}}
-
-
-
-
